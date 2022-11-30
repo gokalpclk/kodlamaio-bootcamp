@@ -6,7 +6,7 @@
       "lastName":"Çelikten",
       "email":"habibecelikten@gmail.com",
       "password":"1234567890",
-      "nationalIdentity":"12345678901",
+      "nationalIdentity":12345678901,
       "dateOfBirth":"20/01/1994",
       "about":"Muğla Sıtkı Koçman Üniversitesi Bilişim Sistemleri Mühendisliği"
     },
@@ -16,7 +16,7 @@
       "lastName":"Erdoğan",
       "email":"elifsena@gmail.com",
       "password":"1234567890",
-      "nationalIdentity":"23456789012",
+      "nationalIdentity":23456789012,
       "dateOfBirth":"15/02/1998",
       "about":"Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği"
     },
@@ -26,7 +26,7 @@
       "lastName":"Karagöz",
       "email":"ahmetsalih@gmail.com",
       "password":"7418529630",
-      "nationalIdentity":"34567890123",
+      "nationalIdentity":34567890123,
       "dateOfBirth":"20/03/1998",
       "about":"Anadolu Üniversitesi Yönetim Bilişim Sistemleri"
     },
@@ -36,7 +36,7 @@
       "lastName":"Peynirci",
       "email":"mustafapeynirci@gmail.com",
       "password":"8529637410",
-      "nationalIdentity":"4567891230",
+      "nationalIdentity":45678912304,
       "dateOfBirth":"08/05/1998",
       "about":"Anadolu Üniversitesi Yönetim Bilişim Sistemleri"
     },
@@ -46,7 +46,7 @@
       "lastName":"Çelik",
       "email":"gokalpcelik@gmail.com",
       "password":"9637418520",
-      "nationalIdentity":"36985214789",
+      "nationalIdentity":36985214789,
       "dateOfBirth":"15/12/1994",
       "about":"Atılım Üniversitesi Bilişim Sistemleri Mühendisliği"
     },
@@ -56,7 +56,7 @@
       "lastName":"Deniz",
       "email":"senadeniz@gmail.com",
       "password":"7532145698",
-      "nationalIdentity":"45218956324",
+      "nationalIdentity":45218956324,
       "dateOfBirth":"15/01/1990",
       "about":"Gazi Üniversitesi Bilgisayar Mühendisliği"
     },
@@ -66,7 +66,7 @@
       "lastName":"Çapa",
       "email":"fatihcapa@gmail.com",
       "password":"8452148965",
-      "nationalIdentity":"75648512458",
+      "nationalIdentity":75648512458,
       "dateOfBirth":"10/05/2000",
       "about":"Bİlkent Üniversitesi Bilgisayar Mühendisliği"
     }    
@@ -80,7 +80,7 @@
       "email":"engindemirog@gmail.com",
       "password":"9876543210",
       "companyName":"Kodlama.io",
-      "nationalIdentity":"12345678901"
+      "nationalIdentity":12345678901
     },
     {
       "id": 2,
@@ -90,7 +90,7 @@
       "email":"gurcancetin@gmail.com",
       "password":"9876543210",
       "companyName":"Kodlama.io",
-      "nationalIdentity":"78965412300"
+      "nationalIdentity":78965412300
     },
     {
       "id": 3,
@@ -100,7 +100,7 @@
       "email":"guncanyayla@gmail.com",
       "password":"4256987452",
       "companyName":"Patika.dev",
-      "nationalIdentity":"98745265312"
+      "nationalIdentity":98745265312
     }
   ],
   "employees": [
@@ -110,7 +110,7 @@
       "lastName":"Köksal",
       "email":"eneskoksal@gmail.com",
       "password":"1234567890",
-      "nationalIdentity":"12345678901",
+      "nationalIdentity":12345678901,
       "dateOfBirth":"01/01/1980",
       "position":"Uzman"
     },
@@ -120,7 +120,7 @@
       "lastName":"Alıcı",
       "email":"beyzaalici@gmail.com",
       "password":"7539512648",
-      "nationalIdentity":"65498712301",
+      "nationalIdentity":65498712301,
       "dateOfBirth":"01/01/1980",
       "position":"Uzman Yardımcısı"
     }
