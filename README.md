@@ -1,4 +1,14 @@
-# KodlamaioBootcamp
+# KodlamaIo Bootcamp Project
+
+## It is a group project who members are :
+
+[Habibe ÇELİKTEN](https://github.com/HabibeC)
+
+[Mustafa PEYNİRCİ](https://github.com/MustafaPeynirci)
+
+[Gökalp ÇELİK](https://github.com/gokalpclk)
+
+[Ahmet Salih KARAGÖZ](https://github.com/krgzsalih)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
 
