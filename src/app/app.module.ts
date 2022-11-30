@@ -12,6 +12,8 @@ import { EmployeeAddComponent } from './components/employee/employee-add/employe
 import { EmployeeUpdateComponent } from './components/employee/employee-update/employee-update.component';
 import { InstructorAddComponent } from './components/instructor/instructor-add/instructor-add.component';
 import { InstructorUpdateComponent } from './components/instructor/instructor-update/instructor-update.component';
+import { NaviComponent } from './layout/navi/navi.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { InstructorUpdateComponent } from './components/instructor/instructor-up
     EmployeeAddComponent,
     EmployeeUpdateComponent,
     InstructorAddComponent,
-    InstructorUpdateComponent
+    InstructorUpdateComponent,
+    NaviComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
