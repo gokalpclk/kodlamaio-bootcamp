@@ -1,4 +1,4 @@
-import { IApplicantModel } from './../../models/applicant/ApplicantModel';
+import { IApplicantModel } from '../../models/applicant/request/ApplicantAllModel';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 

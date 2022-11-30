@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IInstructorModel } from 'src/app/models/instructor/InstructorModel';
+import { IInstructorModel } from 'src/app/models/instructor/request/InstructorAllModel';
 
 @Injectable({
   providedIn: 'root',

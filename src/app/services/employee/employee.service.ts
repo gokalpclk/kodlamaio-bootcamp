@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { IEmployeeModel } from './../../models/employee/EmployeeModel';
+import { IEmployeeModel } from '../../models/employee/request/EmployeeAllModel';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -8,9 +8,9 @@ import { Injectable } from '@angular/core';
 export class EmployeeService {
   allEmployee: IEmployeeModel[] = [];
   constructor(private httpClient: HttpClient) {}
-  getAllEmployees(){}
-  getEmployeeById(){}
-  addEmployee(){}
-  updateEmployee(){}
-  deleteEmployee(){}
+  getAllEmployees() {}
+  getEmployeeById() {}
+  addEmployee() {}
+  updateEmployee() {}
+  deleteEmployee() {}
 }
