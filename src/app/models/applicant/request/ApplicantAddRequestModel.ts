@@ -2,7 +2,7 @@ export interface IApplicantAddRequestModel {
   firstName: string;
   lastName: string;
   email: string;
-  password: number;
+  password: string;
   nationalIdentity: number;
   dateOfBirth: string;
   about: string;
