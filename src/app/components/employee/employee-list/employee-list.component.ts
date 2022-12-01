@@ -1,5 +1,3 @@
-import { EmployeeService } from './../../../services/employee/employee.service';
-import { IEmployeeAllModel } from './../../../models/employee/request/EmployeeAllModel';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-list.component.css'],
 })
 export class EmployeeListComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit(): void {}
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.getAllEmployees();
+  }
+
+  getAllEmployees(){
+    this.employeeService.getAllEmployees().subscribe((data)=>{
+      this.emloyees=data;
+    })
+  }
+
 }
