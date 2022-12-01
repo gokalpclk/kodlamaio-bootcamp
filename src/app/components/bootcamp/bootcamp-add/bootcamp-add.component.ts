@@ -23,11 +23,11 @@ export class BootcampAddComponent implements OnInit {
 
   createAddBootcampForm() {
     this.addBootcampForm = this.formBuilder.group({
-      instructorId: ['', [Validators.required]],
-      name: ['', [Validators.required]],
-      dateStart: ['', [Validators.required]],
-      dateEnd: ['', [Validators.required]],
-      state: ['', [Validators.required]],
+      instructorId: [[''], [Validators.required]],
+      name: [[''], [Validators.required]],
+      dateStart: [[''], [Validators.required]],
+      dateEnd: [[''], [Validators.required]],
+      state: [[''], [Validators.required]],
     });
   }
 

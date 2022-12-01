@@ -12,42 +12,36 @@ import { IBootcampUpdateRequestModel } from 'src/app/models/bootcamp/request/Boo
   providedIn: 'root',
 })
 export class BootcampService {
+  apiUrl = 'http://localhost:3000/bootcamps';
   allBootcamps: IBootcampAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
-  path = 'http://localhost:3000/bootcamps';
 
   getAllBootcamps(): Observable<IBootcampAllModel[]> {
-    return this.httpClient.get<IBootcampAllModel[]>(this.path);
+    return this.httpClient.get<IBootcampAllModel[]>(this.apiUrl);
   }
 
-  getBootcampById() {}
-
+  getBootcampById(id: number): Observable<IBootcampAllModel> {
+    return this.httpClient.get<IBootcampAllModel>(this.apiUrl + '/' + id);
+  }
   addBootcamp(
-    bootcamp: IBootcampAddRequestModel
+    data: IBootcampAddRequestModel
   ): Observable<IBootcampAddRequestModel[]> {
-    return this.httpClient.post<IBootcampAddRequestModel[]>(
-      this.path,
-      bootcamp
-    );
+    return this.httpClient.post<IBootcampAddRequestModel[]>(this.apiUrl, data);
   }
 
   updateBootcamp(
     id: number,
-    data: any
+    data: IBootcampUpdateRequestModel
   ): Observable<IBootcampUpdateRequestModel> {
     return this.httpClient.put<IBootcampUpdateRequestModel>(
-      this.path + '/' + id,
+      this.apiUrl + '/' + id,
       data
     );
   }
 
-  getBootcampDetail(id: number): Observable<IBootcampAllModel> {
-    return this.httpClient.get<IBootcampAllModel>(this.path + '/' + id);
-  }
-
   deleteBootcamp(id: number): Observable<IBootcampDeleteRequestModel> {
     return this.httpClient.delete<IBootcampDeleteRequestModel>(
-      this.path + '/' + id
+      this.apiUrl + '/' + id
     );
   }
 }

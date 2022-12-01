@@ -5,7 +5,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { InstructorService } from 'src/app/services/instructor/instructor.service';
-import { IBootcampDeleteRequestModel } from 'src/app/models/bootcamp/request/BootcampDeleteRequestModel';
 
 @Component({
   selector: 'app-bootcamp-update',
@@ -14,9 +13,9 @@ import { IBootcampDeleteRequestModel } from 'src/app/models/bootcamp/request/Boo
 })
 export class BootcampUpdateComponent implements OnInit {
   bootcampUpdateForm: FormGroup;
-  bootcamp: IBootcampAllModel;
-
+  getBootcamp: IBootcampAllModel;
   instracters: IInstructorAllModel[];
+
   constructor(
     private bootcampService: BootcampService,
     private formBuilder: FormBuilder,
@@ -25,37 +24,34 @@ export class BootcampUpdateComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe((params) => {
-      this.loadBootcampDetail(params['id']);
-    });
+    this.getBootcampById();
     this.instructorService.getAllInstructors();
   }
 
-  loadBootcampDetail(id: number) {
-    this.bootcampService.getBootcampDetail(id).subscribe((data) => {
-      this.bootcamp = data;
-      this.createBootcampForm();
-    });
-  }
-
-  createBootcampForm() {
-    this.bootcampUpdateForm = this.formBuilder.group({
-      id: [this.bootcamp.id, Validators.required],
-      instructorId: [this.bootcamp.instructorId, Validators.required],
-      name: [this.bootcamp.name, Validators.required],
-      dateStart: [this.bootcamp.dateStart, Validators.required],
-      dateEnd: [this.bootcamp.dateEnd, Validators.required],
-      state: [this.bootcamp.state, Validators.required],
-    });
-  }
-
-  updateBootcamp() {
+  getBootcampById() {
     this.bootcampService
-      .updateBootcamp(
-        this.activatedRoute.snapshot.params['id'],
-        this.bootcampUpdateForm.value
-      )
-      .subscribe((data) => console.log('Güncellendi'));
+      .getBootcampById(this.activatedRoute.snapshot.params['id'])
+      .subscribe((data) => {
+        this.getBootcamp = data;
+        this.createUpdateBootcampForm();
+      });
+  }
+
+  createUpdateBootcampForm() {
+    this.bootcampUpdateForm = this.formBuilder.group({
+      instructorId: [this.getBootcamp.instructorId, Validators.required],
+      name: [this.getBootcamp.name, Validators.required],
+      dateStart: [this.getBootcamp.dateStart, Validators.required],
+      dateEnd: [this.getBootcamp.dateEnd, Validators.required],
+      state: [this.getBootcamp.state, Validators.required],
+    });
+  }
+
+  updateBootcamp(id: number) {
+    if (this.bootcampUpdateForm.valid) {
+      let bootcampModel = Object.assign({}, this.bootcampUpdateForm.value);
+      this.bootcampService.updateBootcamp(id, bootcampModel);
+    }
   }
 
   deleteBootcamp(id: number) {

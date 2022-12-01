@@ -8,17 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bootcamp-list.component.css'],
 })
 export class BootcampListComponent implements OnInit {
+  allBootcampsList = this.bootcampService.allBootcamps;
   constructor(private bootcampService: BootcampService) {}
-  bootcamps: IBootcampAllModel[] = [];
+
   ngOnInit(): void {
     this.getAllBootcamps();
   }
 
   getAllBootcamps() {
-    this.bootcampService.getAllBootcamps().subscribe((data) => {
-      this.bootcamps = data;
-      console.log(data);
-    });
+    this.bootcampService.getAllBootcamps();
   }
-
 }
