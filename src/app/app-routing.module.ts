@@ -1,3 +1,6 @@
+import { InstructorUpdateComponent } from './components/instructor/instructor-update/instructor-update.component';
+import { InstructorAddComponent } from './components/instructor/instructor-add/instructor-add.component';
+import { InstructorListComponent } from './components/instructor/instructor-list/instructor-list.component';
 import { EmployeeUpdateComponent } from './components/employee/employee-update/employee-update.component';
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add.component';
 import { EmployeeListComponent } from './components/employee/employee-list/employee-list.component';
@@ -17,7 +20,10 @@ const routes: Routes = [
   { path: 'employee-list', component: EmployeeListComponent },
   { path: 'employee-add', component: EmployeeAddComponent },
   { path: 'employee-update/:id', component: EmployeeUpdateComponent },
-
+  
+  { path: 'instructor-list', component: InstructorListComponent },
+  { path: 'instructor-add', component: InstructorAddComponent },
+  { path: 'instructor-update/:id', component: InstructorUpdateComponent },
 
 
 
