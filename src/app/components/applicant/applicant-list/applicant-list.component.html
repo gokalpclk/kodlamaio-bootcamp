@@ -17,39 +17,19 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Jacob</td>
-                <td>Yeah</td>
-                <td>jacop@gmail.com</td>
-                <td>12345678901</td>
-                <td>about about about</td>
-                <td>13/03/1998</td>
+              <tr *ngFor="let applicant of allApplicantsList">
+                <td>{{applicant.firstName}}</td>
+                <td>{{applicant.lastName}}</td>
+                <td>{{applicant.email}}</td>
+                <td>{{applicant.nationalIdentity}}</td>
+                <td>{{applicant.about}}</td>
+                <td>{{applicant.dateOfBirth}}</td>
+                <td>{{applicant.about}}</td>
                 <td><button type="button" class="btn btn-outline-info btn-sm" routerLink="/applicant-update/:id">Update</button>
                     <button type="button" class="btn btn-outline-danger btn-sm ml-2">Add Black List</button>
                 </td>
               </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Yeah</td>
-                <td>jacop@gmail.com</td>
-                <td>12345678901</td>
-                <td>about about about</td>
-                <td>13/03/1998</td>
-                <td><button type="button" class="btn btn-outline-info btn-sm" routerLink="/applicant-update/:id">Update</button>
-                    <button type="button" class="btn btn-outline-danger btn-sm ml-2">Add Black List</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Jacob</td>
-                <td>Yeah</td>
-                <td>jacop@gmail.com</td>
-                <td>12345678901</td>
-                <td>about about about</td>
-                <td>13/03/1998</td>
-                <td><button type="button" class="btn btn-outline-info btn-sm" routerLink="/applicant-update/:id">Update</button>
-                    <button type="button" class="btn btn-outline-danger btn-sm ml-2">Add Black List</button>
-                </td>
-              </tr>
+      
             </tbody>
           </table>
         </div>
