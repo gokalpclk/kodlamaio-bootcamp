@@ -1,3 +1,4 @@
+import { BlackListAddComponent } from './../../blackList/black-list-add/black-list-add.component';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
 import { IApplicantAllModel } from 'src/app/models/applicant/request/ApplicantAllModel';
@@ -9,6 +10,7 @@ import { IApplicantAllModel } from 'src/app/models/applicant/request/ApplicantAl
 })
 export class ApplicantListComponent implements OnInit {
   allApplicantsList: IApplicantAllModel[] = [];
+  blackListAddComponent:BlackListAddComponent
   constructor(private applicantService: ApplicantService) {}
 
   ngOnInit(): void {

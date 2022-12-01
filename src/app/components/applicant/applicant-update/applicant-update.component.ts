@@ -44,13 +44,18 @@ export class ApplicantUpdateComponent implements OnInit {
     });
   }
 
-  updateApplicant(id: number) {
+  updateApplicant() {
     if (this.applicantUpdateForm.valid) {
-      let applicantModel = Object.assign({}, this.applicantUpdateForm.value);
-      this.applicantService.updateApplicant(id, applicantModel);
+      this.applicantService
+        .updateApplicant(
+          this.activatedRoute.snapshot.params['id'],
+          this.applicantUpdateForm.value
+        )
+        .subscribe();
     }
   }
   deleteApplicant(id: number) {
-    this.applicantService.deleteApplicant(id);
+    this.applicantService.deleteApplicant(id).subscribe();
+    console.log(this.getApplicant.id);
   }
 }

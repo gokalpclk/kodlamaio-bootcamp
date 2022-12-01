@@ -13,7 +13,6 @@
                 <th>National Identy</th>
                 <th>About</th>
                 <th>Date Of Bird</th>
-                <th>Manage</th>
               </tr>
             </thead>
             <tbody>
@@ -24,8 +23,7 @@
                 <td>{{applicant.nationalIdentity}}</td>
                 <td>{{applicant.about}}</td>
                 <td>{{applicant.dateOfBirth}}</td>
-                <td>{{applicant.about}}</td>
-                <td><button type="button" class="btn btn-outline-info btn-sm" routerLink="/applicant-update/:id">Update</button>
+                <td><button type="button" class="btn btn-outline-info btn-sm" routerLink="/applicant-update/{{applicant.id}}">Update</button>
                     <button type="button" class="btn btn-outline-danger btn-sm ml-2">Add Black List</button>
                 </td>
               </tr>

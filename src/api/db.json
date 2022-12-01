@@ -2,225 +2,223 @@
   "applicants": [
     {
       "id": 1,
-      "firstName":"Habibe",
-      "lastName":"Çelikten",
-      "email":"habibecelikten@gmail.com",
-      "password":"1234567890",
-      "nationalIdentity":12345678901,
-      "dateOfBirth":"20/01/1994",
-      "about":"Muğla Sıtkı Koçman Üniversitesi Bilişim Sistemleri Mühendisliği"
+      "firstName": "Habibe",
+      "lastName": "Çelikten",
+      "email": "habibecelikten@gmail.com",
+      "password": "1234567890",
+      "nationalIdentity": 12345678901,
+      "dateOfBirth": "20/01/1994",
+      "about": "Muğla Sıtkı Koçman Üniversitesi Bilişim Sistemleri Mühendisliği"
     },
     {
       "id": 2,
-      "firstName":"Elif Sena",
-      "lastName":"Erdoğan",
-      "email":"elifsena@gmail.com",
-      "password":"1234567890",
-      "nationalIdentity":23456789012,
-      "dateOfBirth":"15/02/1998",
-      "about":"Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği"
+      "firstName": "Elif Sena",
+      "lastName": "Erdoğan",
+      "email": "elifsena@gmail.com",
+      "password": "1234567890",
+      "nationalIdentity": 23456789012,
+      "dateOfBirth": "15/02/1998",
+      "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği"
     },
     {
       "id": 3,
-      "firstName":"Ahmet Salih",
-      "lastName":"Karagöz",
-      "email":"ahmetsalih@gmail.com",
-      "password":"7418529630",
-      "nationalIdentity":34567890123,
-      "dateOfBirth":"20/03/1998",
-      "about":"Anadolu Üniversitesi Yönetim Bilişim Sistemleri"
+      "firstName": "Ahmet Salih",
+      "lastName": "Karagöz",
+      "email": "ahmetsalih@gmail.com",
+      "password": "7418529630",
+      "nationalIdentity": 34567890123,
+      "dateOfBirth": "20/03/1998",
+      "about": "Anadolu Üniversitesi Yönetim Bilişim Sistemleri"
     },
     {
       "id": 4,
-      "firstName":"Mustafa",
-      "lastName":"Peynirci",
-      "email":"mustafapeynirci@gmail.com",
-      "password":"8529637410",
-      "nationalIdentity":45678912304,
-      "dateOfBirth":"08/05/1998",
-      "about":"Anadolu Üniversitesi Yönetim Bilişim Sistemleri"
+      "firstName": "Mustafa",
+      "lastName": "Peynirci",
+      "email": "mustafapeynirci@gmail.com",
+      "password": "8529637410",
+      "nationalIdentity": 45678912304,
+      "dateOfBirth": "08/05/1998",
+      "about": "Anadolu Üniversitesi Yönetim Bilişim Sistemleri"
     },
     {
       "id": 5,
-      "firstName":"Gökalp",
-      "lastName":"Çelik",
-      "email":"gokalpcelik@gmail.com",
-      "password":"9637418520",
-      "nationalIdentity":36985214789,
-      "dateOfBirth":"15/12/1994",
-      "about":"Atılım Üniversitesi Bilişim Sistemleri Mühendisliği"
+      "firstName": "Gökalp",
+      "lastName": "Çelik",
+      "email": "gokalpcelik@gmail.com",
+      "password": "9637418520",
+      "nationalIdentity": 36985214789,
+      "dateOfBirth": "15/12/1994",
+      "about": "Atılım Üniversitesi Bilişim Sistemleri Mühendisliği"
     },
     {
       "id": 6,
-      "firstName":"Sena",
-      "lastName":"Deniz",
-      "email":"senadeniz@gmail.com",
-      "password":"7532145698",
-      "nationalIdentity":45218956324,
-      "dateOfBirth":"15/01/1990",
-      "about":"Gazi Üniversitesi Bilgisayar Mühendisliği"
+      "firstName": "Sena",
+      "lastName": "Deniz",
+      "email": "senadeniz@gmail.com",
+      "password": "7532145698",
+      "nationalIdentity": 45218956324,
+      "dateOfBirth": "15/01/1990",
+      "about": "Gazi Üniversitesi Bilgisayar Mühendisliği"
     },
     {
-      "id": 7,
-      "firstName":"Fatih",
-      "lastName":"Çapa",
-      "email":"fatihcapa@gmail.com",
-      "password":"8452148965",
-      "nationalIdentity":75648512458,
-      "dateOfBirth":"10/05/2000",
-      "about":"Bİlkent Üniversitesi Bilgisayar Mühendisliği"
-    }    
+      "firstName": "Fatih",
+      "lastName": "Çapa",
+      "email": "fatihcapa@gmail.com",
+      "password": "8452148965",
+      "nationalIdentity": 75648512458,
+      "dateOfBirth": "10/05/2003",
+      "about": "Bilkent Üniversitesi Bilgisayar Mühendisliği",
+      "id": 7
+    }
   ],
   "instructors": [
     {
       "id": 1,
-      "firstName":"Engin",
-      "lastName":"Demiroğ",
-      "dateOfBirth":"18/02/1985",
-      "email":"engindemirog@gmail.com",
-      "password":"9876543210",
-      "companyName":"Kodlama.io",
-      "nationalIdentity":12345678901
+      "firstName": "Engin",
+      "lastName": "Demiroğ",
+      "dateOfBirth": "18/02/1985",
+      "email": "engindemirog@gmail.com",
+      "password": "9876543210",
+      "companyName": "Kodlama.io",
+      "nationalIdentity": 12345678901
     },
     {
       "id": 2,
-      "firstName":"Gürcan",
-      "lastName":"Çetin",
-      "dateOfBirth":"18/02/1988",
-      "email":"gurcancetin@gmail.com",
-      "password":"9876543210",
-      "companyName":"Kodlama.io",
-      "nationalIdentity":78965412300
+      "firstName": "Gürcan",
+      "lastName": "Çetin",
+      "dateOfBirth": "18/02/1988",
+      "email": "gurcancetin@gmail.com",
+      "password": "9876543210",
+      "companyName": "Kodlama.io",
+      "nationalIdentity": 78965412300
     },
     {
       "id": 3,
-      "firstName":"Gülcan",
-      "lastName":"Yayla",
-      "dateOfBirth":"08/08/1988",
-      "email":"guncanyayla@gmail.com",
-      "password":"4256987452",
-      "companyName":"Patika.dev",
-      "nationalIdentity":98745265312
+      "firstName": "Gülcan",
+      "lastName": "Yayla",
+      "dateOfBirth": "08/08/1988",
+      "email": "guncanyayla@gmail.com",
+      "password": "4256987452",
+      "companyName": "Patika.dev",
+      "nationalIdentity": 98745265312
     }
   ],
   "employees": [
     {
       "id": 1,
-      "firstName":"Enes Bin Malik",
-      "lastName":"Köksal",
-      "email":"eneskoksal@gmail.com",
-      "password":"1234567890",
-      "nationalIdentity":12345678901,
-      "dateOfBirth":"01/01/1980",
-      "position":"Uzman"
+      "firstName": "Enes Bin Malik",
+      "lastName": "Köksal",
+      "email": "eneskoksal@gmail.com",
+      "password": "1234567890",
+      "nationalIdentity": 12345678901,
+      "dateOfBirth": "01/01/1980",
+      "position": "Uzman"
     },
     {
       "id": 2,
-      "firstName":"Beyza",
-      "lastName":"Alıcı",
-      "email":"beyzaalici@gmail.com",
-      "password":"7539512648",
-      "nationalIdentity":65498712301,
-      "dateOfBirth":"01/01/1980",
-      "position":"Uzman Yardımcısı"
+      "firstName": "Beyza",
+      "lastName": "Alıcı",
+      "email": "beyzaalici@gmail.com",
+      "password": "7539512648",
+      "nationalIdentity": 65498712301,
+      "dateOfBirth": "01/01/1980",
+      "position": "Uzman Yardımcısı"
     }
-    
   ],
   "bootcamps": [
     {
       "id": 1,
-      "instructorId":1,
-      "name":"Programlamaya Giriş için Temel Kurs",
-      "dateStart":"01/10/2022",
-      "dateEnd":"01/11/2022",
-      "state":2
+      "instructorId": 1,
+      "name": "Programlamaya Giriş için Temel Kurs",
+      "dateStart": "01/10/2022",
+      "dateEnd": "01/11/2022",
+      "state": 2
     },
     {
       "id": 2,
-      "instructorId":1,
-      "name":"Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
-      "dateStart":"01/11/2022",
-      "dateEnd":"01/12/2022",
-      "state":1
+      "instructorId": 1,
+      "name": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
+      "dateStart": "01/11/2022",
+      "dateEnd": "01/12/2022",
+      "state": 1
     },
     {
       "id": 3,
-      "instructorId":2,
-      "name":"Yazılım Geliştirici Yetiştirme Kampı(Javascript)",
-      "dateStart":"10/12/2022",
-      "dateEnd":"10/01/2023",
-      "state":1
+      "instructorId": 2,
+      "name": "Yazılım Geliştirici Yetiştirme Kampı(Javascript)",
+      "dateStart": "10/12/2022",
+      "dateEnd": "10/01/2023",
+      "state": 1
     },
     {
       "id": 4,
-      "instructorId":3,
-      "name":"Senior Yazılım Geliştirici Yetiştirme Kampı (.NET)",
-      "dateStart":"20/01/2023",
-      "dateEnd":"20/02/2023",
-      "state":2
+      "instructorId": 3,
+      "name": "Senior Yazılım Geliştirici Yetiştirme Kampı (.NET)",
+      "dateStart": "20/01/2023",
+      "dateEnd": "20/02/2023",
+      "state": 2
     },
     {
       "id": 5,
-      "instructorId":1,
-      "name":"Yazılım Geliştirici Yetiştirme Kampı (C# + ANGULAR)",
-      "dateStart":"25/02/2023",
-      "dateEnd":"25/03/2023",
-      "state":2
+      "instructorId": 1,
+      "name": "Yazılım Geliştirici Yetiştirme Kampı (C# + ANGULAR)",
+      "dateStart": "25/02/2023",
+      "dateEnd": "25/03/2023",
+      "state": 2
     },
     {
       "id": 6,
-      "instructorId":1,
-      "name":"Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
-      "dateStart":"01/04/2023",
-      "dateEnd":"01/05/2023",
-      "state":2
+      "instructorId": 1,
+      "name": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
+      "dateStart": "01/04/2023",
+      "dateEnd": "01/05/2023",
+      "state": 2
     }
-    
   ],
   "applications": [
     {
       "id": 1,
-      "applicantId":1,
-      "bootcampId":1,
-      "state":1
+      "applicantId": 1,
+      "bootcampId": 1,
+      "state": 1
     },
     {
       "id": 2,
-      "applicantId":3,
-      "bootcampId":2,
-      "state":1
+      "applicantId": 3,
+      "bootcampId": 2,
+      "state": 1
     },
     {
       "id": 3,
-      "applicantId":4,
-      "bootcampId":3,
-      "state":1
+      "applicantId": 4,
+      "bootcampId": 3,
+      "state": 1
     },
     {
       "id": 4,
-      "applicantId":5,
-      "bootcampId":3,
-      "state":1
+      "applicantId": 5,
+      "bootcampId": 3,
+      "state": 1
     }
   ],
   "blackList": [
     {
       "id": 1,
-      "applicantId":2,
-      "date":"30/09/2022",
-      "reason":"Kayıt olup gelmedi"
+      "applicantId": 2,
+      "date": "30/09/2022",
+      "reason": "Kayıt olup gelmedi"
     },
     {
       "id": 2,
-      "applicantId":6,
-      "date":"12/11/2022",
-      "reason":"Devamsızlığı fazla"
+      "applicantId": 6,
+      "date": "12/11/2022",
+      "reason": "Devamsızlığı fazla"
     },
     {
       "id": 3,
-      "applicantId":7,
-      "date":"20/11/2022",
-      "reason":"Kurumda kavga çıkardı"
+      "applicantId": 7,
+      "date": "20/11/2022",
+      "reason": "Kurumda kavga çıkardı"
     }
   ]
 }

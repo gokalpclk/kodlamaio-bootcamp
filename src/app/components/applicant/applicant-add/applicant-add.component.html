@@ -2,7 +2,7 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Applicant Add</h4>
-        <form class="form-sample">
+        <form class="form-sample" [formGroup]="addApplicantForm">
           <p class="card-description">
             Info
           </p>
@@ -11,7 +11,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">First Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" placeholder="first name"/>
+                  <input type="text" class="form-control" placeholder="first name" formControlName="firstName"/>
                 </div>
               </div>
             </div>
@@ -19,7 +19,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Last Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" placeholder="last name"/>
+                  <input type="text" class="form-control" placeholder="last name" formControlName="lastName"/>
                 </div>
               </div>
             </div>
@@ -29,7 +29,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Email</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" placeholder="@email"/>
+                    <input type="text" class="form-control" placeholder="@email" formControlName="email"/>
                   </div>
               </div>
             </div>
@@ -37,7 +37,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Password</label>
                 <div class="col-sm-9">
-                  <input type="password" class="form-control" placeholder="password"/>
+                  <input type="password" class="form-control" placeholder="password" formControlName="password"/>
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">National Identy</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" placeholder="national identy"/>
+                    <input type="text" class="form-control" placeholder="national identy" formControlName="nationalIdentity"/>
                   </div>
               </div>
             </div>
@@ -55,7 +55,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">About</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" placeholder="about"/>
+                    <input type="text" class="form-control" placeholder="about" formControlName="about"/>
                   </div>
                 </div>
               </div>
@@ -63,11 +63,11 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Date Of Birth</label>
                 <div class="col-sm-9">
-                    <input class="form-control" placeholder="dd/mm/yyyy"/>
+                    <input class="form-control" placeholder="dd/mm/yyyy" formControlName="dateOfBirth"/>
                 </div>
               </div>
             </div>
-            <button type="button" class="btn btn-info">Add</button>
+            <button type="button" class="btn btn-info" (click)="addApplicant()">Add</button>
           </div>
         </form>
       </div>
