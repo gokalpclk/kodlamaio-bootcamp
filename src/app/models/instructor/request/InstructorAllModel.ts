@@ -1,4 +1,4 @@
-export interface IInstructorModel {
+export interface IInstructorAllModel {
   id: number;
   firstName: string;
   lastName: string;

@@ -1,4 +1,4 @@
-import { IApplicantModel } from '../../models/applicant/request/ApplicantAllModel';
+import { IApplicantAllModel } from '../../models/applicant/request/ApplicantAllModel';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ApplicantService {
-  allApplicants: IApplicantModel[] = [];
+  allApplicants: IApplicantAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
 
   getAllApplicants() {}

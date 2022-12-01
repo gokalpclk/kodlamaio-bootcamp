@@ -1,4 +1,4 @@
-export interface IEmployeeModel {
+export interface IEmployeeAllModel {
   id: number;
   firstName: string;
   lastName: string;

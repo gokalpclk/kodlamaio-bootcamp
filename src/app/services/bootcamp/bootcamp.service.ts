@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { IBootcampModel } from '../../models/bootcamp/request/BootcampAllModel';
+import { IBootcampAllModel } from '../../models/bootcamp/request/BootcampAllModel';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BootcampService {
-  allBootcamps: IBootcampModel[] = [];
+  allBootcamps: IBootcampAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
 
   getAllBootcamps() {}
