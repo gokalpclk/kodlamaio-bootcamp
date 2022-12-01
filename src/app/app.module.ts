@@ -23,6 +23,7 @@ import { ApplicantUpdateComponent } from './components/applicant/applicant-updat
 import { BootcampAddComponent } from './components/bootcamp/bootcamp-add/bootcamp-add.component';
 import { BootcampListComponent } from './components/bootcamp/bootcamp-list/bootcamp-list.component';
 import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/b
     BootcampAddComponent,
     BootcampListComponent,
     BootcampUpdateComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
