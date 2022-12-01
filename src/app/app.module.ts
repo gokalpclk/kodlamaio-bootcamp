@@ -14,6 +14,9 @@ import { InstructorAddComponent } from './components/instructor/instructor-add/i
 import { InstructorUpdateComponent } from './components/instructor/instructor-update/instructor-update.component';
 import { NaviComponent } from './layout/navi/navi.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { PanelComponent } from './layout/panel/panel.component';
+import { SidebarRightComponent } from './layout/sidebar-right/sidebar-right.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { FooterComponent } from './layout/footer/footer.component';
     InstructorAddComponent,
     InstructorUpdateComponent,
     NaviComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent,
+    PanelComponent,
+    SidebarRightComponent
   ],
   imports: [
     BrowserModule,
