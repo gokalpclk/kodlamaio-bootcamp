@@ -1,4 +1,4 @@
-export interface IBlackListModel {
+export interface IBlackListAllModel {
   id: number;
   applicantId: number;
   date: string;
