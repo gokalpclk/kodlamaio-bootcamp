@@ -1,1 +1,37 @@
-<p>employee-list works!</p>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Applicants</h4>
+        <p class="card-description">List</p>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>National Identy</th>
+                <th>About</th>
+                <th>Date Of Bird</th>
+                <th>Manage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of allEmployeeList">
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.nationalIdentity}}</td>
+                <td>{{employee.position}}</td>
+                <td>{{employee.dateOfBirth}}</td>
+                <td><button type="button" class="btn btn-outline-info btn-sm" routerLink="/employee-update/:id">Update</button>
+                    <button type="button" class="btn btn-outline-danger btn-sm ml-2">Add Black List</button>
+                </td>
+              </tr>
+      
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
