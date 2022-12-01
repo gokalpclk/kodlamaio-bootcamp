@@ -24,6 +24,10 @@ import { BootcampAddComponent } from './components/bootcamp/bootcamp-add/bootcam
 import { BootcampListComponent } from './components/bootcamp/bootcamp-list/bootcamp-list.component';
 import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update.component';
 import { HomeComponent } from './components/home/home.component';
+import { BlackListAddComponent } from './components/blackList/black-list-add/black-list-add.component';
+import { BlackListListComponent } from './components/blackList/black-list-list/black-list-list.component';
+import { BlackListUpdateComponent } from './components/blackList/black-list-update/black-list-update.component';
+
 
 @NgModule({
   declarations: [
@@ -46,6 +50,9 @@ import { HomeComponent } from './components/home/home.component';
     BootcampListComponent,
     BootcampUpdateComponent,
     HomeComponent,
+    BlackListAddComponent,
+    BlackListListComponent,
+    BlackListUpdateComponent
   ],
   imports: [
     BrowserModule,
