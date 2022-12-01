@@ -1,9 +1,9 @@
 export interface IInstructorAddRequestModel {
-    firstName: string;
-    lastName: string;
-    dateOfBird: string;
-    email: string;
-    password: string;
-    companyName: string;
-    nationalIdenty: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  nationalIdentity: string;
+  dateOfBirth: string;
+  companyName: string;
 }
