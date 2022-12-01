@@ -1,3 +1,4 @@
+import { IApplicantUpdateRequestModel } from './../../../models/applicant/request/ApplicantUpdateRequestModel';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,29 +11,46 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ApplicantUpdateComponent implements OnInit {
   applicantUpdateForm: FormGroup;
-
+  getApplicant: IApplicantUpdateRequestModel;
   constructor(
     private applicantService: ApplicantService,
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute
   ) {}
 
-  ngOnInit(): void {}
-
-  createApplicantUpdateForm() {
+  ngOnInit(): void {
+    this.getApplicantById();
+  }
+  getApplicantById() {
+    this.applicantService
+      .getApplicantById(this.activatedRoute.snapshot.params['id'])
+      .subscribe((data) => {
+        this.getApplicant = data;
+        this.createUpdateApplicantForm();
+      });
+  }
+  createUpdateApplicantForm() {
     this.applicantUpdateForm = this.formBuilder.group({
-      firstName: [[''], Validators.required],
-      lastName: [[''], Validators.required],
-      email: [[''], Validators.required],
-      password: [[''], Validators.required],
-      phoneNumber: [[''], Validators.required],
-      address: [[''], Validators.required],
-      city: [[''], Validators.required],
-      country: [[''], Validators.required],
-      zipCode: [[''], Validators.required],
-      birthDate: [[''], Validators.required],
+      firstName: [this.getApplicant.firstName, Validators.required],
+      lastName: [this.getApplicant.lastName, Validators.required],
+      email: [this.getApplicant.email, Validators.required],
+      password: [this.getApplicant.password, Validators.required],
+      nationalIdentity: [
+        this.getApplicant.nationalIdentity,
+        Validators.required,
+      ],
+      dateOfBirth: [this.getApplicant.dateOfBirth, Validators.required],
+      about: [this.getApplicant.about, Validators.required],
     });
   }
 
-  updateApplicant() {}
+  updateApplicant(id: number) {
+    if (this.applicantUpdateForm.valid) {
+      let applicantModel = Object.assign({}, this.applicantUpdateForm.value);
+      this.applicantService.updateApplicant(id, applicantModel);
+    }
+  }
+  deleteApplicant(id: number) {
+    this.applicantService.deleteApplicant(id);
+  }
 }

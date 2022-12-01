@@ -3,6 +3,8 @@ import { IApplicantAddRequestModel } from './../../models/applicant/request/Appl
 import { IApplicantAllModel } from '../../models/applicant/request/ApplicantAllModel';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IApplicantDeleteRequestModel } from 'src/app/models/applicant/request/ApplicantDeleteRequestModel';
 
 @Injectable({
   providedIn: 'root',
@@ -12,24 +14,29 @@ export class ApplicantService {
   allApplicants: IApplicantAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
 
-  getAllApplicants() {
-    this.httpClient
-      .get<IApplicantAllModel[]>(this.apiUrl)
-      .subscribe((response) => {
-        this.allApplicants = response;
-        console.log(response);
-      });
+  getAllApplicants(): Observable<IApplicantAllModel[]> {
+    return this.httpClient.get<IApplicantAllModel[]>(this.apiUrl);
   }
-  getApplicantById(id: number) {
-    this.httpClient.get<IApplicantAllModel>(this.apiUrl + '/' + id);
+  getApplicantById(id: number): Observable<IApplicantAllModel> {
+    return this.httpClient.get<IApplicantAllModel>(this.apiUrl + '/' + id);
   }
-  addApplicant(data: IApplicantAddRequestModel) {
-    this.httpClient.post<IApplicantAddRequestModel>(this.apiUrl, data);
+  addApplicant(
+    data: IApplicantAddRequestModel
+  ): Observable<IApplicantAddRequestModel> {
+    return this.httpClient.post<IApplicantAddRequestModel>(this.apiUrl, data);
   }
-  updateApplicant(id: number, data: IApplicantUpdateRequestModel) {
-    this.httpClient.put<IApplicantAllModel>(this.apiUrl + '/' + id, data);
+  updateApplicant(
+    id: number,
+    data: IApplicantUpdateRequestModel
+  ): Observable<IApplicantUpdateRequestModel> {
+    return this.httpClient.put<IApplicantUpdateRequestModel>(
+      this.apiUrl + '/' + id,
+      data
+    );
   }
-  deleteApplicant(id: number) {
-    this.httpClient.delete<IApplicantAllModel>(this.apiUrl + '/' + id);
+  deleteApplicant(id: number): Observable<IApplicantDeleteRequestModel> {
+    return this.httpClient.delete<IApplicantDeleteRequestModel>(
+      this.apiUrl + '/' + id
+    );
   }
 }
