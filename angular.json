@@ -27,11 +27,28 @@
             "styles": [
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./src/app/public/skydash/css/vertical-layout-light/style.css"
+              "./src/app/public/skydash/css/vertical-layout-light/style.css",
+              "./src/app/public/skydash/vendors/feather/feather.css",
+              "./src/app/public/skydash/vendors/css/vendor.bundle.base.css",
+              "./src/app/public/skydash/vendors/datatables.net-bs4/dataTables.bootstrap4.css",
+              "./src/app/public/skydash/vendors/ti-icons/css/themify-icons.css",
+              "./src/app/public/skydash/js/select.dataTables.min.css"
             ],
             "scripts": [
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./src/app/public/skydash/vendors/js/vendor.bundle.base.js",
+              "./src/app/public/skydash/vendors/chart.js/Chart.min.js",
+              "./src/app/public/skydash/vendors/datatables.net/jquery.dataTables.js",
+              "./src/app/public/skydash/vendors/datatables.net-bs4/dataTables.bootstrap4.js",
+              "./src/app/public/skydash/js/dataTables.select.min.js",
+              "./src/app/public/skydash/js/off-canvas.js",
+              "./src/app/public/skydash/js/hoverable-collapse.js",
+              "./src/app/public/skydash/js/template.js",
+              "./src/app/public/skydash/js/settings.js",
+              "./src/app/public/skydash/js/todolist.js",
+              "./src/app/public/skydash/js/dashboard.js",
+              "./src/app/public/skydash/js/Chart.roundedBarCharts.js"
             ]
           },
           "configurations": {
