@@ -17,6 +17,12 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { PanelComponent } from './layout/panel/panel.component';
 import { SidebarRightComponent } from './layout/sidebar-right/sidebar-right.component';
+import { ApplicantAddComponent } from './components/applicant/applicant-add/applicant-add.component';
+import { ApplicantListComponent } from './components/applicant/applicant-list/applicant-list.component';
+import { ApplicantUpdateComponent } from './components/applicant/applicant-update/applicant-update.component';
+import { BootcampAddComponent } from './components/bootcamp/bootcamp-add/bootcamp-add.component';
+import { BootcampListComponent } from './components/bootcamp/bootcamp-list/bootcamp-list.component';
+import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update.component';
 
 @NgModule({
   declarations: [
@@ -31,15 +37,21 @@ import { SidebarRightComponent } from './layout/sidebar-right/sidebar-right.comp
     FooterComponent,
     SidebarComponent,
     PanelComponent,
-    SidebarRightComponent
+    SidebarRightComponent,
+    ApplicantAddComponent,
+    ApplicantListComponent,
+    ApplicantUpdateComponent,
+    BootcampAddComponent,
+    BootcampListComponent,
+    BootcampUpdateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
