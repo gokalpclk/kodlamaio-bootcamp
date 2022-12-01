@@ -27,6 +27,9 @@ import { HomeComponent } from './components/home/home.component';
 import { BlackListAddComponent } from './components/blackList/black-list-add/black-list-add.component';
 import { BlackListListComponent } from './components/blackList/black-list-list/black-list-list.component';
 import { BlackListUpdateComponent } from './components/blackList/black-list-update/black-list-update.component';
+import { AdminAddComponent } from './components/admin/admin-add/admin-add/admin-add.component';
+import { AdminListComponent } from './components/admin/admin-list/admin-list/admin-list.component';
+import { AdminUpdateComponent } from './components/admin/admin-update/admin-update/admin-update.component';
 
 
 @NgModule({
@@ -52,7 +55,10 @@ import { BlackListUpdateComponent } from './components/blackList/black-list-upda
     HomeComponent,
     BlackListAddComponent,
     BlackListListComponent,
-    BlackListUpdateComponent
+    BlackListUpdateComponent,
+    AdminAddComponent,
+    AdminListComponent,
+    AdminUpdateComponent
   ],
   imports: [
     BrowserModule,

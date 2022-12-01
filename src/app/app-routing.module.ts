@@ -1,3 +1,6 @@
+import { AdminUpdateComponent } from './components/admin/admin-update/admin-update/admin-update.component';
+import { AdminAddComponent } from './components/admin/admin-add/admin-add/admin-add.component';
+import { AdminListComponent } from './components/admin/admin-list/admin-list/admin-list.component';
 import { InstructorUpdateComponent } from './components/instructor/instructor-update/instructor-update.component';
 import { InstructorAddComponent } from './components/instructor/instructor-add/instructor-add.component';
 import { InstructorListComponent } from './components/instructor/instructor-list/instructor-list.component';
@@ -24,7 +27,10 @@ const routes: Routes = [
   { path: 'instructor-list', component: InstructorListComponent },
   { path: 'instructor-add', component: InstructorAddComponent },
   { path: 'instructor-update/:id', component: InstructorUpdateComponent },
-
+  
+  { path: 'admin-list', component: AdminListComponent },
+  { path: 'admin-add', component: AdminAddComponent },
+  { path: 'admin-update/:id', component: AdminUpdateComponent },
 
 
 ];
