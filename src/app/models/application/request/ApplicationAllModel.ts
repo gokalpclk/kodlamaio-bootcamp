@@ -1,4 +1,4 @@
-export interface IApplicationModel {
+export interface IApplicationAllModel {
   id: number;
   applicantId: number;
   bootcampId: number;
