@@ -32,7 +32,8 @@
               "./src/app/public/skydash/vendors/css/vendor.bundle.base.css",
               "./src/app/public/skydash/vendors/datatables.net-bs4/dataTables.bootstrap4.css",
               "./src/app/public/skydash/vendors/ti-icons/css/themify-icons.css",
-              "./src/app/public/skydash/js/select.dataTables.min.css"
+              "./src/app/public/skydash/js/select.dataTables.min.css",
+              "./node_modules/animate.css/animate.css"
             ],
             "scripts": [
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",
