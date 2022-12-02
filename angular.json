@@ -35,7 +35,8 @@
               "./src/app/public/skydash/vendors/select2/select2.min.css",
               "./src/app/public/skydash/vendors/select2-bootstrap-theme/select2-bootstrap.min.css",
               "./node_modules/animate.css/animate.css",
-              "./node_modules/ngx-toastr/toastr.css"
+              "./node_modules/ngx-toastr/toastr.css",
+              "./src/app/public/skydash/vendors/mdi/css/materialdesignicons.min.css"
             ],
             "scripts": [
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",

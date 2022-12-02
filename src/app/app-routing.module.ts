@@ -1,3 +1,4 @@
+import { LoginComponent } from './components/login/login.component';
 import { BlackListListComponent } from './components/blackList/black-list-list/black-list-list.component';
 import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update.component';
 import { BootcampAddComponent } from './components/bootcamp/bootcamp-add/bootcamp-add.component';
@@ -20,6 +21,8 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+
   { path: 'applicant-list', component: ApplicantListComponent },
   { path: 'applicant-add', component: ApplicantAddComponent },
   { path: 'applicant-update/:id', component: ApplicantUpdateComponent },
@@ -41,6 +44,8 @@ const routes: Routes = [
   { path: 'bootcamp-update/:id', component: BootcampUpdateComponent },
   
   { path: 'blacklist', component: BlackListListComponent },
+  
+
 
 ];
 
