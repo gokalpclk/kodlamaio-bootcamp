@@ -1,1 +1,66 @@
-<p>bootcamp-update works!</p>
+<div class="col-md-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Bootcamp Update</h4>
+        <form class="form-sample" [formGroup]="bootcampUpdateForm" *ngIf="bootcampUpdateForm" >
+          <p class="card-description">
+            Info
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Instructor ID</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="first name" formControlName="firstName"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="last name" formControlName="lastName"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Date Start</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" placeholder="@email" formControlName="email"/>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Date End</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" placeholder="password" formControlName="password"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">State</label>
+                  <div class="col-sm-9">
+                      <input type="text" class="form-control" placeholder="national identy" formControlName="nationalIdentity"/>
+                    </div>
+                </div>
+              </div>
+            <div class="col-md-12 d-flex justify-content-center">
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-outline-info w-100" (click)="updateBootcamp()">Update</button>  
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-outline-danger w-100" (click)="deleteBootcamp(getBootcamp.id)">Delete</button>
+                </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

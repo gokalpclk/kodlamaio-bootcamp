@@ -33,7 +33,8 @@
               "./src/app/public/skydash/vendors/datatables.net-bs4/dataTables.bootstrap4.css",
               "./src/app/public/skydash/vendors/ti-icons/css/themify-icons.css",
               "./src/app/public/skydash/js/select.dataTables.min.css",
-              "./node_modules/animate.css/animate.css"
+              "./src/app/public/skydash/vendors/select2/select2.min.css",
+              "./src/app/public/skydash/vendors/select2-bootstrap-theme/select2-bootstrap.min.css"
             ],
             "scripts": [
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",
@@ -49,7 +50,9 @@
               "./src/app/public/skydash/js/settings.js",
               "./src/app/public/skydash/js/todolist.js",
               "./src/app/public/skydash/js/dashboard.js",
-              "./src/app/public/skydash/js/Chart.roundedBarCharts.js"
+              "./src/app/public/skydash/js/Chart.roundedBarCharts.js",
+              "./src/app/public/skydash/vendors/select2/select2.min.js",
+              "./src/app/public/skydash/js/select2.js"
             ]
           },
           "configurations": {

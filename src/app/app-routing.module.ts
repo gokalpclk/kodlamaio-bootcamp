@@ -1,3 +1,7 @@
+import { BlackListListComponent } from './components/blackList/black-list-list/black-list-list.component';
+import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update.component';
+import { BootcampAddComponent } from './components/bootcamp/bootcamp-add/bootcamp-add.component';
+import { BootcampListComponent } from './components/bootcamp/bootcamp-list/bootcamp-list.component';
 import { AdminUpdateComponent } from './components/admin/admin-update/admin-update/admin-update.component';
 import { AdminAddComponent } from './components/admin/admin-add/admin-add/admin-add.component';
 import { AdminListComponent } from './components/admin/admin-list/admin-list/admin-list.component';
@@ -31,7 +35,12 @@ const routes: Routes = [
   { path: 'admin-list', component: AdminListComponent },
   { path: 'admin-add', component: AdminAddComponent },
   { path: 'admin-update/:id', component: AdminUpdateComponent },
-
+  
+  { path: 'bootcamp-list', component: BootcampListComponent },
+  { path: 'bootcamp-add', component: BootcampAddComponent },
+  { path: 'bootcamp-update/:id', component: BootcampUpdateComponent },
+  
+  { path: 'blacklist', component: BlackListListComponent },
 
 ];
 

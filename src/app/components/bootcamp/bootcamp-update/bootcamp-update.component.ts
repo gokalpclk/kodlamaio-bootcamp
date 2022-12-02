@@ -47,10 +47,10 @@ export class BootcampUpdateComponent implements OnInit {
     });
   }
 
-  updateBootcamp(id: number) {
+  updateBootcamp() {
     if (this.bootcampUpdateForm.valid) {
       let bootcampModel = Object.assign({}, this.bootcampUpdateForm.value);
-      this.bootcampService.updateBootcamp(id, bootcampModel);
+      this.bootcampService.updateBootcamp(this.getBootcamp.id, bootcampModel);
     }
   }
 
