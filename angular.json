@@ -22,7 +22,6 @@
               "src/favicon.ico",
               "src/assets",
               "src/app/public/skydash/images"
-
             ],
             "styles": [
               "src/styles.css",
@@ -34,7 +33,9 @@
               "./src/app/public/skydash/vendors/ti-icons/css/themify-icons.css",
               "./src/app/public/skydash/js/select.dataTables.min.css",
               "./src/app/public/skydash/vendors/select2/select2.min.css",
-              "./src/app/public/skydash/vendors/select2-bootstrap-theme/select2-bootstrap.min.css"
+              "./src/app/public/skydash/vendors/select2-bootstrap-theme/select2-bootstrap.min.css",
+              "./node_modules/animate.css/animate.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",
@@ -113,13 +114,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           }
         }

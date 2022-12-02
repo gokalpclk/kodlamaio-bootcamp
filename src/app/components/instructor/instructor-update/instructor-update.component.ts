@@ -1,8 +1,9 @@
 import { IInstructorAllModel } from './../../../models/instructor/request/InstructorAllModel';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { InstructorService } from 'src/app/services/instructor/instructor.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-instructor-update',
@@ -15,7 +16,9 @@ export class InstructorUpdateComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private instructorService: InstructorService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -46,13 +49,23 @@ export class InstructorUpdateComponent implements OnInit {
     });
   }
 
-  updateInstructor(id: number) {
+  updateInstructor() {
     if (this.instructorUpdateForm.valid) {
       let instructorModel = Object.assign({}, this.instructorUpdateForm.value);
-      this.instructorService.updateInstructor(id, instructorModel);
+      this.instructorService
+        .updateInstructor(this.instructorById.id, instructorModel)
+        .subscribe((data) => {
+          this.toastrService.success('Güncelleme Başarılı');
+          console.log(data, ' güncellendi');
+        });
     }
   }
-  deleteInstructor(id: number) {
-    this.instructorService.deleteInstructor(id);
+  deleteInstructor() {
+    this.instructorService
+      .deleteInstructor(this.instructorById.id)
+      .subscribe((data) => {
+        this.router.navigate(['instructor-list']);
+        this.toastrService.error('Silme İşlemi Başarılı');
+      });
   }
 }

@@ -1,3 +1,5 @@
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { InstructorService } from 'src/app/services/instructor/instructor.service';
@@ -11,7 +13,9 @@ export class InstructorAddComponent implements OnInit {
   instructorAddForm: FormGroup;
   constructor(
     private instructorService: InstructorService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +37,12 @@ export class InstructorAddComponent implements OnInit {
   addInstructor() {
     if (this.instructorAddForm.valid) {
       let instructorModel = Object.assign({}, this.instructorAddForm.value);
-      this.instructorService.addInstructor(instructorModel);
+      this.instructorService
+        .addInstructor(instructorModel)
+        .subscribe((data) => {
+          this.router.navigate(['instructor-list']);
+          this.toastrService.success('Ekleme İşlemi Başarılı');
+        });
     }
   }
 }

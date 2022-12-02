@@ -101,6 +101,16 @@
       "password": "4256987452",
       "companyName": "Patika.dev",
       "nationalIdentity": 98745265312
+    },
+    {
+      "firstName": "Ahmet Salih",
+      "lastName": "tonyali",
+      "email": "ahmet@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678901",
+      "dateOfBirth": "16/12/1234",
+      "companyName": "çasgem",
+      "id": 4
     }
   ],
   "employees": [

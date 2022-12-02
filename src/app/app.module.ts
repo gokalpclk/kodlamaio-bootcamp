@@ -30,7 +30,8 @@ import { BlackListUpdateComponent } from './components/blackList/black-list-upda
 import { AdminAddComponent } from './components/admin/admin-add/admin-add/admin-add.component';
 import { AdminListComponent } from './components/admin/admin-list/admin-list/admin-list.component';
 import { AdminUpdateComponent } from './components/admin/admin-update/admin-update/admin-update.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -58,13 +59,19 @@ import { AdminUpdateComponent } from './components/admin/admin-update/admin-upda
     BlackListUpdateComponent,
     AdminAddComponent,
     AdminListComponent,
-    AdminUpdateComponent
+    AdminUpdateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
