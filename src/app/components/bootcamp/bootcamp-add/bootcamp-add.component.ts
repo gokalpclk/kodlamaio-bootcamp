@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { InstructorService } from './../../../services/instructor/instructor.service';
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,7 +16,9 @@ export class BootcampAddComponent implements OnInit {
   bootcamp: IBootcampAllModel[] = [];
   constructor(
     private bootcampService: BootcampService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -23,18 +27,23 @@ export class BootcampAddComponent implements OnInit {
 
   createAddBootcampForm() {
     this.addBootcampForm = this.formBuilder.group({
-      instructorId: [[''], [Validators.required]],
-      name: [[''], [Validators.required]],
-      dateStart: [[''], [Validators.required]],
-      dateEnd: [[''], [Validators.required]],
-      state: [[''], [Validators.required]],
+      instructorId: ['', Validators.required],
+      name: ['', Validators.required],
+      dateStart: ['', Validators.required],
+      dateEnd: ['', Validators.required],
+      state: ['', Validators.required],
     });
   }
 
   addBootcamp() {
     if (this.addBootcampForm.valid) {
       let bootcampModel = Object.assign({}, this.addBootcampForm.value);
-      this.bootcampService.addBootcamp(bootcampModel);
+      this.bootcampService.addBootcamp(bootcampModel).subscribe((data) => {
+        this.router.navigate(['bootcamp-list']);
+        this.toastrService.success('Ekleme İşlemi Başarılı');
+      });
+    } else {
+      this.toastrService.error('Formunuz Eksik', 'Dikkat');
     }
   }
 }

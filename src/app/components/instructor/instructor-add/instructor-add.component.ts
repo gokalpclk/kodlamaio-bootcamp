@@ -43,6 +43,8 @@ export class InstructorAddComponent implements OnInit {
           this.router.navigate(['instructor-list']);
           this.toastrService.success('Ekleme İşlemi Başarılı');
         });
+    } else {
+      this.toastrService.error('Formunuz Eksik', 'Dikkat');
     }
   }
 }

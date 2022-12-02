@@ -1,9 +1,10 @@
+import { ToastrService } from 'ngx-toastr';
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
 import { IInstructorAllModel } from 'src/app/models/instructor/request/InstructorAllModel';
 import { IBootcampAllModel } from 'src/app/models/bootcamp/request/BootcampAllModel';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { InstructorService } from 'src/app/services/instructor/instructor.service';
 
 @Component({
@@ -20,7 +21,9 @@ export class BootcampUpdateComponent implements OnInit {
     private bootcampService: BootcampService,
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
-    private instructorService: InstructorService
+    private instructorService: InstructorService,
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -50,11 +53,27 @@ export class BootcampUpdateComponent implements OnInit {
   updateBootcamp() {
     if (this.bootcampUpdateForm.valid) {
       let bootcampModel = Object.assign({}, this.bootcampUpdateForm.value);
-      this.bootcampService.updateBootcamp(this.getBootcamp.id, bootcampModel);
+      this.bootcampService
+        .updateBootcamp(this.getBootcamp.id, bootcampModel)
+        .subscribe((data) => {
+          this.router.navigate(['bootcamp-list']);
+          this.toastrService.success('Güncelleme Başarılı');
+          console.log(data, ' güncellendi');
+        });
+    } else {
+      this.toastrService.error(
+        'Form eksik veya hatalı. Lütfen kontrol ediniz.'
+      );
     }
   }
 
-  deleteBootcamp(id: number) {
-    this.bootcampService.deleteBootcamp(id);
+  deleteBootcamp() {
+    this.bootcampService
+      .deleteBootcamp(this.getBootcamp.id)
+      .subscribe((data) => {
+        this.router.navigate(['bootcamp-list']);
+        this.toastrService.info('Silme Başarılı');
+        console.log(data, ' silindi');
+      });
   }
 }
