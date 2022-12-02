@@ -1,3 +1,5 @@
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -12,7 +14,9 @@ export class ApplicantAddComponent implements OnInit {
 
   constructor(
     private applicantService: ApplicantService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -33,8 +37,12 @@ export class ApplicantAddComponent implements OnInit {
   addApplicant() {
     if (this.addApplicantForm.valid) {
       let applicantModel = Object.assign({}, this.addApplicantForm.value);
-      this.applicantService.addApplicant(applicantModel).subscribe();
-      console.log(applicantModel)
+      this.applicantService.addApplicant(applicantModel).subscribe((data) => {
+        this.router.navigate(['applicant-list']);
+        this.toastrService.success('Ekleme İşlemi Başarılı');
+      });
+    } else {
+      this.toastrService.error('Formunuz Eksik', 'Dikkat');
     }
   }
 }

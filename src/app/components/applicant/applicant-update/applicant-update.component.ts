@@ -1,8 +1,9 @@
+import { ToastrService } from 'ngx-toastr';
 import { IApplicantUpdateRequestModel } from './../../../models/applicant/request/ApplicantUpdateRequestModel';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-applicant-update',
@@ -15,7 +16,9 @@ export class ApplicantUpdateComponent implements OnInit {
   constructor(
     private applicantService: ApplicantService,
     private formBuilder: FormBuilder,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private toastrService: ToastrService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -46,16 +49,25 @@ export class ApplicantUpdateComponent implements OnInit {
 
   updateApplicant() {
     if (this.applicantUpdateForm.valid) {
+      let getApplicant = Object.assign({}, this.applicantUpdateForm.value);
       this.applicantService
-        .updateApplicant(
-          this.activatedRoute.snapshot.params['id'],
-          this.applicantUpdateForm.value
-        )
-        .subscribe();
+        .updateApplicant(this.getApplicant.id, getApplicant)
+        .subscribe((data) => {
+          this.router.navigate(['applicant-list']);
+          this.toastrService.success('Güncelleme Başarılı');
+        });
+    } else {
+      this.toastrService.error(
+        'Form eksik veya hatalı. Lütfen kontrol ediniz.'
+      );
     }
   }
-  deleteApplicant(id: number) {
-    this.applicantService.deleteApplicant(id).subscribe();
-    console.log(this.getApplicant.id);
+  deleteApplicant() {
+    this.applicantService
+      .deleteApplicant(this.getApplicant.id)
+      .subscribe((data) => {
+        this.router.navigate(['applicant-list']);
+        this.toastrService.error('Silme İşlemi Başarılı');
+      });
   }
 }
