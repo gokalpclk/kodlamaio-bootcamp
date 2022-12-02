@@ -1,6 +1,6 @@
+import { IBlackListUpdateRequestModel } from './../../../models/blackList/request/BlacklistUpdateRequestModel';
 import { ActivatedRoute } from '@angular/router';
 import { BlackListService } from './../../../services/blackList/black-list.service';
-import { IBlackListUpdateRequestModel } from 'src/app/models/blackList/request/BlackListUpdateRequestModel';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -44,9 +44,5 @@ export class BlackListUpdateComponent implements OnInit {
       let blackListModel = Object.assign({}, this.blackListUpdateForm.value);
       this.blackListService.updateBlackList(id, blackListModel);
     }
-  }
-
-  deleteBlackList(id: number) {
-    this.blackListService.deleteBlackList(id);
   }
 }

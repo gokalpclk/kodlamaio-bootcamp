@@ -1,10 +1,10 @@
+import { IBlackListDeleteRequestModel } from './../../models/blackList/request/BlacklistDeleteRequestModel';
+import { IBlackListUpdateRequestModel } from './../../models/blackList/request/BlacklistUpdateRequestModel';
+import { IBlackListAddRequestModel } from './../../models/blackList/request/BlacklistAddRequestModel';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IBlackListAllModel } from 'src/app/models/blackList/request/BlackListAllModel';
-import { IBlackListAddRequestModel } from 'src/app/models/blackList/request/BlackListAddRequestModel';
-import { IBlackListUpdateRequestModel } from 'src/app/models/blackList/request/BlackListUpdateRequestModel';
-import { IBlackListDeleteRequestModel } from 'src/app/models/blackList/request/BlackListDeleteRequestModel';
 
 @Injectable({
   providedIn: 'root',
@@ -20,10 +20,8 @@ export class BlackListService {
   getBlackListById(id: number): Observable<IBlackListAllModel> {
     return this.httpClient.get<IBlackListAllModel>(this.apiUrl + '/' + id);
   }
-  addBlackList(
-    data: IBlackListAddRequestModel
-  ): Observable<IBlackListAddRequestModel> {
-    return this.httpClient.post<IBlackListAddRequestModel>(this.apiUrl, data);
+  addBlackList(id: number): Observable<IBlackListAddRequestModel> {
+    return this.httpClient.post<IBlackListAddRequestModel>(this.apiUrl, id);
   }
   updateBlackList(
     id: number,
@@ -34,7 +32,7 @@ export class BlackListService {
       data
     );
   }
-  deleteBlackList(id: number) {
+  removeApplicant(id: number) {
     return this.httpClient.delete<IBlackListDeleteRequestModel>(
       this.apiUrl + '/' + id
     );

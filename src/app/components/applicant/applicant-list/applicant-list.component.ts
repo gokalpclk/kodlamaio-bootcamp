@@ -1,3 +1,4 @@
+import { BlackListService } from './../../../services/blackList/black-list.service';
 import { BlackListAddComponent } from './../../blackList/black-list-add/black-list-add.component';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,8 +11,11 @@ import { IApplicantAllModel } from 'src/app/models/applicant/request/ApplicantAl
 })
 export class ApplicantListComponent implements OnInit {
   allApplicantsList: IApplicantAllModel[] = [];
-  blackListAddComponent:BlackListAddComponent
-  constructor(private applicantService: ApplicantService) {}
+  blackListAddComponent: BlackListAddComponent;
+  constructor(
+    private applicantService: ApplicantService,
+    private blackListService: BlackListService
+  ) {}
 
   ngOnInit(): void {
     this.getAllApplicants();
@@ -21,6 +25,15 @@ export class ApplicantListComponent implements OnInit {
   getAllApplicants() {
     this.applicantService.getAllApplicants().subscribe((data) => {
       this.allApplicantsList = data;
+    });
+  }
+
+  addToBlackList(id: number) {
+    this.blackListService.addBlackList(id).subscribe((response) => {
+      console.log(response);
+      this.applicantService.deleteApplicant(id).subscribe((response) => {
+        console.log(response, ' Silindi');
+      });
     });
   }
 }
