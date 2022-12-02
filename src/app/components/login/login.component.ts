@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         .subscribe((data) => {
           if (data.length > 0) {
             this.toastr.success('Giriş Başarılı');
-            //this.router.navigate('');
+            this.router.navigate(['']);
           }
           else{
             this.toastr.error('Giriş Başarısız');
