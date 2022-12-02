@@ -2,7 +2,7 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Employee Add</h4>
-        <form class="form-sample">
+        <form class="form-sample" [formGroup]="addEmployeeForm" *ngIf="addEmployeeForm">
           <p class="card-description">
             Info
           </p>
@@ -11,7 +11,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">First Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" placeholder="first name"/>
+                  <input type="text" class="form-control" formControlName="firstName" placeholder="first name"/>
                 </div>
               </div>
             </div>
@@ -19,7 +19,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Last Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" placeholder="last name"/>
+                  <input type="text" class="form-control" formControlName="lastName" placeholder="last name"/>
                 </div>
               </div>
             </div>
@@ -29,7 +29,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Email</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" placeholder="@email"/>
+                    <input type="text" class="form-control" formControlName="email" placeholder="@email"/>
                   </div>
               </div>
             </div>
@@ -37,7 +37,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Password</label>
                 <div class="col-sm-9">
-                  <input type="password" class="form-control" placeholder="password"/>
+                  <input type="password" class="form-control" formControlName="password" placeholder="password"/>
                 </div>
               </div>
             </div>
@@ -45,9 +45,9 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">National Identy</label>
+                <label class="col-sm-3 col-form-label">National Identity</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" placeholder="national identy"/>
+                    <input type="text" class="form-control" formControlName="nationalIdentity" placeholder="national identity"/>
                   </div>
               </div>
             </div>
@@ -55,7 +55,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Position</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" placeholder="position"/>
+                    <input type="text" class="form-control" formControlName="position" placeholder="position"/>
                   </div>
                 </div>
               </div>
@@ -63,11 +63,11 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Date Of Birth</label>
                 <div class="col-sm-9">
-                    <input class="form-control" placeholder="dd/mm/yyyy"/>
+                    <input class="form-control" formControlName="dateOfBirth" placeholder="dd/mm/yyyy"/>
                 </div>
               </div>
             </div>
-            <button type="button" class="btn btn-info">Add</button>
+            <button type="button" class="btn btn-info" (click)="addEmployee()">Add</button>
           </div>
         </form>
       </div>

@@ -10,8 +10,8 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>National Identy</th>
-                <th>About</th>
+                <th>National Identity</th>
+                <th>Position</th>
                 <th>Date Of Bird</th>
                 <th>Manage</th>
               </tr>
@@ -25,7 +25,7 @@
                 <td>{{employee.position}}</td>
                 <td>{{employee.dateOfBirth}}</td>
                 <td>
-                  <button type="button" class="btn btn-outline-info btn-sm" routerLink="/employee-update/:id">Update</button>
+                  <button type="button" class="btn btn-outline-info btn-sm" routerLink="/employee-update/{{employee.id}}">Update</button>
                 </td>
               </tr>
       

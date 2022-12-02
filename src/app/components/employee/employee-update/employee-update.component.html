@@ -2,7 +2,7 @@
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Employee Update</h4>
-        <form class="form-sample">
+        <form class="form-sample" [formGroup]="updateEmployeeForm" *ngIf="updateEmployeeForm">
           <p class="card-description">
             Info
           </p>
@@ -11,7 +11,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">First Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" value="Jacob" placeholder="first name"/>
+                  <input type="text" class="form-control" value="Jacob" placeholder="first name" formControlName="firstName"/>
                 </div>
               </div>
             </div>
@@ -19,7 +19,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Last Name</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" value="Yeah" placeholder="last name"/>
+                  <input type="text" class="form-control" value="Yeah" placeholder="last name" formControlName="lastName"/>
                 </div>
               </div>
             </div>
@@ -29,7 +29,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Email</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" value="" placeholder="@email"/>
+                    <input type="text" class="form-control" value="" placeholder="@email" formControlName="email"/>
                   </div>
               </div>
             </div>
@@ -37,7 +37,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Password</label>
                 <div class="col-sm-9">
-                  <input type="password" class="form-control" value="" placeholder="password"/>
+                  <input type="password" class="form-control" value="" placeholder="password" formControlName="password"/>
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">National Identy</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" value="" placeholder="national identy"/>
+                    <input type="text" class="form-control" value="" placeholder="national identy" formControlName="nationalIdentity" />
                   </div>
               </div>
             </div>
@@ -55,7 +55,7 @@
                 <div class="form-group row">
                   <label class="col-sm-3 col-form-label">Position</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" value="" placeholder="position"/>
+                    <input type="text" class="form-control" value="" placeholder="position" formControlName="position"/>
                   </div>
                 </div>
               </div>
@@ -63,16 +63,16 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Date Of Birth</label>
                 <div class="col-sm-9">
-                    <input class="form-control" value="" placeholder="dd/mm/yyyy"/>
+                    <input class="form-control" value="" placeholder="dd/mm/yyyy" formControlName="dateOfBirth"/>
                 </div>
               </div>
             </div>
             <div class="col-md-12 d-flex justify-content-center">
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-outline-info w-100">Update</button>  
+                    <button type="button" class="btn btn-outline-info w-100" (click)="updateEmployee()">Update</button>  
                 </div>
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-outline-danger w-100">Delete</button>
+                    <button type="button" class="btn btn-outline-danger w-100" (click)="deleteEmployee()">Delete</button>
                 </div>
             </div>
           </div>

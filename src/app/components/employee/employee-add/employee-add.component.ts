@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { EmployeeService } from './../../../services/employee/employee.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -11,28 +13,36 @@ export class EmployeeAddComponent implements OnInit {
   addEmployeeForm: FormGroup;
   constructor(
     private employeeService: EmployeeService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private toastrService: ToastrService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.createAddEmployeeForm();
+  }
 
   createAddEmployeeForm() {
     this.addEmployeeForm = this.formBuilder.group({
-      firstName: ['', [Validators.required]],
-      lastName: ['', [Validators.required]],
-      email: ['', [Validators.email]],
-      password: ['', [Validators.min(10), Validators.max(15)]],
-      nationalIdenty: ['', [Validators.min(11),Validators.max(11)]],
-      dateOfBird: ['', [Validators.required]],
-      position: ['', [Validators.required]]
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+      nationalIdentity: ['', Validators.required],
+      dateOfBirth: ['', Validators.required],
+      position: ['', Validators.required],
     });
   }
 
-  addEmployee(){
-    if(this.addEmployeeForm.valid){
-     let employeeModel=Object.assign({}, this.addEmployeeForm.value);
-     this.employeeService.addEmployee(employeeModel);
+  addEmployee() {
+    if (this.addEmployeeForm.valid) {
+      let employeeModel = Object.assign({}, this.addEmployeeForm.value);
+      this.employeeService.addEmployee(employeeModel).subscribe((data) => {
+        this.router.navigate(['employee-list']);
+        this.toastrService.success('Ekleme İşlemi Başarılı');
+      });
+    } else {
+      this.toastrService.error('Formunuz Eksik', 'Dikkat');
     }
-
   }
 }
