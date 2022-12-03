@@ -39,10 +39,10 @@ export class ApplicantAddComponent implements OnInit {
       let applicantModel = Object.assign({}, this.addApplicantForm.value);
       this.applicantService.addApplicant(applicantModel).subscribe((data) => {
         this.router.navigate(['applicant-list']);
-        this.toastrService.success('Ekleme İşlemi Başarılı');
+        this.toastrService.success('Aplicant added');
       });
     } else {
-      this.toastrService.error('Formunuz Eksik', 'Dikkat');
+      this.toastrService.error('Form not valid', 'Error');
     }
   }
 }

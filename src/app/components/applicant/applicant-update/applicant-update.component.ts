@@ -54,12 +54,10 @@ export class ApplicantUpdateComponent implements OnInit {
         .updateApplicant(this.getApplicant.id, getApplicant)
         .subscribe((data) => {
           this.router.navigate(['applicant-list']);
-          this.toastrService.success('Güncelleme Başarılı');
+          this.toastrService.success('Aplicant updated');
         });
     } else {
-      this.toastrService.error(
-        'Form eksik veya hatalı. Lütfen kontrol ediniz.'
-      );
+      this.toastrService.error('Form not valid', 'Error');
     }
   }
   deleteApplicant() {
@@ -67,7 +65,7 @@ export class ApplicantUpdateComponent implements OnInit {
       .deleteApplicant(this.getApplicant.id)
       .subscribe((data) => {
         this.router.navigate(['applicant-list']);
-        this.toastrService.error('Silme İşlemi Başarılı');
+        this.toastrService.error('Aplicant deleted');
       });
   }
 }
