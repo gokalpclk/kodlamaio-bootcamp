@@ -19,9 +19,8 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private loginService: LoginService,
     private toastr: ToastrService,
-    private router:Router
+    private router: Router
   ) {}
-
   ngOnInit(): void {
     this.creatEmployeeLoginForm();
   }
@@ -38,16 +37,16 @@ export class LoginComponent implements OnInit {
       this.loginService
         .employeeLogin(this.employeeLoginForm.value)
         .subscribe((data) => {
+          console.log(data, ' data');
           if (data.length > 0) {
             this.toastr.success('Giriş Başarılı');
-            this.router.navigate(['']);
-          }
-          else{
+            this.router.navigate(['admin-panel']);
+            localStorage.setItem('token', data[0].email);
+          } else {
             this.toastr.error('Giriş Başarısız');
           }
         });
-    }
-    else{
+    } else {
       this.toastr.error('Bilgilerinizi Doğru Girdiğinizden Emin Olun');
     }
   }

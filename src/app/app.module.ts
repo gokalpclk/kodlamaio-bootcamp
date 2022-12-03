@@ -33,6 +33,8 @@ import { AdminUpdateComponent } from './components/admin/admin-update/admin-upda
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './components/login/login.component';
+import { IndexComponent } from './components/index/index.component';
+import { PanelIndexComponent } from './components/panel-index/panel-index.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +64,8 @@ import { LoginComponent } from './components/login/login.component';
     AdminListComponent,
     AdminUpdateComponent,
     LoginComponent,
+    IndexComponent,
+    PanelIndexComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { IEmployeeAllModel } from './../../models/employee/request/EmployeeAllModel';
 import { IEmployeeTokenModel } from './../../models/employee/request/EmployeeTokenModel';
 import { Observable } from 'rxjs';
 import { IEmployeeLoginModel } from './../../models/employee/request/EmployeeLoginModel';
@@ -14,8 +15,21 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) {}
 
-  employeeLogin(user: IEmployeeLoginModel){
-    return this.httpClient.get<IEmployeeTokenModel[]>(
-      this.employeesApiUrl + '?email=' + user.email + '&password=' + user.password)
+  employeeLogin(user: IEmployeeLoginModel) {
+    return this.httpClient.get<IEmployeeAllModel[]>(
+      this.employeesApiUrl +
+        '?email=' +
+        user.email +
+        '&password=' +
+        user.password
+    );
+  }
+
+  isEmployeeAuthenticated() {
+    if (localStorage.getItem('token')) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
