@@ -55,20 +55,21 @@ export class InstructorUpdateComponent implements OnInit {
       this.instructorService
         .updateInstructor(this.instructorById.id, instructorModel)
         .subscribe((data) => {
-          this.router.navigate(['instructor-list']);
+          this.router.navigate(['admin-panel/instructor-list']);
           this.toastrService.success('Güncelleme Başarılı');
           console.log(data, ' güncellendi');
         });
-    }
-    else{
-      this.toastrService.error('Form eksik veya hatalı. Lütfen kontrol ediniz.');
+    } else {
+      this.toastrService.error(
+        'Form eksik veya hatalı. Lütfen kontrol ediniz.'
+      );
     }
   }
   deleteInstructor() {
     this.instructorService
       .deleteInstructor(this.instructorById.id)
       .subscribe((data) => {
-        this.router.navigate(['instructor-list']);
+        this.router.navigate(['admin-panel/instructor-list']);
         this.toastrService.error('Silme İşlemi Başarılı');
       });
   }

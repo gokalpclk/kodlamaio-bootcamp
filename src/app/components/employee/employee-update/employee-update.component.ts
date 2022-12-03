@@ -51,7 +51,7 @@ export class EmployeeUpdateComponent implements OnInit {
       this.employeeService
         .updateEmployee(this.employee.id, employeeModel)
         .subscribe((data) => {
-          this.router.navigate(['employee-list']);
+          this.router.navigate(['admin-panel/employee-list']);
           this.toastrService.success('Güncelleme Başarılı');
           console.log(data, ' güncellendi');
         });
@@ -64,7 +64,7 @@ export class EmployeeUpdateComponent implements OnInit {
 
   deleteEmployee() {
     this.employeeService.deleteEmployee(this.employee.id).subscribe((data) => {
-      this.router.navigate(['employee-list']);
+      this.router.navigate(['admin-panel/employee-list']);
       this.toastrService.error('Silme İşlemi Başarılı');
     });
   }

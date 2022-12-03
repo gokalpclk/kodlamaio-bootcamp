@@ -36,15 +36,24 @@ const routes: Routes = [
         component: ApplicantListComponent,
       },
       { path: 'applicant-add', component: ApplicantAddComponent },
-      { path: 'applicant-update/:id', component: ApplicantUpdateComponent },
+      {
+        path: 'applicant-list/applicant-update/:id',
+        component: ApplicantUpdateComponent,
+      },
 
       { path: 'employee-list', component: EmployeeListComponent },
       { path: 'employee-add', component: EmployeeAddComponent },
-      { path: 'employee-update/:id', component: EmployeeUpdateComponent },
+      {
+        path: 'employee-list/employee-update/:id',
+        component: EmployeeUpdateComponent,
+      },
 
       { path: 'instructor-list', component: InstructorListComponent },
       { path: 'instructor-add', component: InstructorAddComponent },
-      { path: 'instructor-update/:id', component: InstructorUpdateComponent },
+      {
+        path: 'instructor-list/instructor-update/:id',
+        component: InstructorUpdateComponent,
+      },
 
       { path: 'admin-list', component: AdminListComponent },
       { path: 'admin-add', component: AdminAddComponent },
@@ -52,7 +61,10 @@ const routes: Routes = [
 
       { path: 'bootcamp-list', component: BootcampListComponent },
       { path: 'bootcamp-add', component: BootcampAddComponent },
-      { path: 'bootcamp-update/:id', component: BootcampUpdateComponent },
+      {
+        path: 'bootcamp-list/bootcamp-update/:id',
+        component: BootcampUpdateComponent,
+      },
 
       { path: 'blacklist', component: BlackListListComponent },
     ],

@@ -15,18 +15,18 @@ import { IBootcampAllModel } from 'src/app/models/bootcamp/request/BootcampAllMo
 export class BootcampAddComponent implements OnInit {
   addBootcampForm: FormGroup;
   bootcamp: IBootcampAllModel[] = [];
-  instructors : IInstructorAllModel[];
+  instructors: IInstructorAllModel[];
   constructor(
     private bootcampService: BootcampService,
     private formBuilder: FormBuilder,
     private router: Router,
     private toastrService: ToastrService,
-    private instructorService:InstructorService,
+    private instructorService: InstructorService
   ) {}
 
   ngOnInit(): void {
     this.createAddBootcampForm();
-    this.getAllInstructors()
+    this.getAllInstructors();
   }
 
   getAllInstructors() {
@@ -48,8 +48,9 @@ export class BootcampAddComponent implements OnInit {
   addBootcamp() {
     if (this.addBootcampForm.valid) {
       let bootcampModel = Object.assign({}, this.addBootcampForm.value);
+      this.addBootcampForm.reset();
       this.bootcampService.addBootcamp(bootcampModel).subscribe((data) => {
-        this.router.navigate(['bootcamp-list']);
+        this.router.navigate(['admin-panel/bootcamp-list']);
         this.toastrService.success('Ekleme İşlemi Başarılı');
       });
     } else {

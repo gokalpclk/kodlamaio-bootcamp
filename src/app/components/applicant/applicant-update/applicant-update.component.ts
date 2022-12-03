@@ -53,7 +53,7 @@ export class ApplicantUpdateComponent implements OnInit {
       this.applicantService
         .updateApplicant(this.getApplicant.id, getApplicant)
         .subscribe((data) => {
-          this.router.navigate(['applicant-list']);
+          this.router.navigate(['admin-panel/applicant-list']);
           this.toastrService.success('Aplicant updated');
         });
     } else {
@@ -64,7 +64,7 @@ export class ApplicantUpdateComponent implements OnInit {
     this.applicantService
       .deleteApplicant(this.getApplicant.id)
       .subscribe((data) => {
-        this.router.navigate(['applicant-list']);
+        this.router.navigate(['admin-panel/applicant-list']);
         this.toastrService.error('Aplicant deleted');
       });
   }

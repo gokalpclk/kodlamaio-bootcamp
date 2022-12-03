@@ -59,10 +59,11 @@ export class BootcampUpdateComponent implements OnInit {
   updateBootcamp() {
     if (this.bootcampUpdateForm.valid) {
       let bootcampModel = Object.assign({}, this.bootcampUpdateForm.value);
+      this.bootcampUpdateForm.reset();
       this.bootcampService
         .updateBootcamp(this.getBootcamp.id, bootcampModel)
         .subscribe((data) => {
-          this.router.navigate(['bootcamp-list']);
+          this.router.navigate(['admin-panel/bootcamp-list']);
           this.toastrService.success('Güncelleme Başarılı');
           console.log(data, ' güncellendi');
         });
@@ -77,7 +78,7 @@ export class BootcampUpdateComponent implements OnInit {
     this.bootcampService
       .deleteBootcamp(this.getBootcamp.id)
       .subscribe((data) => {
-        this.router.navigate(['bootcamp-list']);
+        this.router.navigate(['admin-panel/bootcamp-list']);
         this.toastrService.info('Silme Başarılı');
       });
   }

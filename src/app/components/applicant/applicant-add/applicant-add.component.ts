@@ -37,8 +37,9 @@ export class ApplicantAddComponent implements OnInit {
   addApplicant() {
     if (this.addApplicantForm.valid) {
       let applicantModel = Object.assign({}, this.addApplicantForm.value);
+      this.addApplicantForm.reset();
       this.applicantService.addApplicant(applicantModel).subscribe((data) => {
-        this.router.navigate(['applicant-list']);
+        this.router.navigate(['admin-panel/applicant-list']);
         this.toastrService.success('Aplicant added');
       });
     } else {

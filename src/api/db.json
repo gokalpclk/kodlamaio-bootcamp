@@ -51,24 +51,14 @@
       "about": "Atılım Üniversitesi Bilişim Sistemleri Mühendisliği"
     },
     {
-      "id": 6,
       "firstName": "Sena",
       "lastName": "Deniz",
       "email": "senadeniz@gmail.com",
       "password": "7532145698",
-      "nationalIdentity": 45218956324,
+      "nationalIdentity": "45218956361",
       "dateOfBirth": "15/01/1990",
-      "about": "Gazi Üniversitesi Bilgisayar Mühendisliği"
-    },
-    {
-      "firstName": "Fatih",
-      "lastName": "Çapa",
-      "email": "fatihcapa@gmail.com",
-      "password": "8452148965",
-      "nationalIdentity": 75648512458,
-      "dateOfBirth": "10/05/2003",
-      "about": "Bilkent Üniversitesi Bilgisayar Mühendisliği",
-      "id": 7
+      "about": "Gazi Üniversitesi Bilgisayar Mühendisliği",
+      "id": 6
     }
   ],
   "instructors": [
@@ -101,16 +91,6 @@
       "password": "4256987452",
       "companyName": "Patika.dev",
       "nationalIdentity": 98745265312
-    },
-    {
-      "firstName": "Ahmet Salih",
-      "lastName": "tonyali",
-      "email": "ahmet@gmail.com",
-      "password": "1234",
-      "nationalIdentity": "12345678901",
-      "dateOfBirth": "16/12/1234",
-      "companyName": "çasgem",
-      "id": 4
     }
   ],
   "employees": [
@@ -125,24 +105,24 @@
       "position": "Uzman"
     },
     {
-      "id": 2,
-      "firstName": "Beyza",
-      "lastName": "Alıcı",
-      "email": "beyzaalici@gmail.com",
+      "firstName": "Ahmet",
+      "lastName": "Salih",
+      "email": "ahmet@gmail.com",
       "password": "7539512648",
       "nationalIdentity": 65498712301,
       "dateOfBirth": "01/01/1980",
-      "position": "Uzman Yardımcısı"
+      "position": "Uzman Yardımcısı",
+      "id": 2
     },
     {
-      "id": 2,
       "firstName": "Beyza",
       "lastName": "Alıcı",
-      "email": "ahmet@gmail.com",
+      "email": "beyza@gmail.com",
       "password": "1234",
       "nationalIdentity": 65498712301,
       "dateOfBirth": "01/01/1980",
-      "position": "Uzman Yardımcısı"
+      "position": "Uzman Yardımcısı",
+      "id": 3
     }
   ],
   "bootcamps": [
@@ -187,12 +167,12 @@
       "state": 2
     },
     {
-      "id": 6,
       "instructorId": 1,
       "name": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
       "dateStart": "01/04/2023",
-      "dateEnd": "01/05/2023",
-      "state": 2
+      "dateEnd": "01/05/2025",
+      "state": 2,
+      "id": 6
     }
   ],
   "applications": [
@@ -233,12 +213,6 @@
       "applicantId": 6,
       "date": "12/11/2022",
       "reason": "Devamsızlığı fazla"
-    },
-    {
-      "id": 3,
-      "applicantId": 7,
-      "date": "20/11/2022",
-      "reason": "Kurumda kavga çıkardı"
     }
   ]
 }

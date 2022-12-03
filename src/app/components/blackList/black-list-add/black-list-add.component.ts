@@ -26,22 +26,23 @@ export class BlackListAddComponent implements OnInit {
 
   createAddBlackListForm() {
     this.addBlackListForm = this.formBuilder.group({
-      reason: ['',[ Validators.required]],
+      reason: ['', [Validators.required]],
     });
   }
 
   addBlackList() {
     if (this.addBlackListForm.valid) {
-      console.log('form valid');
-
-      let blackListAddRequest: IBlackListAddRequestModel = Object.assign({},this.addBlackListForm.value);
+      let blackListAddRequest: IBlackListAddRequestModel = Object.assign(
+        {},
+        this.addBlackListForm.value
+      );
       this.activatedRoute.params.subscribe((params) => {
         blackListAddRequest.applicantId = params['id'];
       });
       this.blackListService
         .addBlackList(blackListAddRequest)
         .subscribe((data) => {
-          this.router.navigate(['blacklist']);
+          this.router.navigate(['admin-panel/blacklist']);
           this.toastrService.success('Aplicant added black list');
         });
     } else {

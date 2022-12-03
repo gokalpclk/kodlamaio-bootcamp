@@ -37,8 +37,9 @@ export class EmployeeAddComponent implements OnInit {
   addEmployee() {
     if (this.addEmployeeForm.valid) {
       let employeeModel = Object.assign({}, this.addEmployeeForm.value);
+      this.addEmployeeForm.reset();
       this.employeeService.addEmployee(employeeModel).subscribe((data) => {
-        this.router.navigate(['employee-list']);
+        this.router.navigate(['admin-panel/employee-list']);
         this.toastrService.success('Ekleme İşlemi Başarılı');
       });
     } else {

@@ -37,10 +37,11 @@ export class InstructorAddComponent implements OnInit {
   addInstructor() {
     if (this.instructorAddForm.valid) {
       let instructorModel = Object.assign({}, this.instructorAddForm.value);
+      this.instructorAddForm.reset();
       this.instructorService
         .addInstructor(instructorModel)
         .subscribe((data) => {
-          this.router.navigate(['instructor-list']);
+          this.router.navigate(['admin-panel/instructor-list']);
           this.toastrService.success('Ekleme İşlemi Başarılı');
         });
     } else {
