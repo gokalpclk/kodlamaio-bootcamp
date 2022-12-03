@@ -1,3 +1,6 @@
+import { ToastrService } from 'ngx-toastr';
+import { ActivatedRoute, Router } from '@angular/router';
+import { IBlackListAddRequestModel } from './../../../models/blackList/request/BlacklistAddRequestModel';
 import { BlackListService } from './../../../services/blackList/black-list.service';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +14,10 @@ export class BlackListAddComponent implements OnInit {
   addBlackListForm: FormGroup;
   constructor(
     private blackListService: BlackListService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -20,16 +26,26 @@ export class BlackListAddComponent implements OnInit {
 
   createAddBlackListForm() {
     this.addBlackListForm = this.formBuilder.group({
-      applicantId: [[''], Validators.required],
-      date: [[''], Validators.required],
-      reason: [[''], Validators.required],
+      reason: ['',[ Validators.required]],
     });
   }
 
   addBlackList() {
     if (this.addBlackListForm.valid) {
-      let blackListModel = Object.assign({}, this.addBlackListForm.value);
-      this.blackListService.addBlackList(blackListModel);
+      console.log('form valid');
+
+      let blackListAddRequest: IBlackListAddRequestModel = Object.assign({},this.addBlackListForm.value);
+      this.activatedRoute.params.subscribe((params) => {
+        blackListAddRequest.applicantId = params['id'];
+      });
+      this.blackListService
+        .addBlackList(blackListAddRequest)
+        .subscribe((data) => {
+          this.router.navigate(['blacklist']);
+          this.toastrService.success('Aplicant added black list');
+        });
+    } else {
+      this.toastrService.error('Form not valid', 'Error');
     }
   }
 }

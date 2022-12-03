@@ -1,1 +1,7 @@
-<p>black-list-add works!</p>
+<form class="form-sample" [formGroup]="addBlackListForm" *ngIf="addBlackListForm">
+    <div class="form-group">
+        <label for="reason">Reason</label>
+        <textarea class="form-control" id="reason" rows="4" formControlName="reason"></textarea>
+      </div>
+    <button type="button" class="btn btn-info" (click)="addBlackList()">Add</button>
+</form>

@@ -20,8 +20,9 @@ export class BlackListService {
   getBlackListById(id: number): Observable<IBlackListAllModel> {
     return this.httpClient.get<IBlackListAllModel>(this.apiUrl + '/' + id);
   }
-  addBlackList(id: number): Observable<IBlackListAddRequestModel> {
-    return this.httpClient.post<IBlackListAddRequestModel>(this.apiUrl, id);
+
+  addBlackList(blacklistAddRequestModel: IBlackListAddRequestModel): Observable<IBlackListAllModel> {
+    return this.httpClient.post<IBlackListAllModel>(this.apiUrl, blacklistAddRequestModel);
   }
   updateBlackList(
     id: number,

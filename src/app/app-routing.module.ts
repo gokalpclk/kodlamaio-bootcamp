@@ -1,3 +1,4 @@
+import { BlackListAddComponent } from './components/blackList/black-list-add/black-list-add.component';
 import { LoginComponent } from './components/login/login.component';
 import { BlackListListComponent } from './components/blackList/black-list-list/black-list-list.component';
 import { BootcampUpdateComponent } from './components/bootcamp/bootcamp-update/bootcamp-update.component';
@@ -44,6 +45,8 @@ const routes: Routes = [
   { path: 'bootcamp-update/:id', component: BootcampUpdateComponent },
   
   { path: 'blacklist', component: BlackListListComponent },
+  { path: 'add-blacklist/:id', component: BlackListAddComponent },
+  
   
 
 

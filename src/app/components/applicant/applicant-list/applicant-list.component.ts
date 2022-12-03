@@ -27,13 +27,4 @@ export class ApplicantListComponent implements OnInit {
       this.allApplicantsList = data;
     });
   }
-
-  addToBlackList(id: number) {
-    this.blackListService.addBlackList(id).subscribe((response) => {
-      console.log(response);
-      this.applicantService.deleteApplicant(id).subscribe((response) => {
-        console.log(response, ' Silindi');
-      });
-    });
-  }
 }
