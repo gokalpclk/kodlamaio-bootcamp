@@ -11,7 +11,11 @@
             <div class="form-group row">
               <label class="col-sm-3 col-form-label">Instructor ID</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="Instructor" formControlName="instructorId" />
+                <select class="form-select" style="padding:0.7em;" formControlName="instructorId">
+                  <option *ngFor="let instructor of instructors" value="{{instructor.id}}" id="instructorId" class="form-control">
+                    {{instructor.firstName}} {{instructor.lastName}}
+                  </option>
+                </select>
               </div>
             </div>
           </div>

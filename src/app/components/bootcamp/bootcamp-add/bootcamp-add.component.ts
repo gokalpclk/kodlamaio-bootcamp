@@ -1,6 +1,7 @@
+import { InstructorService } from 'src/app/services/instructor/instructor.service';
+import { IInstructorAllModel } from 'src/app/models/instructor/request/InstructorAllModel';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { InstructorService } from './../../../services/instructor/instructor.service';
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -14,15 +15,24 @@ import { IBootcampAllModel } from 'src/app/models/bootcamp/request/BootcampAllMo
 export class BootcampAddComponent implements OnInit {
   addBootcampForm: FormGroup;
   bootcamp: IBootcampAllModel[] = [];
+  instructors : IInstructorAllModel[];
   constructor(
     private bootcampService: BootcampService,
     private formBuilder: FormBuilder,
     private router: Router,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private instructorService:InstructorService,
   ) {}
 
   ngOnInit(): void {
     this.createAddBootcampForm();
+    this.getAllInstructors()
+  }
+
+  getAllInstructors() {
+    this.instructorService.getAllInstructors().subscribe((data) => {
+      this.instructors = data;
+    });
   }
 
   createAddBootcampForm() {

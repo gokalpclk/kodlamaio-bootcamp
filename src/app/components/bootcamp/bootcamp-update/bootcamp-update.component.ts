@@ -15,7 +15,7 @@ import { InstructorService } from 'src/app/services/instructor/instructor.servic
 export class BootcampUpdateComponent implements OnInit {
   bootcampUpdateForm: FormGroup;
   getBootcamp: IBootcampAllModel;
-  instracters: IInstructorAllModel[];
+  instructors: IInstructorAllModel[];
 
   constructor(
     private bootcampService: BootcampService,
@@ -28,7 +28,13 @@ export class BootcampUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBootcampById();
-    this.instructorService.getAllInstructors();
+    this.getAllInstructors();
+  }
+
+  getAllInstructors() {
+    this.instructorService.getAllInstructors().subscribe((data) => {
+      this.instructors = data;
+    });
   }
 
   getBootcampById() {
@@ -73,7 +79,6 @@ export class BootcampUpdateComponent implements OnInit {
       .subscribe((data) => {
         this.router.navigate(['bootcamp-list']);
         this.toastrService.info('Silme Başarılı');
-        console.log(data, ' silindi');
       });
   }
 }
