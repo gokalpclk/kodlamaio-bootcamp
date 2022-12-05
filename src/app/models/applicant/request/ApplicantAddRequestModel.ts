@@ -6,4 +6,5 @@ export interface IApplicantAddRequestModel {
   nationalIdentity: number;
   dateOfBirth: string;
   about: string;
+  state:number;
 }

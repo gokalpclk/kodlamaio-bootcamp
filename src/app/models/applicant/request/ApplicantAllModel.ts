@@ -7,4 +7,5 @@ export interface IApplicantAllModel {
   nationalIdentity: number;
   dateOfBirth: string;
   about: string;
+  state: number;
 }

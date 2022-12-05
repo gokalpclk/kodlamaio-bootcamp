@@ -7,4 +7,5 @@ export interface IApplicantUpdateRequestModel {
   nationalIdentity: number;
   dateOfBirth: string;
   about: string;
+  state: number;
 }

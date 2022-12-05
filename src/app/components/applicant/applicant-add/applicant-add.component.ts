@@ -32,6 +32,7 @@ export class ApplicantAddComponent implements OnInit {
       nationalIdentity: ['', Validators.required],
       dateOfBirth: ['', Validators.required],
       about: ['', Validators.required],
+      state:[1]
     });
   }
   addApplicant() {

@@ -15,7 +15,7 @@ export class ApplicantService {
   constructor(private httpClient: HttpClient) {}
 
   getAllApplicants(): Observable<IApplicantAllModel[]> {
-    return this.httpClient.get<IApplicantAllModel[]>(this.apiUrl);
+    return this.httpClient.get<IApplicantAllModel[]>(this.apiUrl + '?state=1');
   }
   getApplicantById(id: number): Observable<IApplicantAllModel> {
     return this.httpClient.get<IApplicantAllModel>(this.apiUrl + '/' + id);
@@ -35,6 +35,13 @@ export class ApplicantService {
   deleteApplicant(id: number): Observable<IApplicantDeleteRequestModel> {
     return this.httpClient.delete<IApplicantDeleteRequestModel>(
       this.apiUrl + '/' + id
+    );
+  }
+
+  updateApplicantState(id: number): Observable<IApplicantUpdateRequestModel> {
+    return this.httpClient.patch<IApplicantUpdateRequestModel>(
+      this.apiUrl + '/' + id,
+      { state: 0 }
     );
   }
 }
