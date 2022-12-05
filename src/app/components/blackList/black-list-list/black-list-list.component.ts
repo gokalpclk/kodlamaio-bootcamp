@@ -3,6 +3,8 @@ import { ApplicantService } from './../../../services/applicant/applicant.servic
 import { IBlackListAllModel } from './../../../models/blackList/request/BlackListAllModel';
 import { BlackListService } from './../../../services/blackList/black-list.service';
 import { Component, OnInit } from '@angular/core';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-black-list-list',
@@ -14,7 +16,9 @@ export class BlackListListComponent implements OnInit {
   constructor(
     private blackListService: BlackListService,
     private applicantService: ApplicantService,
-    public authGuard: AuthGuard
+    public authGuard: AuthGuard,
+    private toastrService: ToastrService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -29,10 +33,10 @@ export class BlackListListComponent implements OnInit {
 
   removeApplicant(id: number, applicantId: number) {
     this.blackListService.removeApplicant(id).subscribe((response) => {
-      console.log(response, ' applicant blacklistten silindi');
-      this.applicantService.addApplicant(applicantId).subscribe((response) => {
-        console.log(response, ' Applicant geri eklendi');
-      });
+      this.toastrService.error('Aplicant deleted from black list');
+      this.applicantService.updateApplicantState(applicantId, 1).subscribe();
+      this.toastrService.success('Black list updated');
+      this.router.navigate(['admin-panel/applicant-list']);
     });
   }
 }

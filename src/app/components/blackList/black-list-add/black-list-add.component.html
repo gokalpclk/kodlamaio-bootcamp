@@ -1,5 +1,6 @@
 <form class="form-sample" [formGroup]="addBlackListForm" *ngIf="addBlackListForm">
     <div class="form-group">
+        <p>Date: {{ date }}</p>
         <label for="reason">Reason</label>
         <textarea class="form-control" id="reason" rows="4" formControlName="reason"></textarea>
       </div>

@@ -14,6 +14,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlackListAddComponent implements OnInit {
   addBlackListForm: FormGroup;
+  today: Date = new Date();
+  date: any = this.today.getDate() + '/' + this.today.getMonth() + '/' + this.today.getFullYear();
   constructor(
     private blackListService: BlackListService,
     private formBuilder: FormBuilder,
@@ -28,15 +30,12 @@ export class BlackListAddComponent implements OnInit {
     this.createAddBlackListForm();
   }
   id: number;
+
   createAddBlackListForm() {
     this.addBlackListForm = this.formBuilder.group({
       reason: ['', [Validators.required]],
-    });
-  }
-
-  updateApplicantState() {
-    this.applicantService.updateApplicantState(this.id).subscribe((val) => {
-      console.log('Güncellendi', val);
+      date: [this.date]
+      
     });
   }
 
@@ -49,7 +48,6 @@ export class BlackListAddComponent implements OnInit {
       this.activatedRoute.params.subscribe((params) => {
         blackListAddRequest.applicantId = params['id'];
         this.id = params['id'];
-        console.log(this.id);
       });
       this.blackListService
         .addBlackList(blackListAddRequest)
@@ -61,5 +59,11 @@ export class BlackListAddComponent implements OnInit {
     } else {
       this.toastrService.error('Form not valid', 'Error');
     }
+  }
+
+  updateApplicantState() {
+    this.applicantService.updateApplicantState(this.id, 0).subscribe((val) => {
+      this.toastrService.success('Aplicant updated');
+    });
   }
 }

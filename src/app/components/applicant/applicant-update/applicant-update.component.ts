@@ -44,6 +44,7 @@ export class ApplicantUpdateComponent implements OnInit {
       ],
       dateOfBirth: [this.getApplicant.dateOfBirth, Validators.required],
       about: [this.getApplicant.about, Validators.required],
+      state:[1]
     });
   }
 
@@ -60,6 +61,7 @@ export class ApplicantUpdateComponent implements OnInit {
       this.toastrService.error('Form not valid', 'Error');
     }
   }
+
   deleteApplicant() {
     this.applicantService
       .deleteApplicant(this.getApplicant.id)

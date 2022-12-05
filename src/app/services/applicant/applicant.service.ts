@@ -38,10 +38,13 @@ export class ApplicantService {
     );
   }
 
-  updateApplicantState(id: number): Observable<IApplicantUpdateRequestModel> {
+  updateApplicantState(
+    id: number,
+    stateval: number
+  ): Observable<IApplicantUpdateRequestModel> {
     return this.httpClient.patch<IApplicantUpdateRequestModel>(
       this.apiUrl + '/' + id,
-      { state: 0 }
+      { state: stateval }
     );
   }
 }
