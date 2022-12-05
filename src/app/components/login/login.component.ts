@@ -1,8 +1,8 @@
+import { ITokenModel } from './../../models/token/TokenModel';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { LoginService } from './../../services/login/login.service';
 import { IEmployeeLoginModel } from './../../models/employee/request/EmployeeLoginModel';
-import { IEmployeeTokenModel } from './../../models/employee/request/EmployeeTokenModel';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,9 +12,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  tokenModel: IEmployeeTokenModel;
   employeeLoginForm: FormGroup;
   employee: IEmployeeLoginModel[] = [];
+  // tokenModel: ITokenModel;
   constructor(
     private formBuilder: FormBuilder,
     private loginService: LoginService,
@@ -40,8 +40,11 @@ export class LoginComponent implements OnInit {
           console.log(data, ' data');
           if (data.length > 0) {
             this.toastr.success('Giriş Başarılı');
-            this.router.navigate(['admin-panel']);
-            localStorage.setItem('token', data[0].email);
+            data[0].role == 'ROLE_INSTRUCTOR'
+              ? this.router.navigate(['instructor-panel'])
+              : this.router.navigate(['admin-panel']);
+            localStorage.setItem('token', data[0].token);
+            localStorage.setItem('role', data[0].role);
           } else {
             this.toastr.error('Giriş Başarısız');
           }

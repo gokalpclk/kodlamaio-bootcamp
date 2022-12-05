@@ -74,6 +74,27 @@ const routes: Routes = [
       },
     ],
     canActivate: [AuthGuard],
+    data: {
+      role: 'ROLE_EMPLOYEE',
+    },
+  },
+  {
+    path: 'instructor-panel',
+    component: PanelIndexComponent,
+    children: [
+      { path: '', component: HomeComponent },
+      {
+        path: 'applicant-list',
+        component: ApplicantListComponent,
+      },
+      { path: 'bootcamp-list', component: BootcampListComponent },
+
+      { path: 'blacklist', component: BlackListListComponent },
+    ],
+    canActivate: [AuthGuard],
+    data: {
+      role: 'ROLE_INSTRUCTOR',
+    },
   },
 ];
 

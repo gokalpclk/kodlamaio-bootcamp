@@ -1,3 +1,4 @@
+import { ITokenModel } from './../../token/TokenModel';
 export interface IEmployeeAllModel {
   id: number;
   firstName: string;
@@ -7,4 +8,7 @@ export interface IEmployeeAllModel {
   nationalIdentity: number;
   dateOfBirth: string;
   position: string;
+  token: string;
+  role: string;
+  expiration: string;
 }

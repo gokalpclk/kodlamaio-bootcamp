@@ -11,7 +11,7 @@ export class NaviComponent implements OnInit {
 
   ngOnInit(): void {}
   logOut() {
-    localStorage.removeItem('token');
+    localStorage.clear();
     this.router.navigate(['']);
   }
 }
