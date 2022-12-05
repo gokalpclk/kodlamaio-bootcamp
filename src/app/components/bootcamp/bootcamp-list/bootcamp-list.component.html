@@ -21,7 +21,12 @@
               <td>{{bootcamp.name}}</td>
               <td>{{bootcamp.dateStart}}</td>
               <td>{{bootcamp.dateEnd}}</td>
-              <td>{{bootcamp.state}}</td>
+              <td class="font-weight-medium">
+                <span class="{{bootcamp.state == 1 ? 'badge badge-success' : 'badge badge-danger'}}">
+                  {{bootcamp.state == 1 ? 'Active' : 'Passive'}}
+                </span>
+              </td>
+
               <td>
                 <button type="button" class="btn btn-outline-info btn-sm"
                   *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"
