@@ -1,3 +1,4 @@
+import { BlackListAddComponent } from './components/blackList/black-list-add/black-list-add.component';
 import { PanelIndexComponent } from './components/panel-index/panel-index.component';
 import { LoginComponent } from './components/login/login.component';
 import { BlackListListComponent } from './components/blackList/black-list-list/black-list-list.component';
@@ -67,6 +68,10 @@ const routes: Routes = [
       },
 
       { path: 'blacklist', component: BlackListListComponent },
+      {
+        path: 'applicant-list/blacklist-add/:id',
+        component: BlackListAddComponent,
+      },
     ],
     canActivate: [AuthGuard],
   },
