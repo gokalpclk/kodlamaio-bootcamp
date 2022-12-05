@@ -8,7 +8,12 @@
       "password": "1234567890",
       "nationalIdentity": 12345678901,
       "dateOfBirth": "20/01/1994",
-      "about": "Muğla Sıtkı Koçman Üniversitesi Bilişim Sistemleri Mühendisliği"
+      "about": "Muğla Sıtkı Koçman Üniversitesi Bilişim Sistemleri Mühendisliği",
+      "token": {
+        "jwt": "AsdfgHGFdsadFGH",
+        "role": 3
+      },
+      "expiration": "01/01/2023"
     },
     {
       "id": 2,
@@ -18,7 +23,12 @@
       "password": "1234567890",
       "nationalIdentity": 23456789012,
       "dateOfBirth": "15/02/1998",
-      "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği"
+      "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği",
+      "token": {
+        "jwt": "AsdfgHGFdsadFGH",
+        "role": 3
+      },
+      "expiration": "01/01/2023"
     },
     {
       "id": 3,
@@ -28,7 +38,12 @@
       "password": "7418529630",
       "nationalIdentity": 34567890123,
       "dateOfBirth": "20/03/1998",
-      "about": "Anadolu Üniversitesi Yönetim Bilişim Sistemleri"
+      "about": "Anadolu Üniversitesi Yönetim Bilişim Sistemleri",
+      "token": {
+        "jwt": "AsdfgHGFdsadFGH",
+        "role": 3
+      },
+      "expiration": "01/01/2023"
     },
     {
       "id": 4,
@@ -38,7 +53,12 @@
       "password": "8529637410",
       "nationalIdentity": 45678912304,
       "dateOfBirth": "08/05/1998",
-      "about": "Anadolu Üniversitesi Yönetim Bilişim Sistemleri"
+      "about": "Anadolu Üniversitesi Yönetim Bilişim Sistemleri",
+      "token": {
+        "jwt": "AsdfgHGFdsadFGH",
+        "role": 3
+      },
+      "expiration": "01/01/2023"
     },
     {
       "id": 5,
@@ -48,7 +68,12 @@
       "password": "9637418520",
       "nationalIdentity": 36985214789,
       "dateOfBirth": "15/12/1994",
-      "about": "Atılım Üniversitesi Bilişim Sistemleri Mühendisliği"
+      "about": "Atılım Üniversitesi Bilişim Sistemleri Mühendisliği",
+      "token": {
+        "jwt": "AsdfgHGFdsadFGH",
+        "role": 3
+      },
+      "expiration": "01/01/2023"
     },
     {
       "firstName": "Sena",
@@ -58,7 +83,12 @@
       "nationalIdentity": "45218956361",
       "dateOfBirth": "15/01/1990",
       "about": "Gazi Üniversitesi Bilgisayar Mühendisliği",
-      "id": 6
+      "id": 6,
+      "token": {
+        "jwt": "AsdfgHGFdsadFGH",
+        "role": 3
+      },
+      "expiration": "01/01/2023"
     }
   ],
   "instructors": [
@@ -70,7 +100,12 @@
       "email": "engindemirog@gmail.com",
       "password": "9876543210",
       "companyName": "Kodlama.io",
-      "nationalIdentity": 12345678901
+      "nationalIdentity": 12345678901,
+      "token": {
+        "jwt": "cvBNhgfdsDFGb",
+        "role": 2
+      },
+      "expiration": "01/01/2023"
     },
     {
       "id": 2,
@@ -80,7 +115,12 @@
       "email": "gurcancetin@gmail.com",
       "password": "9876543210",
       "companyName": "Kodlama.io",
-      "nationalIdentity": 78965412300
+      "nationalIdentity": 78965412300,
+      "token": {
+        "jwt": "cvBNhgfdsDFGb",
+        "role": 2
+      },
+      "expiration": "01/01/2023"
     },
     {
       "id": 3,
@@ -90,7 +130,12 @@
       "email": "guncanyayla@gmail.com",
       "password": "4256987452",
       "companyName": "Patika.dev",
-      "nationalIdentity": 98745265312
+      "nationalIdentity": 98745265312,
+      "token": {
+        "jwt": "cvBNhgfdsDFGb",
+        "role": 2
+      },
+      "expiration": "01/01/2023"
     }
   ],
   "employees": [
@@ -102,7 +147,12 @@
       "password": "1234",
       "nationalIdentity": 12345678901,
       "dateOfBirth": "01/01/1980",
-      "position": "Uzman"
+      "position": "Uzman",
+      "token": {
+        "jwt": "MNBVCghgfdsDFGHJNMnbv",
+        "role": 1
+      },
+      "expiration": "01/01/2023"
     },
     {
       "firstName": "Ahmet",
@@ -112,7 +162,12 @@
       "nationalIdentity": 65498712301,
       "dateOfBirth": "01/01/1980",
       "position": "Uzman Yardımcısı",
-      "id": 2
+      "id": 2,
+      "token": {
+        "jwt": "MNBVCghgfdsDFGHJNMnbv",
+        "role": 1
+      },
+      "expiration": "01/01/2023"
     },
     {
       "firstName": "Beyza",
@@ -122,7 +177,12 @@
       "nationalIdentity": 65498712301,
       "dateOfBirth": "01/01/1980",
       "position": "Uzman Yardımcısı",
-      "id": 3
+      "id": 3,
+      "token": {
+        "jwt": "MNBVCghgfdsDFGHJNMnbv",
+        "role": 1
+      },
+      "expiration": "01/01/2023"
     }
   ],
   "bootcamps": [
