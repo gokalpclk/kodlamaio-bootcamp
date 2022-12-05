@@ -21,6 +21,7 @@
               <td>{{blacklist.reason}}</td>
               <td>
                 <button type="button" class="btn btn-outline-danger btn-sm ml-2"
+                  *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"
                   (click)="removeApplicant(blacklist.id, blacklist.applicantId)">Remove From Black List</button>
               </td>
             </tr>

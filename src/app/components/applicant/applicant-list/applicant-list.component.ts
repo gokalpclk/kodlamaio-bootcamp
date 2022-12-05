@@ -1,3 +1,4 @@
+import { AuthGuard } from 'src/app/guards/auth.guard';
 import { BlackListService } from './../../../services/blackList/black-list.service';
 import { BlackListAddComponent } from './../../blackList/black-list-add/black-list-add.component';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
@@ -14,7 +15,8 @@ export class ApplicantListComponent implements OnInit {
   blackListAddComponent: BlackListAddComponent;
   constructor(
     private applicantService: ApplicantService,
-    private blackListService: BlackListService
+    private blackListService: BlackListService,
+    public authGuard: AuthGuard
   ) {}
 
   ngOnInit(): void {

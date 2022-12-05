@@ -13,7 +13,7 @@
               <th>National Identy</th>
               <th>About</th>
               <th>Date Of Bird</th>
-              <th>Manage</th>
+              <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th>
             </tr>
           </thead>
           <tbody>
@@ -25,9 +25,11 @@
               <td>{{applicant.about}}</td>
               <td>{{applicant.dateOfBirth}}</td>
               <td><button type="button" class="btn btn-outline-info btn-sm"
+                  *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"
                   routerLink="applicant-update/{{applicant.id}}">Update</button>
                 <button type="button" class="btn btn-outline-danger btn-sm ml-2"
-                  routerLink="blacklist-add/{{applicant.id}}">Add Black List</button>
+                  *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'" routerLink="blacklist-add/{{applicant.id}}">Add
+                  Black List</button>
               </td>
             </tr>
 

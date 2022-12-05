@@ -1,17 +1,20 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
+    <!-- ---------------- EMPLOYEE COMPONENT'S ----------------- -->
     <li class="nav-item" routerLink="/admin-panel" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link">
         <i class="icon-grid menu-icon"></i>
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
+    <!-- ---------------- EMPLOYEE COMPONENT'S ----------------- -->
     <li class="nav-item" routerLink="/instructor-panel" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
       <a class="nav-link">
         <i class="icon-grid menu-icon"></i>
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
+    <!-- ---------------- EMPLOYEE COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#instructor" aria-expanded="false" aria-controls="instructor">
         <i class="icon-layout menu-icon"></i>
@@ -25,6 +28,7 @@
         </ul>
       </div>
     </li>
+    <!-- ---------------- EMPLOYEE COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#employee" aria-expanded="false" aria-controls="employee">
         <i class="icon-layout menu-icon"></i>
@@ -38,6 +42,7 @@
         </ul>
       </div>
     </li>
+    <!-- ---------------- EMPLOYEE COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#applicant" aria-expanded="false" aria-controls="applicant">
         <i class="icon-layout menu-icon"></i>
@@ -51,6 +56,8 @@
         </ul>
       </div>
     </li>
+    <!-- ---------------- INSTRUCTOR COMPONENT'S ----------------- -->
+
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
       <a class="nav-link" data-toggle="collapse" href="#applicant" aria-expanded="false" aria-controls="applicant">
         <i class="icon-layout menu-icon"></i>
@@ -63,6 +70,7 @@
         </ul>
       </div>
     </li>
+    <!-- ---------------- EMPLOYEE COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#bootcamp" aria-expanded="false" aria-controls="bootcamp">
         <i class="icon-layout menu-icon"></i>
@@ -76,6 +84,7 @@
         </ul>
       </div>
     </li>
+    <!-- ---------------- INSTRUCTOR COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
       <a class="nav-link" data-toggle="collapse" href="#bootcamp" aria-expanded="false" aria-controls="bootcamp">
         <i class="icon-layout menu-icon"></i>
