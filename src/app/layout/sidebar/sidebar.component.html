@@ -1,12 +1,18 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
-    <li class="nav-item" routerLink="/admin-panel">
+    <li class="nav-item" routerLink="/admin-panel" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link">
         <i class="icon-grid menu-icon"></i>
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" routerLink="/instructor-panel" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
+      <a class="nav-link">
+        <i class="icon-grid menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#instructor" aria-expanded="false" aria-controls="instructor">
         <i class="icon-layout menu-icon"></i>
         <span class="menu-title">Instructor</span>
@@ -19,7 +25,7 @@
         </ul>
       </div>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#employee" aria-expanded="false" aria-controls="employee">
         <i class="icon-layout menu-icon"></i>
         <span class="menu-title">Employee</span>
@@ -32,7 +38,7 @@
         </ul>
       </div>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#applicant" aria-expanded="false" aria-controls="applicant">
         <i class="icon-layout menu-icon"></i>
         <span class="menu-title">Applicant</span>
@@ -45,7 +51,19 @@
         </ul>
       </div>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
+      <a class="nav-link" data-toggle="collapse" href="#applicant" aria-expanded="false" aria-controls="applicant">
+        <i class="icon-layout menu-icon"></i>
+        <span class="menu-title">Applicant</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="applicant">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="applicant-list">List</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#bootcamp" aria-expanded="false" aria-controls="bootcamp">
         <i class="icon-layout menu-icon"></i>
         <span class="menu-title">BootCamp</span>
@@ -55,6 +73,18 @@
         <ul class="nav flex-column sub-menu">
           <li class="nav-item"> <a class="nav-link" routerLink="bootcamp-list">List</a></li>
           <li class="nav-item"> <a class="nav-link" routerLink="bootcamp-add">Add</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
+      <a class="nav-link" data-toggle="collapse" href="#bootcamp" aria-expanded="false" aria-controls="bootcamp">
+        <i class="icon-layout menu-icon"></i>
+        <span class="menu-title">BootCamp</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="bootcamp">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="bootcamp-list">List</a></li>
         </ul>
       </div>
     </li>

@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
+  userRoleIn = '';
   constructor(private loginService: LoginService) {}
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -33,6 +34,8 @@ export class AuthGuard implements CanActivate {
   checkUserLogin(route: ActivatedRouteSnapshot, url: any): boolean {
     if (this.loginService.isLoggedIn()) {
       const userRole = this.loginService.getRole();
+      this.userRoleIn = userRole;
+      console.log(userRole);
       if (route.data['role'] && route.data['role'].indexOf(userRole) === -1) {
         return false;
       }

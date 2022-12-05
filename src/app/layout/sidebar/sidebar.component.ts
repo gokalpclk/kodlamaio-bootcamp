@@ -7,7 +7,7 @@ import { AuthGuard } from 'src/app/guards/auth.guard';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
-  constructor() {}
+  constructor(public authGuard: AuthGuard) {}
 
   ngOnInit(): void {}
 }
