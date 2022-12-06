@@ -1,3 +1,4 @@
+import { RegisterComponent } from './components/register/register.component';
 import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user.component';
 import { BlackListAddComponent } from './components/blackList/black-list-add/black-list-add.component';
 import { PanelIndexComponent } from './components/panel-index/panel-index.component';
@@ -27,6 +28,7 @@ import { IndexComponent } from './components/index/index.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: IndexComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
 
   {
     path: 'admin-panel',

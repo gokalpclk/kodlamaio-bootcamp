@@ -41,6 +41,8 @@ export class RegisterComponent implements OnInit {
   }
 
   addApplicant() {
+    console.log(this.registerForm.value);
+    
     if(this.registerForm.valid){
       let user:IApplicantAddRequestModel=Object.assign({}, this.registerForm.value)
       user.role="ROLE_APPLICANT";
@@ -54,6 +56,9 @@ export class RegisterComponent implements OnInit {
         
       })
 
+    }else{
+      console.log(this.registerForm.errors);
+      
     }
   }
 }
