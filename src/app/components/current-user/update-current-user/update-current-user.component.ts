@@ -62,8 +62,9 @@ export class UpdateCurrentUserComponent implements OnInit {
 
   deleteUser() {
     this.currentUserService.deleteUser(this.getUser.id).subscribe((data) => {
-      this.router.navigate(['']);
       this.toastrService.error('Your Account Deleted!');
+      localStorage.clear();
+      this.router.navigate(['']);
     });
   }
 }

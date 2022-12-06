@@ -203,7 +203,10 @@
       "dateOfBirth": "15/02/1945",
       "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği",
       "state": 1,
-      "id": 3
+      "id": 3,
+      "token": "MNBVCghgfdsDFGHJNMnbv",
+      "role": "ROLE_APPLICANT",
+      "expiration": "01/01/2023"
     }
   ],
   "bootcamps": [

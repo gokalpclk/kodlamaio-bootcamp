@@ -8,13 +8,6 @@
       </a>
     </li>
     <!-- ---------------- EMPLOYEE COMPONENT'S ----------------- -->
-    <li class="nav-item" routerLink="/instructor-panel" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
-      <a class="nav-link">
-        <i class="icon-grid menu-icon"></i>
-        <span class="menu-title">Dashboard</span>
-      </a>
-    </li>
-    <!-- ---------------- EMPLOYEE COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#instructor" aria-expanded="false" aria-controls="instructor">
         <i class="icon-layout menu-icon"></i>
@@ -70,6 +63,14 @@
         </ul>
       </div>
     </li>
+
+    <!-- ---------------- INSTRUCTOR COMPONENT'S ----------------- -->
+    <li class="nav-item" routerLink="/instructor-panel" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
+      <a class="nav-link">
+        <i class="icon-grid menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
     <!-- ---------------- INSTRUCTOR COMPONENT'S ----------------- -->
 
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
@@ -96,6 +97,14 @@
           <li class="nav-item"> <a class="nav-link" routerLink="bootcamp-list">List</a></li>
         </ul>
       </div>
+    </li>
+
+    <!-- ---------------- APPLICANT COMPONENT'S ----------------- -->
+    <li class="nav-item" routerLink="/applicant-panel" *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
+      <a class="nav-link">
+        <i class="icon-grid menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
     </li>
     <!-- ---------------- APPLICANT COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
