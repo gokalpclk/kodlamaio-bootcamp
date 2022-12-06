@@ -8,4 +8,7 @@ export interface IApplicantAllModel {
   dateOfBirth: string;
   about: string;
   state: number;
+  token: string;
+  role: string;
+  expiration: string;
 }

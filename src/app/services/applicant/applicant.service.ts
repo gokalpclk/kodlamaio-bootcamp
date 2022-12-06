@@ -20,8 +20,8 @@ export class ApplicantService {
   getApplicantById(id: number): Observable<IApplicantAllModel> {
     return this.httpClient.get<IApplicantAllModel>(this.apiUrl + '/' + id);
   }
-  addApplicant(id: number): Observable<IApplicantAddRequestModel[]> {
-    return this.httpClient.post<IApplicantAddRequestModel[]>(this.apiUrl, id);
+  addApplicant(id: any): Observable<IApplicantAddRequestModel> {
+    return this.httpClient.post<IApplicantAddRequestModel>(this.apiUrl, id);
   }
   updateApplicant(
     id: number,

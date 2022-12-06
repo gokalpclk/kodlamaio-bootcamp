@@ -7,4 +7,7 @@ export interface IApplicantAddRequestModel {
   dateOfBirth: string;
   about: string;
   state:number;
+  token: string;
+  role: string;
+  expiration: string;
 }

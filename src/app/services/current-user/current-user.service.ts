@@ -1,3 +1,4 @@
+import { IApplicantAddRequestModel } from './../../models/applicant/request/ApplicantAddRequestModel';
 import { IApplicantDeleteRequestModel } from './../../models/applicant/request/ApplicantDeleteRequestModel';
 import { IApplicantUpdateRequestModel } from './../../models/applicant/request/ApplicantUpdateRequestModel';
 import { HttpClient } from '@angular/common/http';
@@ -28,5 +29,9 @@ export class CurrentUserService {
     return this.httpClient.delete<IApplicantDeleteRequestModel>(
       this.apiUrl + '/' + id
     );
+  }
+
+  addUser(data:IApplicantAddRequestModel): Observable<IApplicantAddRequestModel> {
+    return this.httpClient.post<IApplicantAddRequestModel>(this.apiUrl, data);
   }
 }
