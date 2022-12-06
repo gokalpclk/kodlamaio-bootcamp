@@ -1,3 +1,4 @@
+import { RegisterComponent } from './components/register/register.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -70,6 +71,7 @@ import { UpdateCurrentUserComponent } from './components/current-user/update-cur
     PanelIndexComponent,
     CurrentUserComponent,
     UpdateCurrentUserComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
