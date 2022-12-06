@@ -15,7 +15,12 @@ import { Component, OnInit } from '@angular/core';
 export class BlackListAddComponent implements OnInit {
   addBlackListForm: FormGroup;
   today: Date = new Date();
-  date: any = this.today.getDate() + '/' + this.today.getMonth() + '/' + this.today.getFullYear();
+  date: any =
+    this.today.getDate() +
+    '/' +
+    this.today.getMonth() +
+    '/' +
+    this.today.getFullYear();
   constructor(
     private blackListService: BlackListService,
     private formBuilder: FormBuilder,
@@ -34,8 +39,12 @@ export class BlackListAddComponent implements OnInit {
   createAddBlackListForm() {
     this.addBlackListForm = this.formBuilder.group({
       reason: ['', [Validators.required]],
-      date: [this.date]
-      
+      date: [this.date],
+    });
+  }
+  getAplicantById(id: number) {
+    this.applicantService.getApplicantById(id).subscribe((data) => {
+      console.log(data.firstName);
     });
   }
 
@@ -49,12 +58,20 @@ export class BlackListAddComponent implements OnInit {
         blackListAddRequest.applicantId = params['id'];
         this.id = params['id'];
       });
-      this.blackListService
-        .addBlackList(blackListAddRequest)
+      this.applicantService
+        .getApplicantById(blackListAddRequest.applicantId)
         .subscribe((data) => {
-          this.router.navigate(['admin-panel/blacklist']);
-          this.toastrService.success('Aplicant added black list');
+          blackListAddRequest.applicantName =
+            data.firstName + ' ' + data.lastName;
+
+          this.blackListService
+            .addBlackList(blackListAddRequest)
+            .subscribe((data) => {
+              this.router.navigate(['admin-panel/blacklist']);
+              this.toastrService.success('Aplicant added black list');
+            });
         });
+
       this.updateApplicantState();
     } else {
       this.toastrService.error('Form not valid', 'Error');

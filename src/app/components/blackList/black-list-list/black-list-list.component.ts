@@ -31,6 +31,12 @@ export class BlackListListComponent implements OnInit {
     });
   }
 
+  getAplicantById(id:number){
+   this.applicantService.getApplicantById(id).subscribe(data=>{
+    console.log(data.firstName)
+   })
+  }
+
   removeApplicant(id: number, applicantId: number) {
     this.blackListService.removeApplicant(id).subscribe((response) => {
       this.toastrService.error('Aplicant deleted from black list');

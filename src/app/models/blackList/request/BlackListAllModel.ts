@@ -3,4 +3,5 @@ export interface IBlackListAllModel {
   applicantId: number;
   date: string;
   reason: string;
+  applicantName: string;
 }

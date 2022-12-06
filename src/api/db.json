@@ -83,6 +83,28 @@
       "role": "ROLE_APPLICANT",
       "expiration": "01/01/2023",
       "state": 0
+    },
+    {
+      "firstName": "a",
+      "lastName": "a",
+      "email": "a",
+      "password": "a",
+      "nationalIdentity": "a",
+      "dateOfBirth": "a",
+      "about": "a",
+      "state": 0,
+      "id": 7
+    },
+    {
+      "firstName": "a",
+      "lastName": "a",
+      "email": "a",
+      "password": "a",
+      "nationalIdentity": "a",
+      "dateOfBirth": "a",
+      "about": "a",
+      "state": 0,
+      "id": 8
     }
   ],
   "instructors": [
@@ -296,13 +318,22 @@
       "id": 1,
       "applicantId": 2,
       "date": "30/09/2022",
-      "reason": "Kayıt olup gelmedi"
+      "reason": "Kayıt olup gelmedi",
+      "applicantName": "Elif Sena Erdoğan"
     },
     {
       "id": 2,
       "applicantId": 6,
       "date": "12/11/2022",
-      "reason": "Devamsızlığı fazla"
+      "reason": "Devamsızlığı fazla",
+      "applicantName": "Sena Deniz"
+    },
+    {
+      "reason": "ss",
+      "date": "6/11/2022",
+      "applicantId": "8",
+      "applicantName": "a a",
+      "id": 3
     }
   ]
 }
