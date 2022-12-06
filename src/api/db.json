@@ -12,21 +12,21 @@
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_APPLICANT",
       "expiration": "01/01/2023",
-      "state":1
+      "state": 1
     },
     {
       "id": 2,
       "firstName": "Elif Sena",
       "lastName": "Erdoğan",
       "email": "elifsena@gmail.com",
-      "password": "1234567890",
+      "password": "1234",
       "nationalIdentity": 23456789012,
       "dateOfBirth": "15/02/1998",
       "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği",
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_APPLICANT",
       "expiration": "01/01/2023",
-      "state":0
+      "state": 0
     },
     {
       "id": 3,
@@ -40,7 +40,7 @@
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_APPLICANT",
       "expiration": "01/01/2023",
-      "state":1
+      "state": 1
     },
     {
       "id": 4,
@@ -54,7 +54,7 @@
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_APPLICANT",
       "expiration": "01/01/2023",
-      "state":1
+      "state": 1
     },
     {
       "id": 5,
@@ -68,7 +68,7 @@
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_APPLICANT",
       "expiration": "01/01/2023",
-      "state":1
+      "state": 1
     },
     {
       "firstName": "Sena",
@@ -82,7 +82,7 @@
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_APPLICANT",
       "expiration": "01/01/2023",
-      "state":0
+      "state": 0
     }
   ],
   "instructors": [
@@ -193,6 +193,20 @@
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_EMPLOYEE",
       "expiration": "01/01/2023"
+    },
+    {
+      "id": 3,
+      "firstName": "Elif Sena",
+      "lastName": "Erdoğan",
+      "email": "elifsena@gmail.com",
+      "password": "1234",
+      "nationalIdentity": 23456789012,
+      "dateOfBirth": "15/02/1998",
+      "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği",
+      "token": "MNBVCghgfdsDFGHJNMnbv",
+      "role": "ROLE_APPLICANT",
+      "expiration": "01/01/2023",
+      "state": 0
     }
   ],
   "bootcamps": [

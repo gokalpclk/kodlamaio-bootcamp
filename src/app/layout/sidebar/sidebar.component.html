@@ -56,20 +56,6 @@
         </ul>
       </div>
     </li>
-    <!-- ---------------- INSTRUCTOR COMPONENT'S ----------------- -->
-
-    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
-      <a class="nav-link" data-toggle="collapse" href="#applicant" aria-expanded="false" aria-controls="applicant">
-        <i class="icon-layout menu-icon"></i>
-        <span class="menu-title">Applicant</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="applicant">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" routerLink="applicant-list">List</a></li>
-        </ul>
-      </div>
-    </li>
     <!-- ---------------- EMPLOYEE COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
       <a class="nav-link" data-toggle="collapse" href="#bootcamp" aria-expanded="false" aria-controls="bootcamp">
@@ -85,6 +71,20 @@
       </div>
     </li>
     <!-- ---------------- INSTRUCTOR COMPONENT'S ----------------- -->
+
+    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
+      <a class="nav-link" data-toggle="collapse" href="#applicant" aria-expanded="false" aria-controls="applicant">
+        <i class="icon-layout menu-icon"></i>
+        <span class="menu-title">Applicant</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="applicant">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="applicant-list">List</a></li>
+        </ul>
+      </div>
+    </li>
+    <!-- ---------------- INSTRUCTOR COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
       <a class="nav-link" data-toggle="collapse" href="#bootcamp" aria-expanded="false" aria-controls="bootcamp">
         <i class="icon-layout menu-icon"></i>
@@ -97,7 +97,34 @@
         </ul>
       </div>
     </li>
-    <li class="nav-item">
+    <!-- ---------------- APPLICANT COMPONENT'S ----------------- -->
+    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
+      <a class="nav-link" data-toggle="collapse" href="#bootcamp" aria-expanded="false" aria-controls="bootcamp">
+        <i class="icon-layout menu-icon"></i>
+        <span class="menu-title">BootCamp</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="bootcamp">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="bootcamp-list">List</a></li>
+        </ul>
+      </div>
+    </li>
+    <!-- ---------------- APPLICANT COMPONENT'S ----------------- -->
+    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
+      <a class="nav-link" data-toggle="collapse" href="#applicant" aria-expanded="false" aria-controls="applicant">
+        <i class="icon-layout menu-icon"></i>
+        <span class="menu-title">Applicant</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="applicant">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" routerLink="user-update/{{getApplicant}}">Update My
+              Profile</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" *ngIf="authGuard.userRoleIn !== 'ROLE_APPLICANT'">
       <a class="nav-link" routerLink="blacklist">
         <i class="icon-grid menu-icon"></i>
         <span class="menu-title">Black List</span>

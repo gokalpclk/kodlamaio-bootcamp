@@ -1,3 +1,4 @@
+import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user.component';
 import { BlackListAddComponent } from './components/blackList/black-list-add/black-list-add.component';
 import { PanelIndexComponent } from './components/panel-index/panel-index.component';
 import { LoginComponent } from './components/login/login.component';
@@ -94,6 +95,22 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     data: {
       role: 'ROLE_INSTRUCTOR',
+    },
+  },
+  {
+    path: 'applicant-panel',
+    component: PanelIndexComponent,
+    children: [
+      { path: '', component: HomeComponent },
+      {
+        path: 'user-update/:id',
+        component: UpdateCurrentUserComponent,
+      },
+      { path: 'bootcamp-list', component: BootcampListComponent },
+    ],
+    canActivate: [AuthGuard],
+    data: {
+      role: 'ROLE_APPLICANT',
     },
   },
 ];

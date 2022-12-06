@@ -35,6 +35,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './components/login/login.component';
 import { IndexComponent } from './components/index/index.component';
 import { PanelIndexComponent } from './components/panel-index/panel-index.component';
+import { CurrentUserComponent } from './components/current-user/current-user/current-user.component';
+import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { PanelIndexComponent } from './components/panel-index/panel-index.compon
     LoginComponent,
     IndexComponent,
     PanelIndexComponent,
+    CurrentUserComponent,
+    UpdateCurrentUserComponent,
   ],
   imports: [
     BrowserModule,

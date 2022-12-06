@@ -22,12 +22,6 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    // let isAuthenticated = this.loginService.isEmployeeAuthenticated();
-    // if (isAuthenticated) {
-    //   return true;
-    // } else {
-    //   return false;
-    // }
     let url: string = state.url;
     return this.checkUserLogin(route, url);
   }

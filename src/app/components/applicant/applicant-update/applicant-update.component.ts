@@ -44,7 +44,7 @@ export class ApplicantUpdateComponent implements OnInit {
       ],
       dateOfBirth: [this.getApplicant.dateOfBirth, Validators.required],
       about: [this.getApplicant.about, Validators.required],
-      state:[1]
+      state: [1],
     });
   }
 
@@ -54,8 +54,8 @@ export class ApplicantUpdateComponent implements OnInit {
       this.applicantService
         .updateApplicant(this.getApplicant.id, getApplicant)
         .subscribe((data) => {
-          this.router.navigate(['admin-panel/applicant-list']);
-          this.toastrService.success('Aplicant updated');
+          // this.router.navigate(['admin-panel/applicant-list']);
+          this.toastrService.success('Update succesfull');
         });
     } else {
       this.toastrService.error('Form not valid', 'Error');

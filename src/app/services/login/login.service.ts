@@ -8,17 +8,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LoginService {
-  apiUrl: string = 'http://localhost:3000/';
+  // apiUrl: string = 'http://localhost:3000/';
 
-  urlArr = ['applicants', 'instructors', 'employees'];
+  // urlArr = ['applicants', 'instructors', 'employees'];
 
-  applicantsApiUrl: string = 'http://localhost:3000/applicants';
-  instructorsApiUrl: string = 'http://localhost:3000/instructors';
-  employeesApiUrl: string = 'http://localhost:3000/employees';
+  // applicantsApiUrl: string = 'http://localhost:3000/applicants';
+  // instructorsApiUrl: string = 'http://localhost:3000/instructors';
+  // employeesApiUrl: string = 'http://localhost:3000/employees';
+
   usersApiUrl: string = 'http://localhost:3000/users';
-
   isLogin = false;
-
   roleAs: string;
 
   constructor(private httpClient: HttpClient) {}
