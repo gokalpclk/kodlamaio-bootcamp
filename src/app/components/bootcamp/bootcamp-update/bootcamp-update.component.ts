@@ -54,26 +54,26 @@ export class BootcampUpdateComponent implements OnInit {
       dateStart: [this.getBootcamp.dateStart, Validators.required],
       dateEnd: [this.getBootcamp.dateEnd, Validators.required],
       state: [this.getBootcamp.state, Validators.required],
-      instructorName: [this.getBootcamp.instructorName, Validators.required],
     });
   }
 
   updateBootcamp() {
     if (this.bootcampUpdateForm.valid) {
       let bootcampModel = Object.assign({}, this.bootcampUpdateForm.value);
-      this.instructorService.getInstructorById(bootcampModel.instructorId).subscribe(data=>{
-        bootcampModel.instructorName=data.firstName+" "+data.lastName
-        console.log("instructorId"+bootcampModel.instructorName)
-        this.bootcampUpdateForm.reset();
-       this.bootcampService
-        .updateBootcamp(this.getBootcamp.id, bootcampModel)
+
+      this.instructorService
+        .getInstructorById(bootcampModel.instructorId)
         .subscribe((data) => {
-          this.router.navigate(['admin-panel/bootcamp-list']);
-          this.toastrService.success('Bootcamp updated');
-          console.log(data, ' güncellendi');
+          bootcampModel.instructorName = data.firstName + ' ' + data.lastName;
+          this.bootcampUpdateForm.reset();
+
+          this.bootcampService
+            .updateBootcamp(this.getBootcamp.id, bootcampModel)
+            .subscribe((data) => {
+              this.router.navigate(['admin-panel/bootcamp-list']);
+              this.toastrService.success('Bootcamp updated');
+            });
         });
-      })
-      
     } else {
       this.toastrService.error('Form not valid', 'Error');
     }
