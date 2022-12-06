@@ -195,18 +195,15 @@
       "expiration": "01/01/2023"
     },
     {
-      "id": 3,
       "firstName": "Elif Sena",
       "lastName": "Erdoğan",
       "email": "elifsena@gmail.com",
       "password": "1234",
       "nationalIdentity": 23456789012,
-      "dateOfBirth": "15/02/1998",
+      "dateOfBirth": "15/02/1945",
       "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği",
-      "token": "MNBVCghgfdsDFGHJNMnbv",
-      "role": "ROLE_APPLICANT",
-      "expiration": "01/01/2023",
-      "state": 0
+      "state": 1,
+      "id": 3
     }
   ],
   "bootcamps": [

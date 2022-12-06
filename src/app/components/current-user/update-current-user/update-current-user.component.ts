@@ -46,7 +46,7 @@ export class UpdateCurrentUserComponent implements OnInit {
     });
   }
 
-  updateApplicant() {
+  updateUser() {
     if (this.userUpdateForm.valid) {
       let getUserInfos = Object.assign({}, this.userUpdateForm.value);
       this.currentUserService
@@ -60,10 +60,10 @@ export class UpdateCurrentUserComponent implements OnInit {
     }
   }
 
-  deleteApplicant() {
+  deleteUser() {
     this.currentUserService.deleteUser(this.getUser.id).subscribe((data) => {
-      this.router.navigate(['admin-panel/applicant-list']);
-      this.toastrService.error('Aplicant deleted');
+      this.router.navigate(['']);
+      this.toastrService.error('Your Account Deleted!');
     });
   }
 }
