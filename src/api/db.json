@@ -213,7 +213,8 @@
       "name": "Programlamaya Giriş için Temel Kurs",
       "dateStart": "01/10/2022",
       "dateEnd": "01/11/2022",
-      "state": 2
+      "state": 2,
+      "instructorName": "Engin Demiroğ"
     },
     {
       "id": 2,
@@ -221,7 +222,8 @@
       "name": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
       "dateStart": "01/11/2022",
       "dateEnd": "01/12/2022",
-      "state": 1
+      "state": 1,
+      "instructorName": "Engin Demiroğ"
     },
     {
       "id": 3,
@@ -229,7 +231,8 @@
       "name": "Yazılım Geliştirici Yetiştirme Kampı(Javascript)",
       "dateStart": "10/12/2022",
       "dateEnd": "10/01/2023",
-      "state": 1
+      "state": 1,
+      "instructorName": "Gürcan Çetin"
     },
     {
       "id": 4,
@@ -237,7 +240,8 @@
       "name": "Senior Yazılım Geliştirici Yetiştirme Kampı (.NET)",
       "dateStart": "20/01/2023",
       "dateEnd": "20/02/2023",
-      "state": 2
+      "state": 2,
+      "instructorName": "Gülcan Yayla"
     },
     {
       "id": 5,
@@ -245,14 +249,16 @@
       "name": "Yazılım Geliştirici Yetiştirme Kampı (C# + ANGULAR)",
       "dateStart": "25/02/2023",
       "dateEnd": "25/03/2023",
-      "state": 2
+      "state": 2,
+      "instructorName": "Engin Demiroğ"
     },
     {
-      "instructorId": 1,
+      "instructorId": "2",
       "name": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
       "dateStart": "01/04/2023",
       "dateEnd": "01/05/2025",
-      "state": 2,
+      "state": "1",
+      "instructorName": "Gürcan Çetin",
       "id": 6
     }
   ],
