@@ -7,7 +7,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>Instructor ID</th>
+              <th>Instructor</th>
               <th>Name</th>
               <th>Date Start</th>
               <th>Date End</th>
@@ -16,8 +16,8 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let bootcamp of allBootcampsList">
-              <td>{{bootcamp.instructorId}}</td>
+            <tr *ngFor="let bootcamp of allBootcampsList" >
+              <td>{{bootcamp.instructorName}}</td>
               <td>{{bootcamp.name}}</td>
               <td>{{bootcamp.dateStart}}</td>
               <td>{{bootcamp.dateEnd}}</td>

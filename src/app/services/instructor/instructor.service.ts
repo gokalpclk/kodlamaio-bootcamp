@@ -16,6 +16,7 @@ export class InstructorService {
   getAllInstructors(): Observable<IInstructorAllModel[]> {
     return this.httpClient.get<IInstructorAllModel[]>(this.apiUrl);
   }
+  
   getInstructorById(id: number): Observable<IInstructorAllModel> {
     return this.httpClient.get<IInstructorAllModel>(this.apiUrl + '/' + id);
   }

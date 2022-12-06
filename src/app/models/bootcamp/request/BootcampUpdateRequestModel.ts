@@ -5,4 +5,5 @@ export interface IBootcampUpdateRequestModel {
   dateStart: string;
   dateEnd: string;
   state: number;
+  instructorName: string;
 }

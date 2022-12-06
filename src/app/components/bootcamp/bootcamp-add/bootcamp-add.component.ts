@@ -35,6 +35,12 @@ export class BootcampAddComponent implements OnInit {
     });
   }
 
+  getInstructorById(id:number) {
+    this.instructorService.getInstructorById(id).subscribe((data) => {
+      return data.firstName
+    });
+  }
+
   createAddBootcampForm() {
     this.addBootcampForm = this.formBuilder.group({
       instructorId: ['', Validators.required],
@@ -42,17 +48,25 @@ export class BootcampAddComponent implements OnInit {
       dateStart: ['', Validators.required],
       dateEnd: ['', Validators.required],
       state: ['', Validators.required],
+      instructorName:['']
     });
   }
 
   addBootcamp() {
     if (this.addBootcampForm.valid) {
-      let bootcampModel = Object.assign({}, this.addBootcampForm.value);
-      this.addBootcampForm.reset();
-      this.bootcampService.addBootcamp(bootcampModel).subscribe((data) => {
-        this.router.navigate(['admin-panel/bootcamp-list']);
-        this.toastrService.success('Ekleme İşlemi Başarılı');
+      let bootcampModel:IBootcampAllModel = Object.assign({}, this.addBootcampForm.value);
+      this.instructorService.getInstructorById(bootcampModel.instructorId).subscribe((data) => {
+        bootcampModel.instructorName = data.firstName + " " + data.lastName
+        console.log(bootcampModel.instructorName)
+        this.bootcampService.addBootcamp(bootcampModel).subscribe((data) => {
+          console.log(data)
+          this.addBootcampForm.reset();
+          this.router.navigate(['admin-panel/bootcamp-list']);
+          this.toastrService.success('Ekleme İşlemi Başarılı');
+        });
       });
+      
+
     } else {
       this.toastrService.error('Formunuz Eksik', 'Dikkat');
     }

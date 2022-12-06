@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Instructor ID</label>
+              <label class="col-sm-3 col-form-label">Instructor</label>
               <div class="col-sm-9">
                 <select class="form-select" style="padding:0.7em;" formControlName="instructorId">
                   <option *ngFor="let instructor of instructors" value="{{instructor.id}}" id="instructorId" class="form-control">
@@ -52,7 +52,13 @@
             <div class="form-group row">
               <label class="col-sm-3 col-form-label">State</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" placeholder="State" formControlName="state" />
+
+                <select class="form-select" style="padding:0.7em;" formControlName="state" id="state">
+                  <option id="state" class="form-control" value="0">Passive</option>
+                  <option id="state" class="form-control" value="1">Active</option>
+                </select>
+
+                <!-- <input type="text" class="form-control" placeholder="State" formControlName="state" /> -->
               </div>
             </div>
           </div>
