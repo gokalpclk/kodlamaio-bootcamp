@@ -39,7 +39,7 @@ export class BlackListListComponent implements OnInit {
 
   removeApplicant(id: number, applicantId: number) {
     this.blackListService.removeApplicant(id).subscribe((response) => {
-      this.toastrService.error('Aplicant deleted from black list');
+      this.toastrService.warning('Aplicant deleted from black list');
       this.applicantService.updateApplicantState(applicantId, 1).subscribe();
       this.toastrService.success('Black list updated');
       this.router.navigate(['admin-panel/applicant-list']);

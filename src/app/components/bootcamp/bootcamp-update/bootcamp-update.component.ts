@@ -84,7 +84,7 @@ export class BootcampUpdateComponent implements OnInit {
       .deleteBootcamp(this.getBootcamp.id)
       .subscribe((data) => {
         this.router.navigate(['admin-panel/bootcamp-list']);
-        this.toastrService.info('Silme Başarılı');
+        this.toastrService.warning('Silme Başarılı');
       });
   }
 }
