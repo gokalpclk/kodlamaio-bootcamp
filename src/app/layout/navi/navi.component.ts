@@ -10,7 +10,9 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./navi.component.css'],
 })
 export class NaviComponent implements OnInit {
-  constructor(private router: Router, private store: Store<any>) {}
+  constructor(private router: Router, 
+    // private store: Store<any>
+    ) {}
 
   ngOnInit(): void {}
   logOut() {

@@ -7,7 +7,7 @@ import { LoginService } from './../../services/login/login.service';
 import { IEmployeeLoginModel } from './../../models/employee/request/EmployeeLoginModel';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+// import { Store } from '@ngrx/store';
 import { Login } from 'src/app/store/actions/user-actions';
 
 @Component({
