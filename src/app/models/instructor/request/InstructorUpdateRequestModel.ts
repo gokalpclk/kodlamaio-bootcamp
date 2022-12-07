@@ -7,4 +7,7 @@ export interface IInstructorUpdateRequestModel {
   password: string;
   companyName: string;
   nationalIdentity: string;
+  token: string;
+  role: string;
+  expiration: string;
 }

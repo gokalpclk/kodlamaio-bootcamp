@@ -37,6 +37,8 @@ export class InstructorAddComponent implements OnInit {
   addInstructor() {
     if (this.instructorAddForm.valid) {
       let instructorModel = Object.assign({}, this.instructorAddForm.value);
+      instructorModel.role = 'ROLE_INSTRUCTOR';
+      instructorModel.token = new Date().toLocaleString();
       this.instructorAddForm.reset();
       this.instructorService
         .addInstructor(instructorModel)

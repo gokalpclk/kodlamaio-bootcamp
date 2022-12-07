@@ -10,13 +10,15 @@ import { IInstructorAllModel } from 'src/app/models/instructor/request/Instructo
 })
 export class InstructorService {
   allInstructors: IInstructorAllModel[] = [];
-  apiUrl = 'http://localhost:3000/instructors';
+  apiUrl = 'http://localhost:3000/users';
   constructor(private httpClient: HttpClient) {}
 
   getAllInstructors(): Observable<IInstructorAllModel[]> {
-    return this.httpClient.get<IInstructorAllModel[]>(this.apiUrl);
+    return this.httpClient.get<IInstructorAllModel[]>(
+      this.apiUrl + '?role=ROLE_INSTRUCTOR'
+    );
   }
-  
+
   getInstructorById(id: number): Observable<IInstructorAllModel> {
     return this.httpClient.get<IInstructorAllModel>(this.apiUrl + '/' + id);
   }

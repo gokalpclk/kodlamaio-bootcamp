@@ -9,11 +9,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EmployeeService {
-  apiUrl = 'http://localhost:3000/employees';
+  apiUrl = 'http://localhost:3000/users';
   allEmployee: IEmployeeAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
   getAllEmployees(): Observable<IEmployeeAllModel[]> {
-    return this.httpClient.get<IEmployeeAllModel[]>(this.apiUrl);
+    return this.httpClient.get<IEmployeeAllModel[]>(
+      this.apiUrl + '?role=ROLE_EMPLOYEE'
+    );
   }
   getEmployeeById(id: number): Observable<IEmployeeAllModel> {
     return this.httpClient.get<IEmployeeAllModel>(this.apiUrl + '/' + id);

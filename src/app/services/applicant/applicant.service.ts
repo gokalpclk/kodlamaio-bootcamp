@@ -10,12 +10,14 @@ import { IApplicantDeleteRequestModel } from 'src/app/models/applicant/request/A
   providedIn: 'root',
 })
 export class ApplicantService {
-  apiUrl: string = 'http://localhost:3000/applicants';
+  apiUrl: string = 'http://localhost:3000/users';
   allApplicants: IApplicantAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
 
   getAllApplicants(): Observable<IApplicantAllModel[]> {
-    return this.httpClient.get<IApplicantAllModel[]>(this.apiUrl + '?state=1');
+    return this.httpClient.get<IApplicantAllModel[]>(
+      this.apiUrl + '?role=ROLE_APPLICANT' + '&state=1'
+    );
   }
   getApplicantById(id: number): Observable<IApplicantAllModel> {
     return this.httpClient.get<IApplicantAllModel>(this.apiUrl + '/' + id);

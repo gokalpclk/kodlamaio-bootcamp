@@ -1,128 +1,67 @@
 {
-  "applicants": [
+  "applicants": [],
+  "instructors": [],
+  "employees": [],
+  "applications": [],
+  "blackList": [],
+  "bootcamps": [],
+  "users": [
     {
-      "id": 1,
+      "firstName": "Engin",
+      "lastName": "Demiroğ",
+      "email": "engindemirog@gmail.com",
+      "password": "1661",
+      "nationalIdentity": 12345678901,
+      "dateOfBirth": "18/02/1461",
+      "companyName": "Kodlama.io",
+      "token": "cvBNhgfdsDFGb",
+      "role": "ROLE_INSTRUCTOR",
+      "expiration": "01/01/2023",
+      "id": 1
+    },
+    {
+      "firstName": "Ahmet",
+      "lastName": "Salih",
+      "email": "ahmet@gmail.com",
+      "password": "1234",
+      "nationalIdentity": 65498712301,
+      "dateOfBirth": "01/01/1980",
+      "position": "Uzman Yardımcısı",
+      "id": 2,
+      "token": "MNBVCghgfdsDFGHJNMnbv",
+      "role": "ROLE_EMPLOYEE",
+      "expiration": "01/01/2023"
+    },
+    {
+      "firstName": "Elif Sena",
+      "lastName": "Çelikten",
+      "email": "elifsena@gmail.com",
+      "password": "1234",
+      "nationalIdentity": 23456789012,
+      "dateOfBirth": "15/02/1461",
+      "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği",
+      "state": 1,
+      "token": "MNBVCghgfdsDFGHJNMnbv",
+      "role": "ROLE_APPLICANT",
+      "expiration": "01/01/2023",
+      "id": 3
+    },
+    {
       "firstName": "Habibe",
       "lastName": "Çelikten",
       "email": "habibecelikten@gmail.com",
       "password": "1234567890",
-      "nationalIdentity": 12345678901,
+      "nationalIdentity": "12345678961",
       "dateOfBirth": "20/01/1994",
       "about": "Muğla Sıtkı Koçman Üniversitesi Bilişim Sistemleri Mühendisliği",
+      "state": 1,
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_APPLICANT",
       "expiration": "01/01/2023",
-      "state": 1
-    },
-    {
-      "id": 2,
-      "firstName": "Elif Sena",
-      "lastName": "Erdoğan",
-      "email": "elifsena@gmail.com",
-      "password": "1234",
-      "nationalIdentity": 23456789012,
-      "dateOfBirth": "15/02/1998",
-      "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği",
-      "token": "MNBVCghgfdsDFGHJNMnbv",
-      "role": "ROLE_APPLICANT",
-      "expiration": "01/01/2023",
-      "state": 0
-    },
-    {
-      "id": 3,
-      "firstName": "Ahmet Salih",
-      "lastName": "Karagöz",
-      "email": "ahmetsalih@gmail.com",
-      "password": "7418529630",
-      "nationalIdentity": 34567890123,
-      "dateOfBirth": "20/03/1998",
-      "about": "Anadolu Üniversitesi Yönetim Bilişim Sistemleri",
-      "token": "MNBVCghgfdsDFGHJNMnbv",
-      "role": "ROLE_APPLICANT",
-      "expiration": "01/01/2023",
-      "state": 1
-    },
-    {
-      "id": 4,
-      "firstName": "Mustafa",
-      "lastName": "Peynirci",
-      "email": "mustafapeynirci@gmail.com",
-      "password": "8529637410",
-      "nationalIdentity": 45678912304,
-      "dateOfBirth": "08/05/1998",
-      "about": "Anadolu Üniversitesi Yönetim Bilişim Sistemleri",
-      "token": "MNBVCghgfdsDFGHJNMnbv",
-      "role": "ROLE_APPLICANT",
-      "expiration": "01/01/2023",
-      "state": 1
+      "id": 4
     },
     {
       "id": 5,
-      "firstName": "Gökalp",
-      "lastName": "Çelik",
-      "email": "gokalpcelik@gmail.com",
-      "password": "9637418520",
-      "nationalIdentity": 36985214789,
-      "dateOfBirth": "15/12/1994",
-      "about": "Atılım Üniversitesi Bilişim Sistemleri Mühendisliği",
-      "token": "MNBVCghgfdsDFGHJNMnbv",
-      "role": "ROLE_APPLICANT",
-      "expiration": "01/01/2023",
-      "state": 1
-    },
-    {
-      "firstName": "Sena",
-      "lastName": "Deniz",
-      "email": "senadeniz@gmail.com",
-      "password": "7532145698",
-      "nationalIdentity": "45218956361",
-      "dateOfBirth": "15/01/1990",
-      "about": "Gazi Üniversitesi Bilgisayar Mühendisliği",
-      "id": 6,
-      "token": "MNBVCghgfdsDFGHJNMnbv",
-      "role": "ROLE_APPLICANT",
-      "expiration": "01/01/2023",
-      "state": 0
-    },
-    {
-      "firstName": "a",
-      "lastName": "a",
-      "email": "a",
-      "password": "a",
-      "nationalIdentity": "a",
-      "dateOfBirth": "a",
-      "about": "a",
-      "state": 0,
-      "id": 7
-    },
-    {
-      "firstName": "Deniz",
-      "lastName": "Ak",
-      "email": "deniz@gmail.com",
-      "password": "1234",
-      "nationalIdentity": "12345678912",
-      "dateOfBirth": "10/01/2000",
-      "about": "Ankara Üniversitesi",
-      "state": 0,
-      "id": 8
-    }
-  ],
-  "instructors": [
-    {
-      "id": 1,
-      "firstName": "Engin",
-      "lastName": "Demiroğ",
-      "dateOfBirth": "18/02/1985",
-      "email": "engindemirog@gmail.com",
-      "password": "1661",
-      "companyName": "Kodlama.io",
-      "nationalIdentity": 12345678901,
-      "token": "cvBNhgfdsDFGb",
-      "role": "ROLE_INSTRUCTOR",
-      "expiration": "01/01/2023"
-    },
-    {
-      "id": 2,
       "firstName": "Gürcan",
       "lastName": "Çetin",
       "dateOfBirth": "18/02/1988",
@@ -135,7 +74,7 @@
       "expiration": "01/01/2023"
     },
     {
-      "id": 3,
+      "id": 6,
       "firstName": "Gülcan",
       "lastName": "Yayla",
       "dateOfBirth": "08/08/1988",
@@ -146,11 +85,9 @@
       "token": "cvBNhgfdsDFGb",
       "role": "ROLE_INSTRUCTOR",
       "expiration": "01/01/2023"
-    }
-  ],
-  "employees": [
+    },
     {
-      "id": 1,
+      "id": 7,
       "firstName": "Enes Bin Malik",
       "lastName": "Köksal",
       "email": "eneskoksal@gmail.com",
@@ -163,19 +100,6 @@
       "expiration": "01/01/2023"
     },
     {
-      "firstName": "Ahmet",
-      "lastName": "Salih",
-      "email": "ahmet@gmail.com",
-      "password": "1234",
-      "nationalIdentity": 65498712301,
-      "dateOfBirth": "01/01/1980",
-      "position": "Uzman Yardımcısı",
-      "id": 2,
-      "token": "MNBVCghgfdsDFGHJNMnbv",
-      "role": "ROLE_EMPLOYEE",
-      "expiration": "01/01/2023"
-    },
-    {
       "firstName": "Beyza",
       "lastName": "Alıcı",
       "email": "beyza@gmail.com",
@@ -183,157 +107,10 @@
       "nationalIdentity": 65498712301,
       "dateOfBirth": "01/01/1980",
       "position": "Uzman Yardımcısı",
-      "id": 3,
+      "id": 9,
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_EMPLOYEE",
       "expiration": "01/01/2023"
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "firstName": "Engin",
-      "lastName": "Demiroğ",
-      "dateOfBirth": "18/02/1985",
-      "email": "engindemirog@gmail.com",
-      "password": "1661",
-      "companyName": "Kodlama.io",
-      "nationalIdentity": 12345678901,
-      "token": "cvBNhgfdsDFGb",
-      "role": "ROLE_INSTRUCTOR",
-      "expiration": "01/01/2023"
-    },
-    {
-      "firstName": "Ahmet",
-      "lastName": "Salih",
-      "email": "ahmet@gmail.com",
-      "password": "1234",
-      "nationalIdentity": 65498712301,
-      "dateOfBirth": "01/01/1980",
-      "position": "Uzman Yardımcısı",
-      "id": 2,
-      "token": "MNBVCghgfdsDFGHJNMnbv",
-      "role": "ROLE_EMPLOYEE",
-      "expiration": "01/01/2023"
-    },
-    {
-      "firstName": "Elif Sena",
-      "lastName": "Erdoğan",
-      "email": "elifsena@gmail.com",
-      "password": "1234",
-      "nationalIdentity": 23456789012,
-      "dateOfBirth": "15/02/1945",
-      "about": "Necmettin Erbakan Üniversitesi Bilgisayar Mühendisliği",
-      "state": 1,
-      "id": 3,
-      "token": "MNBVCghgfdsDFGHJNMnbv",
-      "role": "ROLE_APPLICANT",
-      "expiration": "01/01/2023"
-    }
-  ],
-  "bootcamps": [
-    {
-      "instructorId": 1,
-      "name": "Programlamaya Giriş için Temel Kurs",
-      "dateStart": "01/10/2022",
-      "dateEnd": "01/11/2022",
-      "state": "0",
-      "instructorName": "Engin Demiroğ",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "instructorId": 1,
-      "name": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
-      "dateStart": "01/11/2022",
-      "dateEnd": "01/12/2022",
-      "state": 1,
-      "instructorName": "Engin Demiroğ"
-    },
-    {
-      "id": 3,
-      "instructorId": 2,
-      "name": "Yazılım Geliştirici Yetiştirme Kampı(Javascript)",
-      "dateStart": "10/12/2022",
-      "dateEnd": "10/01/2023",
-      "state": 1,
-      "instructorName": "Gürcan Çetin"
-    },
-    {
-      "instructorId": 3,
-      "name": "Senior Yazılım Geliştirici Yetiştirme Kampı (.NET)",
-      "dateStart": "20/01/2023",
-      "dateEnd": "20/02/2023",
-      "state": "0",
-      "instructorName": "Gülcan Yayla",
-      "id": 4
-    },
-    {
-      "instructorId": 1,
-      "name": "Yazılım Geliştirici Yetiştirme Kampı (C# + ANGULAR)",
-      "dateStart": "25/02/2023",
-      "dateEnd": "25/03/2023",
-      "state": "0",
-      "instructorName": "Engin Demiroğ",
-      "id": 5
-    },
-    {
-      "instructorId": "2",
-      "name": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
-      "dateStart": "01/04/2023",
-      "dateEnd": "01/05/2025",
-      "state": "1",
-      "instructorName": "Gürcan Çetin",
-      "id": 6
-    }
-  ],
-  "applications": [
-    {
-      "id": 1,
-      "applicantId": 1,
-      "bootcampId": 1,
-      "state": 1
-    },
-    {
-      "id": 2,
-      "applicantId": 3,
-      "bootcampId": 2,
-      "state": 1
-    },
-    {
-      "id": 3,
-      "applicantId": 4,
-      "bootcampId": 3,
-      "state": 1
-    },
-    {
-      "id": 4,
-      "applicantId": 5,
-      "bootcampId": 3,
-      "state": 1
-    }
-  ],
-  "blackList": [
-    {
-      "id": 1,
-      "applicantId": 2,
-      "date": "30/09/2022",
-      "reason": "Kayıt olup gelmedi",
-      "applicantName": "Elif Sena Erdoğan"
-    },
-    {
-      "reason": "Derse gelmedi",
-      "date": "7/11/2022",
-      "applicantId": "6",
-      "applicantName": "Sena Deniz",
-      "id": 3
-    },
-    {
-      "reason": "Kavga çıkardı",
-      "date": "7/11/2022",
-      "applicantId": "8",
-      "applicantName": "Deniz Ak",
-      "id": 4
     }
   ]
 }

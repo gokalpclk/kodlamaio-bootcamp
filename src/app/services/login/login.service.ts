@@ -8,14 +8,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LoginService {
-  // apiUrl: string = 'http://localhost:3000/';
-
-  // urlArr = ['applicants', 'instructors', 'employees'];
-
-  // applicantsApiUrl: string = 'http://localhost:3000/applicants';
-  // instructorsApiUrl: string = 'http://localhost:3000/instructors';
-  // employeesApiUrl: string = 'http://localhost:3000/employees';
-
   usersApiUrl: string = 'http://localhost:3000/users';
   isLogin = false;
   roleAs: string;
@@ -23,29 +15,10 @@ export class LoginService {
   constructor(private httpClient: HttpClient) {}
 
   employeeLogin(user: any) {
-    // this.urlArr.map((arrs) => {
-    //   return this.httpClient.get<ILoginModel>(
-    //     this.apiUrl +
-    //       arrs +
-    //       '?email=' +
-    //       user.email +
-    //       '&password=' +
-    //       user.password
-    //   );
-    // }).filter((user)=>user.forEach((i)=>i.email));
-
     return this.httpClient.get<IEmployeeAllModel[]>(
       this.usersApiUrl + '?email=' + user.email + '&password=' + user.password
     );
   }
-
-  // isEmployeeAuthenticated() {
-  //   if (localStorage.getItem('token')) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
 
   login(value: string) {
     this.isLogin = true;

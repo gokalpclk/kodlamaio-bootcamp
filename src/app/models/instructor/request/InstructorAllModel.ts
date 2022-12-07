@@ -7,4 +7,7 @@ export interface IInstructorAllModel {
   password: number;
   companyName: string;
   nationalIdentity: number;
+  token: string;
+  role: string;
+  expiration: string;
 }

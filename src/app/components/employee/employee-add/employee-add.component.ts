@@ -37,6 +37,8 @@ export class EmployeeAddComponent implements OnInit {
   addEmployee() {
     if (this.addEmployeeForm.valid) {
       let employeeModel = Object.assign({}, this.addEmployeeForm.value);
+      employeeModel.role = 'ROLE_EMPLOYEE';
+      employeeModel.token = new Date().toLocaleString();
       this.addEmployeeForm.reset();
       this.employeeService.addEmployee(employeeModel).subscribe((data) => {
         this.router.navigate(['admin-panel/employee-list']);

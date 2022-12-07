@@ -46,6 +46,9 @@ export class InstructorUpdateComponent implements OnInit {
       ],
       dateOfBirth: [this.instructorById.dateOfBirth, Validators.required],
       companyName: [this.instructorById.companyName, Validators.required],
+      token: [this.instructorById.token],
+      role: [this.instructorById.role],
+      expiration: [this.instructorById.expiration],
     });
   }
 

@@ -1,3 +1,4 @@
+import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { CurrentUserService } from './../../../services/current-user/current-user.service';
 import { IApplicantAllModel } from 'src/app/models/applicant/request/ApplicantAllModel';
 import { ToastrService } from 'ngx-toastr';
@@ -15,6 +16,7 @@ export class UpdateCurrentUserComponent implements OnInit {
   getUser: IApplicantAllModel;
   constructor(
     private currentUserService: CurrentUserService,
+    private applicantService: ApplicantService,
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
     private toastrService: ToastrService,
@@ -43,6 +45,9 @@ export class UpdateCurrentUserComponent implements OnInit {
       dateOfBirth: [this.getUser.dateOfBirth, Validators.required],
       about: [this.getUser.about, Validators.required],
       state: [1],
+      token: [this.getUser.token],
+      role: [this.getUser.role],
+      expiration: [this.getUser.expiration],
     });
   }
 
