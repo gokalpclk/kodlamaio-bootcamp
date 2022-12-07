@@ -1,5 +1,8 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Logout } from 'src/app/store/actions/user-actions';
+
 
 @Component({
   selector: 'app-navi',
@@ -7,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navi.component.css'],
 })
 export class NaviComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private store: Store<any>) {}
 
   ngOnInit(): void {}
   logOut() {
+    this.store.dispatch(new Logout())
+    // redux
     localStorage.clear();
     this.router.navigate(['']);
   }

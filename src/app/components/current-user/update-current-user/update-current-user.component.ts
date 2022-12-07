@@ -20,7 +20,8 @@ export class UpdateCurrentUserComponent implements OnInit {
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
     private toastrService: ToastrService,
-    private router: Router
+    private router: Router,
+    private store: Store<any>
   ) {}
 
   ngOnInit(): void {
@@ -68,6 +69,7 @@ export class UpdateCurrentUserComponent implements OnInit {
   deleteUser() {
     this.currentUserService.deleteUser(this.getUser.id).subscribe((data) => {
       this.toastrService.error('Your Account Deleted!');
+      this.store.dispatch(new Logout())
       localStorage.clear();
       this.router.navigate(['']);
     });
