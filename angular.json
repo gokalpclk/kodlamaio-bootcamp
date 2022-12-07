@@ -25,6 +25,9 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/app/public/miri/css/flat-ui-kit.css",
+              "src/app/public/miri/css/miri-ui-kit-free.css",
+              "./node_modules/@mdi/font/css/materialdesignicons.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./src/app/public/skydash/css/vertical-layout-light/style.css",
               "./src/app/public/skydash/vendors/feather/feather.css",
@@ -54,7 +57,8 @@
               "./src/app/public/skydash/js/dashboard.js",
               "./src/app/public/skydash/js/Chart.roundedBarCharts.js",
               "./src/app/public/skydash/vendors/select2/select2.min.js",
-              "./src/app/public/skydash/js/select2.js"
+              "./src/app/public/skydash/js/select2.js",
+              "src/app/public/miri/js/miri-ui-kit.js"
             ]
           },
           "configurations": {
