@@ -9,11 +9,14 @@ import { AuthGuard } from 'src/app/guards/auth.guard';
 })
 export class SidebarComponent implements OnInit {
   getApplicant = '';
+  getInstructor = '';
 
   constructor(public authGuard: AuthGuard) {}
 
   ngOnInit(): void {
     this.getApplicant = localStorage.getItem('id');
     console.log(this.getApplicant);
+    this.getInstructor = localStorage.getItem('id');
+    console.log(this.getInstructor);
   }
 }
