@@ -93,6 +93,10 @@ const routes: Routes = [
       { path: 'bootcamp-list', component: BootcampListComponent },
 
       { path: 'blacklist', component: BlackListListComponent },
+      {
+        path: 'instructor-update/:id',
+        component: InstructorUpdateComponent,
+      },
     ],
     canActivate: [AuthGuard],
     data: {
