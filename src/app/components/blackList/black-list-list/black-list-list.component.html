@@ -7,7 +7,6 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Applicant</th>
               <th>Date</th>
               <th>Reason</th>
@@ -15,7 +14,6 @@
           </thead>
           <tbody>
             <tr *ngFor="let blacklist of allBlackListList">
-              <td>{{blacklist.id}}</td>
               <td>{{blacklist.applicantName}}</td>
               <td>{{blacklist.date}}</td>
               <td>{{blacklist.reason}}</td>

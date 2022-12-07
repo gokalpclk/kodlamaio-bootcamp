@@ -51,11 +51,11 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('id', data[0].id.toString());
             localStorage.setItem('role', data[0].role);
           } else {
-            this.toastr.error('Giriş Başarısız');
+            this.toastr.error('Make Sure You Enter Your Information Correctly!');
           }
         });
     } else {
-      this.toastr.error('Bilgilerinizi Doğru Girdiğinizden Emin Olun');
+      this.toastr.warning('Cannot be blank! Please fill in all fields.');
     }
   }
 }
