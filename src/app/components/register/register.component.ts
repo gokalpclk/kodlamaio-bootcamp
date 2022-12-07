@@ -53,12 +53,9 @@ export class RegisterComponent implements OnInit {
           this.router.navigate(["/login"])
           this.toastrService.success("Register is success", "Succes")
         })
-        
       })
-
     }else{
-      console.log(this.registerForm.errors);
-      
+      this.toastrService.warning("Cannot be blank! Please fill in all fields.")
     }
   }
 }
