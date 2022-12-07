@@ -96,13 +96,13 @@
       "id": 7
     },
     {
-      "firstName": "a",
-      "lastName": "a",
-      "email": "a",
-      "password": "a",
-      "nationalIdentity": "a",
-      "dateOfBirth": "a",
-      "about": "a",
+      "firstName": "Deniz",
+      "lastName": "Ak",
+      "email": "deniz@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678912",
+      "dateOfBirth": "10/01/2000",
+      "about": "Ankara Üniversitesi",
       "state": 0,
       "id": 8
     }
@@ -233,13 +233,13 @@
   ],
   "bootcamps": [
     {
-      "id": 1,
       "instructorId": 1,
       "name": "Programlamaya Giriş için Temel Kurs",
       "dateStart": "01/10/2022",
       "dateEnd": "01/11/2022",
-      "state": 2,
-      "instructorName": "Engin Demiroğ"
+      "state": "0",
+      "instructorName": "Engin Demiroğ",
+      "id": 1
     },
     {
       "id": 2,
@@ -260,22 +260,22 @@
       "instructorName": "Gürcan Çetin"
     },
     {
-      "id": 4,
       "instructorId": 3,
       "name": "Senior Yazılım Geliştirici Yetiştirme Kampı (.NET)",
       "dateStart": "20/01/2023",
       "dateEnd": "20/02/2023",
-      "state": 2,
-      "instructorName": "Gülcan Yayla"
+      "state": "0",
+      "instructorName": "Gülcan Yayla",
+      "id": 4
     },
     {
-      "id": 5,
       "instructorId": 1,
       "name": "Yazılım Geliştirici Yetiştirme Kampı (C# + ANGULAR)",
       "dateStart": "25/02/2023",
       "dateEnd": "25/03/2023",
-      "state": 2,
-      "instructorName": "Engin Demiroğ"
+      "state": "0",
+      "instructorName": "Engin Demiroğ",
+      "id": 5
     },
     {
       "instructorId": "2",
@@ -322,18 +322,18 @@
       "applicantName": "Elif Sena Erdoğan"
     },
     {
-      "id": 2,
-      "applicantId": 6,
-      "date": "12/11/2022",
-      "reason": "Devamsızlığı fazla",
-      "applicantName": "Sena Deniz"
+      "reason": "Derse gelmedi",
+      "date": "7/11/2022",
+      "applicantId": "6",
+      "applicantName": "Sena Deniz",
+      "id": 3
     },
     {
-      "reason": "ss",
-      "date": "6/11/2022",
+      "reason": "Kavga çıkardı",
+      "date": "7/11/2022",
       "applicantId": "8",
-      "applicantName": "a a",
-      "id": 3
+      "applicantName": "Deniz Ak",
+      "id": 4
     }
   ]
 }
