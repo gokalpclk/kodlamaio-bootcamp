@@ -1,3 +1,4 @@
+import { ApplicationAddComponent } from './components/application/application-add/application-add.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user.component';
 import { BlackListAddComponent } from './components/blackList/black-list-add/black-list-add.component';
@@ -113,6 +114,10 @@ const routes: Routes = [
         component: UpdateCurrentUserComponent,
       },
       { path: 'bootcamp-list', component: BootcampListComponent },
+      // {
+      //   path: 'bootcamp-list/application-add/:id',
+      //   component: ApplicationAddComponent,
+      // },
     ],
     canActivate: [AuthGuard],
     data: {

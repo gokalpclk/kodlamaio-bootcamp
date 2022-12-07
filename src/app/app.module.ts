@@ -38,6 +38,9 @@ import { IndexComponent } from './components/index/index.component';
 import { PanelIndexComponent } from './components/panel-index/panel-index.component';
 import { CurrentUserComponent } from './components/current-user/current-user/current-user.component';
 import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user.component';
+import { ApplicationAddComponent } from './components/application/application-add/application-add.component';
+import { ApplicationListComponent } from './components/application/application-list/application-list.component';
+import { ApplicationUpdateComponent } from './components/application/application-update/application-update.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,10 @@ import { UpdateCurrentUserComponent } from './components/current-user/update-cur
     PanelIndexComponent,
     CurrentUserComponent,
     UpdateCurrentUserComponent,
-    RegisterComponent
+    RegisterComponent,
+    ApplicationAddComponent,
+    ApplicationListComponent,
+    ApplicationUpdateComponent
   ],
   imports: [
     BrowserModule,
