@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private toastr: ToastrService,
     private router: Router,
-    private store: Store<any>,
+    // private store: Store<any>,
   ) {}
   ngOnInit(): void {
     this.creatEmployeeLoginForm();
@@ -52,11 +52,11 @@ export class LoginComponent implements OnInit {
               ? this.router.navigate(['admin-panel'])
               : this.router.navigate(['applicant-panel']);
               // redux
-              let user:IUser;
-              user.id=data[0].id.toString();
-              user.role=data[0].role;
-              user.token=data[0].token;
-              this.store.dispatch(new Login(user));
+              // let user:IUser;
+              // user.id=data[0].id.toString();
+              // user.role=data[0].role;
+              // user.token=data[0].token;
+              // this.store.dispatch(new Login(user));
               // redux
 
             localStorage.setItem('token', data[0].token);

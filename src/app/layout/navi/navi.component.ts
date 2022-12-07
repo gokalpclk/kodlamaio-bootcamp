@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Logout } from 'src/app/store/actions/user-actions';
+// import { Logout } from 'src/app/store/actions/user-actions';
 
 
 @Component({
@@ -14,7 +14,7 @@ export class NaviComponent implements OnInit {
 
   ngOnInit(): void {}
   logOut() {
-    this.store.dispatch(new Logout())
+    // this.store.dispatch(new Logout())
     // redux
     localStorage.clear();
     this.router.navigate(['']);
