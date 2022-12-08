@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StoreModule } from '@ngrx/store';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -41,7 +42,7 @@ import { UpdateCurrentUserComponent } from './components/current-user/update-cur
 import { ApplicationAddComponent } from './components/application/application-add/application-add.component';
 import { ApplicationListComponent } from './components/application/application-list/application-list.component';
 import { ApplicationUpdateComponent } from './components/application/application-update/application-update.component';
-
+import { userReducer } from './store/reducers/user-reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +78,7 @@ import { ApplicationUpdateComponent } from './components/application/application
     RegisterComponent,
     ApplicationAddComponent,
     ApplicationListComponent,
-    ApplicationUpdateComponent
+    ApplicationUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,6 +86,7 @@ import { ApplicationUpdateComponent } from './components/application/application
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    StoreModule.forRoot({ userReducer }),
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-top-right',

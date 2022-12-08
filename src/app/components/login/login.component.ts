@@ -7,7 +7,7 @@ import { LoginService } from './../../services/login/login.service';
 import { IEmployeeLoginModel } from './../../models/employee/request/EmployeeLoginModel';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-// import { Store } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { Login } from 'src/app/store/actions/user-actions';
 
 @Component({
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private toastr: ToastrService,
     private router: Router,
-    // private store: Store<any>,
+    private store: Store<any>
   ) {}
   ngOnInit(): void {
     this.creatEmployeeLoginForm();
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       this.loginService
         .employeeLogin(this.employeeLoginForm.value)
         .subscribe((data) => {
-          console.log(data, ' data');
+          // console.log(data, ' data');
           if (data.length > 0) {
             this.toastr.success('Giriş Başarılı');
             data[0].role == 'ROLE_INSTRUCTOR'
@@ -52,11 +52,14 @@ export class LoginComponent implements OnInit {
               ? this.router.navigate(['admin-panel'])
               : this.router.navigate(['applicant-panel']);
               // redux
-              // let user:IUser;
-              // user.id=data[0].id.toString();
-              // user.role=data[0].role;
-              // user.token=data[0].token;
-              // this.store.dispatch(new Login(user));
+              let user:IUser=Object.assign({});
+              user.id=data[0].id.toString();
+              user.role=data[0].role;
+              user.token=data[0].token;
+              console.log(user);
+              console.log("gokalp");
+              
+              this.store.dispatch(new Login(user));
               // redux
 
             localStorage.setItem('token', data[0].token);
