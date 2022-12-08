@@ -5,7 +5,7 @@ import { IApplicationUpdateRequestModel } from './../../../models/application/re
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApplicationService } from './../../../services/application/application.service';
 import { Component, OnInit } from '@angular/core';
-import { ApplicationStates } from './../../../enums/applicationState';
+import { ApplicationStates } from 'src/app/enums/applicationState';
 @Component({
   selector: 'app-application-update',
   templateUrl: './application-update.component.html',
@@ -21,9 +21,13 @@ export class ApplicationUpdateComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private formBuilder: FormBuilder,
     private router: Router,
-    private toastrService: ToastrService,
+    private toastrService: ToastrService
   ) {}
+  public getapplicationState(): typeof ApplicationStates {
+    return ApplicationStates; 
+  }
 
+  // applicationStates: ApplicationStates
   ngOnInit(): void {
     this.getApplicationById();
   }

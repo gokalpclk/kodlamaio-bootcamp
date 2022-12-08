@@ -1,4 +1,4 @@
-import { ApplicationStates } from './../../../enums/applicationState';
+import { ApplicationStates } from 'src/app/enums/applicationState';
 import { ToastrService } from 'ngx-toastr';
 import { ApplicationService } from './../../../services/application/application.service';
 import { InstructorService } from 'src/app/services/instructor/instructor.service';

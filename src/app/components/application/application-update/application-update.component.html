@@ -44,9 +44,9 @@
                   <label class="col-sm-3 col-form-label">Aplication State</label>
                   <div class="col-sm-9">
                     <select class="form-select" style="padding:0.7em;" formControlName="applicationState" id="applicationState">
-                      <option id="state" class="form-control" value="PENDING">PENDING</option>
-                      <option id="state" class="form-control" value="SELECTED">SELECTED</option>
-                      <option id="state" class="form-control" value="DENIED">DENIED</option>
+                      <option id="state" class="form-control" value="{{getapplicationState().PENDING}}">PENDING</option>
+                      <option id="state" class="form-control" value="{{getapplicationState().SELECTED}}">SELECTED</option>
+                      <option id="state" class="form-control" value="{{getapplicationState().DENIED}}">DENIED</option>
                     </select>
                   </div>
                 </div>
