@@ -28,13 +28,13 @@ export class LoginService {
     return { success: this.isLogin, role: this.roleAs };
   }
 
-  logout() {
-    this.isLogin = false;
-    this.roleAs = '';
-    // localStorage.setItem('STATE', 'false');
-    localStorage.setItem('role', '');
-    return { success: this.isLogin, role: '' };
-  }
+  // logout() {
+  //   this.isLogin = false;
+  //   this.roleAs = '';
+  //   // localStorage.setItem('STATE', 'false');
+  //   localStorage.setItem('role', '');
+  //   return { success: this.isLogin, role: '' };
+  // }
 
   isLoggedIn() {
     const loggedIn = localStorage.getItem('token');

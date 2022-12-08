@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   employee: IEmployeeLoginModel[] = [];
   currentApplicant: IApplicantUpdateRequestModel;
   // tokenModel: ITokenModel;
+  user: IUser;
   constructor(
     private formBuilder: FormBuilder,
     private loginService: LoginService,
@@ -28,7 +29,22 @@ export class LoginComponent implements OnInit {
     private store: Store<any>
   ) {}
   ngOnInit(): void {
-    this.creatEmployeeLoginForm();
+    // let checkUser = this.store.select('userReducer').subscribe((data) => {
+    //   this.user = data;
+    //   console.log(this.user, ' STORE DAN GELDİ');
+    // });
+    if (
+      localStorage.getItem('role') &&
+      localStorage.getItem('role') == 'ROLE_EMPLOYEE'
+    ) {
+      this.router.navigate(['admin-panel']);
+    } else if (localStorage.getItem('role') == 'ROLE_INSTRUCTOR') {
+      this.router.navigate(['instructor-panel']);
+    } else if (localStorage.getItem('role') == 'ROLE_APPLICANT') {
+      this.router.navigate(['applicant-panel']);
+    } else {
+      this.creatEmployeeLoginForm();
+    }
   }
 
   creatEmployeeLoginForm() {
@@ -51,22 +67,24 @@ export class LoginComponent implements OnInit {
               : data[0].role == 'ROLE_EMPLOYEE'
               ? this.router.navigate(['admin-panel'])
               : this.router.navigate(['applicant-panel']);
-              // redux
-              let user:IUser=Object.assign({});
-              user.id=data[0].id.toString();
-              user.role=data[0].role;
-              user.token=data[0].token;
-              console.log(user);
-              console.log("gokalp");
-              
-              this.store.dispatch(new Login(user));
-              // redux
+            // redux
+            let user: IUser = Object.assign({});
+            user.id = data[0].id.toString();
+            user.role = data[0].role;
+            user.token = data[0].token;
+            console.log(user);
+            // console.log("gokalp");
+
+            this.store.dispatch(new Login(user));
+            // redux
 
             localStorage.setItem('token', data[0].token);
             localStorage.setItem('id', data[0].id.toString());
             localStorage.setItem('role', data[0].role);
           } else {
-            this.toastr.error('Make Sure You Enter Your Information Correctly!');
+            this.toastr.error(
+              'Make Sure You Enter Your Information Correctly!'
+            );
           }
         });
     } else {

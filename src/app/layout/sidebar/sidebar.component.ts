@@ -15,8 +15,8 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getApplicant = localStorage.getItem('id');
-    console.log(this.getApplicant);
+    // console.log(this.getApplicant);
     this.getInstructor = localStorage.getItem('id');
-    console.log(this.getInstructor);
+    // console.log(this.getInstructor);
   }
 }
