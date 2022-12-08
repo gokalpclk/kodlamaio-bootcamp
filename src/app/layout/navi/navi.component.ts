@@ -20,7 +20,6 @@ export class NaviComponent implements OnInit {
     localStorage.clear();
     this.store.dispatch(new Logout());
     this.router.navigate(['']);
-    this.getUser();
   }
 
 }
