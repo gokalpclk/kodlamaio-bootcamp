@@ -30,9 +30,11 @@ export class NaviComponent implements OnInit {
   }
   getUser() {
     this.store.select('userReducer').subscribe((state) => {
+      
       this.user = state;
       console.log(this.user);
-      
+      console.log(this.user.id);
+            
     });
   }
 }

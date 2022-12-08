@@ -44,7 +44,6 @@ export class ApplicationUpdateComponent implements OnInit {
     this.applicationUpdateForm = this.formBuilder.group({
       applicantId: [this.getApplication.applicantId, Validators.required],
       bootcampId: [this.getApplication.bootcampId, Validators.required],
-      state: [this.getApplication.state, Validators.required],
       applicationState: [
         this.getApplication.applicationState,
         Validators.required,
