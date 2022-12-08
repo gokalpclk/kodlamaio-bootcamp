@@ -1,3 +1,9 @@
 .font-size-20{
     font-size: 25px !important;
 }
+.navbar .navbar-brand-wrapper .navbar-brand img{
+    height: 43px !important;
+}
+.hamburger{
+    box-shadow: none;
+}

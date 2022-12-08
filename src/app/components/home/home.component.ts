@@ -12,6 +12,14 @@ export class HomeComponent implements OnInit {
   totalInstructors = 0;
   totalBootcamps = 0;
 
+  today: Date = new Date();
+  date: any =
+    this.today.getDate() +
+    '/' +
+    this.today.getMonth() +
+    '/' +
+    this.today.getFullYear();
+    
   constructor(private dashboardService: DashboardService) {}
 
   ngOnInit(): void {
