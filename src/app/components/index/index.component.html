@@ -242,72 +242,23 @@
      </div>
      <h3 class="mb-2 mt-3">BootCamps</h3>
      <div class="col-md-12 card-bg p-30">
-        <div class="card mb-3 img-animation">
+        <div class="card mb-3 img-animation" *ngFor="let bootcamp of allBootCampList">
            <div class="row g-0">
               <div class="col-md-4">
                  <img src="app/public/skydash/images/s1.png" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <button class="btn btn-sm btn-outline-primary">Apply</button>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <div class="card mb-3 img-animation">
-           <div class="row g-0">
-              <div class="col-md-4">
-                 <img src="app/public/skydash/images/s1.png" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <button class="btn btn-sm btn-outline-primary">Apply</button>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <div class="card mb-3 img-animation">
-           <div class="row g-0">
-              <div class="col-md-4">
-                 <img src="app/public/skydash/images/s1.png" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <button class="btn btn-sm btn-outline-primary">Apply</button>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <div class="card mb-3 img-animation">
-           <div class="row g-0">
-              <div class="col-md-4">
-                 <img src="app/public/skydash/images/s1.png" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <button class="btn btn-sm btn-outline-primary">Apply</button>
-                 </div>
-              </div>
-           </div>
-        </div>
-        <div class="card mb-3 img-animation">
-           <div class="row g-0">
-              <div class="col-md-4">
-                 <img src="app/public/skydash/images/s1.png" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <button class="btn btn-sm btn-outline-primary">Apply</button>
+                    <h5 class="card-title">{{bootcamp.name}}</h5>
+                   <p class="card-text">{{bootcamp.dateStart}} - {{bootcamp.dateEnd}}
+                     <span class="{{bootcamp.state == 1 ? 'badge badge-success' : 'badge badge-danger'}} ml-2">
+                        {{bootcamp.state == 1 ? 'Active' : 'Passive'}}
+                      </span>
+                   </p>
+                    <p class="card-text">{{bootcamp.explanation}}</p>
+                    <div class="state d-flex justify-content-start">
+                        <button class="btn btn-sm btn-outline-primary">Apply</button>
+                     </div>
                  </div>
               </div>
            </div>

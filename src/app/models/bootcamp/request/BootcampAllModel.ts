@@ -6,4 +6,5 @@ export interface IBootcampAllModel {
   dateEnd: string;
   state: number;
   instructorName: string;
+  explanation: string;
 }

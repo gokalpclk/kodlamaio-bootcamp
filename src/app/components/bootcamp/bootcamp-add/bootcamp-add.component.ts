@@ -47,7 +47,8 @@ export class BootcampAddComponent implements OnInit {
       name: ['', Validators.required],
       dateStart: ['', Validators.required],
       dateEnd: ['', Validators.required],
-      state: ['', Validators.required]
+      state: ['', Validators.required],
+      explanation: ['', Validators.required]
     });
   }
 

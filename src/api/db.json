@@ -54,6 +54,7 @@
       "dateStart": "01/10/2022",
       "dateEnd": "01/11/2022",
       "state": "0",
+      "explanation": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.",
       "instructorName": "Engin Demiroğ",
       "id": 1
     },
@@ -63,6 +64,7 @@
       "dateStart": "01/11/2022",
       "dateEnd": "01/12/2022",
       "state": "1",
+      "explanation": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.",
       "instructorName": "Engin Demiroğ",
       "id": 2
     },
@@ -72,6 +74,7 @@
       "dateStart": "10/12/2022",
       "dateEnd": "10/01/2023",
       "state": "1",
+      "explanation": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.",
       "instructorName": "Gürcan Çetin",
       "id": 3
     },
@@ -81,6 +84,7 @@
       "dateStart": "20/01/2023",
       "dateEnd": "20/02/2023",
       "state": "0",
+      "explanation": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.",
       "instructorName": "Gülcan Yayla",
       "id": 4
     },
@@ -90,6 +94,7 @@
       "dateStart": "25/02/2023",
       "dateEnd": "25/03/2023",
       "state": "0",
+      "explanation": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.",
       "instructorName": "Engin Demiroğ",
       "id": 5
     },
@@ -99,8 +104,19 @@
       "dateStart": "01/04/2023",
       "dateEnd": "01/05/2025",
       "state": "1",
+      "explanation": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.",
       "instructorName": "Gürcan Çetin",
       "id": 6
+    },
+    {
+      "instructorId": "5",
+      "name": "ygyj",
+      "dateStart": "57657",
+      "dateEnd": "65765",
+      "state": "0",
+      "explanation": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır.",
+      "instructorName": "Gürcan Çetin",
+      "id": 7
     }
   ],
   "users": [
