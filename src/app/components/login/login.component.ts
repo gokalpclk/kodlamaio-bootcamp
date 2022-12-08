@@ -29,10 +29,10 @@ export class LoginComponent implements OnInit {
     private store: Store<any>
   ) {}
   ngOnInit(): void {
-    // let checkUser = this.store.select('userReducer').subscribe((data) => {
-    //   this.user = data;
-    //   console.log(this.user, ' STORE DAN GELDİ');
-    // });
+    let checkUser = this.store.select('userReducer').subscribe((data) => {
+      this.user = data;
+      console.log(this.user, ' STORE DAN GELDİ');
+    });
     if (
       localStorage.getItem('role') &&
       localStorage.getItem('role') == 'ROLE_EMPLOYEE'

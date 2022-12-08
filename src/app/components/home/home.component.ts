@@ -1,3 +1,5 @@
+import { Store } from '@ngrx/store';
+import { CurrentUserService } from './../../services/current-user/current-user.service';
 import { DashboardService } from './../../services/dashboard/dashboard.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,6 +13,8 @@ export class HomeComponent implements OnInit {
   totalEmployee = 0;
   totalInstructors = 0;
   totalBootcamps = 0;
+  currentUserId = 0;
+  userInfo: string;
 
   today: Date = new Date();
   date: any =
@@ -19,14 +23,18 @@ export class HomeComponent implements OnInit {
     this.today.getMonth() +
     '/' +
     this.today.getFullYear();
-    
-  constructor(private dashboardService: DashboardService) {}
+
+  constructor(
+    private dashboardService: DashboardService,
+    private currentUserService: CurrentUserService
+  ) {}
 
   ngOnInit(): void {
     this.getAllApplicants();
     this.getTotalEmployee();
     this.getTotalInstructors();
     this.getTotalBootcamps();
+    this.getUser();
   }
   getAllApplicants() {
     this.dashboardService.getTotalApplicants().subscribe((data: any) => {
@@ -47,5 +55,14 @@ export class HomeComponent implements OnInit {
     this.dashboardService.getTotalBootcamps().subscribe((data: any) => {
       this.totalBootcamps = data.length;
     });
+  }
+  getUser() {
+    this.currentUserId = JSON.parse(localStorage.getItem('id'));
+    this.currentUserService
+      .getUserById(this.currentUserId)
+      .subscribe((data) => {
+        console.log(data, ' Bu data');
+        this.userInfo = `${data.firstName} ${data.lastName}`;
+      });
   }
 }
