@@ -9,7 +9,7 @@
             <tr>
               <th>Instructor</th>
               <th>Name</th>
-              <th>Explanation</th>
+              <th class="w-350">Explanation</th>
               <th>Date Start</th>
               <th>Date End</th>
               <th>State</th>
@@ -20,7 +20,7 @@
             <tr *ngFor="let bootcamp of allBootcampsList" >
               <td>{{bootcamp.instructorName}}</td>
               <td>{{bootcamp.name}}</td>
-              <td>{{bootcamp.explanation}}</td>
+              <td class="w-350 three-points">{{bootcamp.explanation}}</td>
               <td>{{bootcamp.dateStart}}</td>
               <td>{{bootcamp.dateEnd}}</td>
               <td class="font-weight-medium">

@@ -1,0 +1,10 @@
+.w-350{
+    display: block;
+    width: 350px;
+}
+.three-points{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 70px;
+}
