@@ -28,9 +28,9 @@
                   {{bootcamp.state == 1 ? 'Active' : 'Passive'}}
                 </span>
               </td>
-              <td>
+              <td *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
                 <button type="button" class="btn btn-outline-info btn-sm" id="applyButton"
-                  *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'"
+                  
                    data-toggle="modal" data-target="#applicationModal">Apply</button> 
               </td>
               <td>
