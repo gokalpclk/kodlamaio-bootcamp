@@ -84,72 +84,22 @@
         <div class="col-md-8 grid-margin stretch-card mt-5">
            <div class="card">
               <div class="card-body">
-                 <p class="card-title mb-0">Top Products</p>
+                 <p class="card-title mb-2">Top Bootcamps</p>
                  <div class="table-responsive">
                     <table class="table table-striped table-borderless">
                        <thead>
                           <tr>
-                             <th>Product</th>
-                             <th>Price</th>
+                             <th>Bootcamp Name</th>
                              <th>Date</th>
-                             <th>Status</th>
+                             <th>Instructor</th>
                           </tr>
                        </thead>
                        <tbody>
-                          <tr>
-                             <td>Search Engine Marketing</td>
-                             <td class="font-weight-bold">$362</td>
-                             <td>21 Sep 2018</td>
-                             <td class="font-weight-medium">
-                                <div class="badge badge-success">Completed</div>
-                             </td>
-                          </tr>
-                          <tr>
-                             <td>Search Engine Optimization</td>
-                             <td class="font-weight-bold">$116</td>
-                             <td>13 Jun 2018</td>
-                             <td class="font-weight-medium">
-                                <div class="badge badge-success">Completed</div>
-                             </td>
-                          </tr>
-                          <tr>
-                             <td>Display Advertising</td>
-                             <td class="font-weight-bold">$551</td>
-                             <td>28 Sep 2018</td>
-                             <td class="font-weight-medium">
-                                <div class="badge badge-warning">Pending</div>
-                             </td>
-                          </tr>
-                          <tr>
-                             <td>Pay Per Click Advertising</td>
-                             <td class="font-weight-bold">$523</td>
-                             <td>30 Jun 2018</td>
-                             <td class="font-weight-medium">
-                                <div class="badge badge-warning">Pending</div>
-                             </td>
-                          </tr>
-                          <tr>
-                             <td>E-Mail Marketing</td>
-                             <td class="font-weight-bold">$781</td>
-                             <td>01 Nov 2018</td>
-                             <td class="font-weight-medium">
-                                <div class="badge badge-danger">Cancelled</div>
-                             </td>
-                          </tr>
-                          <tr>
-                             <td>Referral Marketing</td>
-                             <td class="font-weight-bold">$283</td>
-                             <td>20 Mar 2018</td>
-                             <td class="font-weight-medium">
-                                <div class="badge badge-warning">Pending</div>
-                             </td>
-                          </tr>
-                          <tr>
-                             <td>Social media marketing</td>
-                             <td class="font-weight-bold">$897</td>
-                             <td>26 Oct 2018</td>
-                             <td class="font-weight-medium">
-                                <div class="badge badge-success">Completed</div>
+                          <tr *ngFor="let bootcamp of allBootCampList">
+                             <td>{{bootcamp.name}}</td>
+                             <td class="font-weight-bold">{{bootcamp.dateStart}}</td>
+                             <td class="font-weight-small">
+                               {{bootcamp.instructorName}}
                              </td>
                           </tr>
                        </tbody>
@@ -161,7 +111,7 @@
         <div class="col-md-4 stretch-card grid-margin mt-5">
            <div class="card">
               <div class="card-body">
-                 <p class="card-title">Notifications</p>
+                 <p class="card-title">Employee</p>
                  <ul class="icon-data-list">
                     <li>
                        <div class="d-flex">
@@ -240,7 +190,7 @@
            </div>
         </div>
      </div>
-     <h3 class="mb-2 mt-3">BootCamps</h3>
+     <h3 class="mb-2 mt-3 font-weight-medium">BootCamps</h3>
      <div class="col-md-12 card-bg p-30">
         <div class="card mb-3 img-animation" *ngFor="let bootcamp of allBootCampList">
            <div class="row g-0">
@@ -257,7 +207,7 @@
                    </p>
                     <p class="card-text">{{bootcamp.explanation}}</p>
                     <div class="state d-flex justify-content-start">
-                        <button class="btn btn-sm btn-outline-primary">Apply</button>
+                        <button class="btn btn-sm btn-outline-primary" routerLink="/register">Apply</button>
                      </div>
                  </div>
               </div>
@@ -294,7 +244,7 @@
      </div>
      <div class="row row-cols-1 row-cols-md-4 g-4 mt-5 card-bg">
         <div class="row col-md-12">
-           <h3>Instructors</h3>
+           <h3 class="font-weight-medium">Instructors</h3>
         </div>
         <div class="col">
            <div class="card img-card img-animation">
@@ -354,7 +304,7 @@
 
 <div class="footer-basic">
   <footer>
-      <div class="social"><a href="www.instagram.com"><i class="mdi mdi-instagram"></i></a><a href="www.twitter.com"><i class="mdi mdi-twitter"></i> </a><a href="www.facebook.com"><i class="mdi mdi-facebook"></i></a></div>
+      <div class="social"><a href="www.instagram.com"><i class="mdi mdi-instagram"></i></a><a href="www.twitter.com"><i class="mdi mdi-twitter"></i> </a><a href="www.linkedin.com"><i class="mdi mdi-linkedin"></i></a></div>
       <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Home</a></li>
           <li class="list-inline-item"><a href="#">Portfolio</a></li>
