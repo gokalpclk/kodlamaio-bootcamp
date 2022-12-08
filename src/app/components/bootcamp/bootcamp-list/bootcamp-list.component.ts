@@ -60,7 +60,7 @@ export class BootcampListComponent implements OnInit {
           this.toastrService.success('Application');
         });
     } else {
-      this.toastrService.warning('aktif değil');
+      this.toastrService.warning('Application is not active');
     }
   }
 }

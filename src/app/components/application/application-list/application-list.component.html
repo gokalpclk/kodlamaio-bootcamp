@@ -9,7 +9,6 @@
             <tr>
               <th>Application Id</th>
               <th>Bootcamp Id</th>
-              <th>State</th>
               <th>Application State</th>
               <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th>
             </tr>
@@ -18,17 +17,6 @@
             <tr *ngFor="let application of allApplicationList">
               <td>{{ application.applicantId }}</td>
               <td>{{ application.bootcampId }}</td>
-              <td class="font-weight-medium">
-                <span
-                  class="{{
-                    application.state == 1
-                      ? 'badge badge-success'
-                      : 'badge badge-danger'
-                  }}"
-                >
-                  {{ application.state == 1 ? "Active" : "Passive" }}
-                </span>
-              </td>
               <!-- class="*ngIf='application.applicationState==PENDING'" -->
               <td>{{ application.applicationState }}</td>
               <td> <button type="button" class="btn btn-outline-info btn-sm" id="updateButton"
