@@ -1,1 +1,43 @@
-<p>application-list works!</p>
+<div class="col-lg-12 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Application</h4>
+      <p class="card-description">List</p>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Application Id</th>
+              <th>Bootcamp Id</th>
+              <th>State</th>
+              <th>Application State</th>
+              <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let application of allApplicationList">
+              <td>{{ application.applicantId }}</td>
+              <td>{{ application.bootcampId }}</td>
+              <td class="font-weight-medium">
+                <span
+                  class="{{
+                    application.state == 1
+                      ? 'badge badge-success'
+                      : 'badge badge-danger'
+                  }}"
+                >
+                  {{ application.state == 1 ? "Active" : "Passive" }}
+                </span>
+              </td>
+              <!-- class="*ngIf='application.applicationState==PENDING'" -->
+              <td>{{ application.applicationState }}</td>
+              <td> <button type="button" class="btn btn-outline-info btn-sm" id="updateButton"
+                *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"
+                 data-toggle="modal" data-target="#applicationModal" routerLink="application-update/{{application.id}}">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,14 +1,12 @@
-import { ToastrModule, ToastrService } from 'ngx-toastr';
-import { ActivatedRoute } from '@angular/router';
+import { ApplicationStates } from './../../../enums/applicationState';
+import { ToastrService } from 'ngx-toastr';
 import { ApplicationService } from './../../../services/application/application.service';
-import { AdminAddComponent } from './../../admin/admin-add/admin-add/admin-add.component';
-import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { InstructorService } from 'src/app/services/instructor/instructor.service';
 import { AuthGuard } from 'src/app/guards/auth.guard';
 import { IBootcampAllModel } from './../../../models/bootcamp/request/BootcampAllModel';
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
 import { Component, OnInit } from '@angular/core';
-import { map, VirtualTimeScheduler, Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-bootcamp-list',
@@ -18,14 +16,13 @@ import { map, VirtualTimeScheduler, Observable } from 'rxjs';
 export class BootcampListComponent implements OnInit {
   allBootcampsList: IBootcampAllModel[] = [];
   bootcampModal: any;
-
+  private instructorId: any;
   constructor(
     private bootcampService: BootcampService,
     public authGuard: AuthGuard,
     private instructorService: InstructorService,
     private applicationService: ApplicationService,
-    private activatedRoute: ActivatedRoute,
-    private toastrService:ToastrService
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -49,21 +46,21 @@ export class BootcampListComponent implements OnInit {
   }
 
   addApplicantion() {
-
     let applicationData = Object.assign({});
     applicationData.bootcampId = this.bootcampModal.id;
     applicationData.applicantId = localStorage.getItem('id');
-    applicationData.state=this.bootcampModal.state;
-    if (this.bootcampModal.state==1) {
-      console.log(applicationData,'Application Data')  
-      this.applicationService.addApplication(applicationData).subscribe((data) => {
-        this.toastrService.success("Application")
-      });
+    this.instructorId = localStorage.getItem('id');
+    applicationData.state = this.bootcampModal.state;
+    applicationData.userState = ApplicationStates.PENDING;
+    if (this.bootcampModal.state == 1) {
+      console.log(applicationData, 'Application Data');
+      this.applicationService
+        .addApplication(applicationData)
+        .subscribe((data) => {
+          this.toastrService.success('Application');
+        });
+    } else {
+      this.toastrService.warning('aktif değil');
     }
-    else{
-      this.toastrService.warning("aktif değil")
-    }
-    
-   
   }
 }

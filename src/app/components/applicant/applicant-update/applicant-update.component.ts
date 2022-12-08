@@ -5,6 +5,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ApplicationStates } from 'src/app/enums/applicationState';
 
 @Component({
   selector: 'app-applicant-update',
@@ -14,6 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ApplicantUpdateComponent implements OnInit {
   applicantUpdateForm: FormGroup;
   getApplicant: IApplicantUpdateRequestModel;
+  type: string = ApplicationStates.PENDING;
   constructor(
     private applicantService: ApplicantService,
     private currentUserService: CurrentUserService,

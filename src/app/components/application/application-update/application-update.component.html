@@ -1,1 +1,90 @@
-<p>application-update works!</p>
+<div class="col-md-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Application Update</h4>
+        <form class="form-sample" [formGroup]="applicationUpdateForm" *ngIf="applicationUpdateForm">
+          <p class="card-description">
+            Info
+          </p>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Bootcamp Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="Bootcamp Name" formControlName="bootcampId"/>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Applicant Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" placeholder="Applicant Name" formControlName="applicantId" />
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">State</label>
+                <div class="col-sm-9">
+                  <select class="form-select" style="padding:0.7em;" formControlName="state" id="state">
+                    <option id="state" class="form-control" value="0">Passive</option>
+                    <option id="state" class="form-control" value="1">Active</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Aplication State</label>
+                  <div class="col-sm-9">
+                    <select class="form-select" style="padding:0.7em;" formControlName="applicationState" id="applicationState">
+                      <option id="state" class="form-control" value="PENDING">PENDING</option>
+                      <option id="state" class="form-control" value="SELECTED">SELECTED</option>
+                      <option id="state" class="form-control" value="DENIED">DENIED</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            
+            <div class="col-md-12 d-flex justify-content-center">
+              <div class="col-md-3">
+                <button type="button" class="btn btn-outline-info w-100" (click)="updateApplication()">Update</button>
+              </div>
+              <div class="col-md-3">
+                <button type="button" class="btn btn-outline-danger w-100" data-toggle="modal" data-target="#deleteModal">Delete</button>
+              </div>
+                <!-- Modal -->
+                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="false">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="deleteModalLabel">Delete Application</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                            Are you sure about delete ?
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary"
+                                  data-dismiss="modal">Cancel</button>
+                              <button type="button" class="btn btn-danger" data-dismiss="modal"
+                              (click)="deleteApplication()">Delete</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Modal end -->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

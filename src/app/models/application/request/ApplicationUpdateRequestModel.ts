@@ -1,6 +1,9 @@
 export interface IApplicationUpdateRequestModel {
   id: number;
-  userId: number;
+  applicantId: number;
   bootcampId: number;
   state: number;
+  applicationName: string;
+  bootcampName: string;
+  applicationState: string;
 }

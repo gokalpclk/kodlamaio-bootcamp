@@ -12,7 +12,7 @@
               <th>Date Start</th>
               <th>Date End</th>
               <th>State</th>
-              <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE' || 'ROLE_APPLICANT'">Manage</th>
+              <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE' || authGuard.userRoleIn == 'ROLE_APPLICANT'">Manage</th>
             </tr>
           </thead>
           <tbody>

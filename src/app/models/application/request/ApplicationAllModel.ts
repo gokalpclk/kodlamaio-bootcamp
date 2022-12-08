@@ -3,4 +3,7 @@ export interface IApplicationAllModel {
   applicantId: number;
   bootcampId: number;
   state: number;
+  applicationName: string;
+  bootcampName: string;
+  applicationState: string;
 }

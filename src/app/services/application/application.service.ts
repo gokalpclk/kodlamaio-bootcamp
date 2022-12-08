@@ -13,8 +13,12 @@ export class ApplicationService {
   allApplications: IApplicationAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
 
-  getAllApplications(): Observable<IApplicationAllModel[]> {
+  getAllApplication(): Observable<IApplicationAllModel[]> {
     return this.httpClient.get<IApplicationAllModel[]>(this.apiUrl);
+  }
+
+  getApplicantById(id: number): Observable<IApplicationAllModel> {
+    return this.httpClient.get<IApplicationAllModel>(this.apiUrl + '/' + id);
   }
 
   addApplication(data: IApplicationAddRequestModel) {

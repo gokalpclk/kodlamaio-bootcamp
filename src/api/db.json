@@ -2,9 +2,107 @@
   "applicants": [],
   "instructors": [],
   "employees": [],
-  "applications": [],
+  "applications": [
+    {
+      "applicantId": "3",
+      "bootcampId": 2,
+      "state": "1",
+      "applicationState": "SELECTED",
+      "id": 1
+    },
+    {
+      "applicantId": "3",
+      "bootcampId": 6,
+      "state": "1",
+      "applicationState": "SELECTED",
+      "id": 2
+    },
+    {
+      "applicantId": "3",
+      "bootcampId": 3,
+      "state": "1",
+      "applicationState": "DENIED",
+      "id": 3
+    },
+    {
+      "bootcampId": 2,
+      "applicantId": "4",
+      "state": "1",
+      "applicationState": "PENDING",
+      "id": 4
+    },
+    {
+      "bootcampId": 6,
+      "applicantId": "4",
+      "state": "1",
+      "applicationState": "PENDING",
+      "id": 5
+    },
+    {
+      "bootcampId": 2,
+      "applicantId": "4",
+      "state": "1",
+      "applicationState": "PENDING",
+      "id": 6
+    }
+  ],
   "blackList": [],
-  "bootcamps": [],
+  "bootcamps": [
+    {
+      "instructorId": "1",
+      "name": "Programlamaya Giriş için Temel Kurs",
+      "dateStart": "01/10/2022",
+      "dateEnd": "01/11/2022",
+      "state": "0",
+      "instructorName": "Engin Demiroğ",
+      "id": 1
+    },
+    {
+      "instructorId": "1",
+      "name": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
+      "dateStart": "01/11/2022",
+      "dateEnd": "01/12/2022",
+      "state": "1",
+      "instructorName": "Engin Demiroğ",
+      "id": 2
+    },
+    {
+      "instructorId": "5",
+      "name": "Yazılım Geliştirici Yetiştirme Kampı(Javascript)",
+      "dateStart": "10/12/2022",
+      "dateEnd": "10/01/2023",
+      "state": "1",
+      "instructorName": "Gürcan Çetin",
+      "id": 3
+    },
+    {
+      "instructorId": "6",
+      "name": "Senior Yazılım Geliştirici Yetiştirme Kampı (.NET)\"",
+      "dateStart": "20/01/2023",
+      "dateEnd": "20/02/2023",
+      "state": "0",
+      "instructorName": "Gülcan Yayla",
+      "id": 4
+    },
+    {
+      "instructorId": "1",
+      "name": "Yazılım Geliştirici Yetiştirme Kampı (C# + ANGULAR)",
+      "dateStart": "25/02/2023",
+      "dateEnd": "25/03/2023",
+      "state": "0",
+      "instructorName": "Engin Demiroğ",
+      "id": 5
+    },
+    {
+      "instructorId": "5",
+      "name": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
+      "dateStart": "01/04/2023",
+      "dateEnd": "01/05/2025",
+      "state": "1",
+      "instructorName": "Gürcan Çetin",
+      "id": 6
+    }
+  ],
   "users": [
     {
       "firstName": "Engin",

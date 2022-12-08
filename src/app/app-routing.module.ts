@@ -1,3 +1,5 @@
+import { ApplicationUpdateComponent } from './components/application/application-update/application-update.component';
+import { ApplicationListComponent } from './components/application/application-list/application-list.component';
 import { ApplicationAddComponent } from './components/application/application-add/application-add.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UpdateCurrentUserComponent } from './components/current-user/update-current-user/update-current-user.component';
@@ -52,6 +54,10 @@ const routes: Routes = [
         path: 'employee-list/employee-update/:id',
         component: EmployeeUpdateComponent,
       },
+      {
+        path: 'application-list/application-update/:id',
+        component: ApplicationUpdateComponent,
+      },
 
       { path: 'instructor-list', component: InstructorListComponent },
       { path: 'instructor-add', component: InstructorAddComponent },
@@ -76,6 +82,7 @@ const routes: Routes = [
         path: 'applicant-list/blacklist-add/:id',
         component: BlackListAddComponent,
       },
+      { path: 'application-list', component: ApplicationListComponent },
     ],
     canActivate: [AuthGuard],
     data: {
@@ -98,6 +105,7 @@ const routes: Routes = [
         path: 'instructor-update/:id',
         component: InstructorUpdateComponent,
       },
+      { path: 'application-list', component: ApplicationListComponent },
     ],
     canActivate: [AuthGuard],
     data: {
@@ -114,6 +122,7 @@ const routes: Routes = [
         component: UpdateCurrentUserComponent,
       },
       { path: 'bootcamp-list', component: BootcampListComponent },
+      { path: 'application-list', component: ApplicationListComponent },
       // {
       //   path: 'bootcamp-list/application-add/:id',
       //   component: ApplicationAddComponent,
