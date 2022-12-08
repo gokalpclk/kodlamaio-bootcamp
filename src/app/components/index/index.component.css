@@ -1,0 +1,35 @@
+.bg-purple{
+    background-color: #4B49AC !important;
+}
+.p-30{
+    padding: 30px !important;
+}
+.nav-link{
+    color: white !important;
+}
+.content{
+    background: #F5F7FF;
+}
+.text-info, .mb-0{
+    font-family: sans-serif;
+}
+.card-img-top{
+    border-radius: 50%;
+}
+.img-card{
+    background: none;
+}
+.hr-cls{
+   border-top:  1px solid black;
+}
+.img-animation{
+   transition: transform .2s;
+}
+.img-animation:hover{
+    transform: scale(1.1); 
+}
+.card-bg{
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
