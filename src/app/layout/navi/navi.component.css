@@ -1,9 +1,23 @@
-.font-size-20{
+.font-size-20 {
     font-size: 25px !important;
 }
-.navbar .navbar-brand-wrapper .navbar-brand img{
+
+.navbar .navbar-brand-wrapper .navbar-brand img {
     height: 43px !important;
 }
-.hamburger{
+
+.hamburger {
     box-shadow: none;
 }
+
+/* .navbar-item {
+    margin: 0 !important;
+    padding: 0 1em;
+    transition: transform 250ms, opacity 400ms;
+
+}
+
+.navbar-item:hover {
+    background-color: #aaa;
+    border-radius: 10px;
+} */
