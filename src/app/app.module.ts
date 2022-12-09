@@ -43,6 +43,7 @@ import { ApplicationAddComponent } from './components/application/application-ad
 import { ApplicationListComponent } from './components/application/application-list/application-list.component';
 import { ApplicationUpdateComponent } from './components/application/application-update/application-update.component';
 import { userReducer } from './store/reducers/user-reducer';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,6 +80,7 @@ import { userReducer } from './store/reducers/user-reducer';
     ApplicationAddComponent,
     ApplicationListComponent,
     ApplicationUpdateComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
