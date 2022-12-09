@@ -1,3 +1,4 @@
+import { IndexAboutComponent } from './components/index-about/index-about.component';
 import { ApplicationUpdateComponent } from './components/application/application-update/application-update.component';
 import { ApplicationListComponent } from './components/application/application-list/application-list.component';
 import { ApplicationAddComponent } from './components/application/application-add/application-add.component';
@@ -27,11 +28,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './guards/auth.guard';
 import { IndexComponent } from './components/index/index.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: IndexComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'index-about', component: IndexAboutComponent },
 
   {
     path: 'admin-panel',
@@ -133,6 +136,7 @@ const routes: Routes = [
       role: 'ROLE_APPLICANT',
     },
   },
+  { path: '**', pathMatch: 'full', component: PagenotfoundComponent },
 ];
 
 @NgModule({

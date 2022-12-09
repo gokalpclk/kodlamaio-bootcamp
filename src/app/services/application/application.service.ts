@@ -23,6 +23,11 @@ export class ApplicationService {
     );
   }
 
+  getApplicationByApplicantId(id: any): Observable<IApplicationAllModel[]> {
+    return this.httpClient.get<IApplicationAllModel[]>(
+      this.apiUrl + '?applicantId=' + id
+    );
+  }
   addApplication(data: IApplicationAddRequestModel) {
     return this.httpClient.post<IApplicationAddRequestModel[]>(
       this.apiUrl,

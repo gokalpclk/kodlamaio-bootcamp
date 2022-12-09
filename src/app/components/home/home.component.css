@@ -1,7 +1,6 @@
 .d-content {
     display: contents;
 }
-
 .home-button {
     width: 100%;
     display: flex;
@@ -9,4 +8,7 @@
     align-items: center;
     margin-bottom: 0.7em;
     background-color: rgb(198, 198, 198) !important;
+}
+.font-weight{
+    font-weight: 300;
 }

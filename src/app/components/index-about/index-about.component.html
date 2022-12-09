@@ -1,0 +1,108 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+       <a class="navbar-brand" href="#">
+          <img src="app/public/skydash/images/BootCampLogo-light.png" width="50" height="50" alt="">
+          <span> BootCamp</span>
+       </a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+             <li class="nav-item navbar-item active">
+                <a class="nav-link " href="#">Home</a>
+             </li>
+             <li class="nav-item navbar-item">
+                <a class="nav-link " routerLink="/index-about">About</a>
+             </li>
+             <li class="nav-item navbar-item" *ngIf="!user">
+                <a class="nav-link " routerLink="/register">Register</a>
+             </li>
+             <li class="nav-item navbar-item">
+                <a class="nav-link " routerLink="/login">{{user ? 'Panel' : 'Login' }}</a>
+             </li>
+          </ul>
+       </div>
+    </div>
+ </nav>
+ <div class="content">
+    <div class="container">
+       <div class="row row-cols-1 row-cols-md-4 g-4 mt-5 card-bg">
+          <div class="col">
+             <div class="card img-card img-animation">
+                <img src="app/public/skydash/images/habibe.png" class="card-img-top " alt="...">
+                <div class="card-body">
+                   <h5 class="card-title">Habibe Çelikten</h5>
+                   <p>Front End Developer</p>
+                     <div class="social">
+                        <a class="norm" href="https://www.linkedin.com/in/habibecelikten/"><i class="mdi mdi-linkedin-box icon-md"></i></a>
+                        <a class="norm" href="https://github.com/HabibeC"><i class="mdi mdi-github-circle icon-md"></i></a>
+                        <a class="norm" href="mailto:habibecelikten@gmail.com"><i class="mdi mdi-gmail icon-md"></i></a>
+                    </div>
+                </div>
+                <hr class="hr-cls">
+             </div>
+          </div>
+          <div class="col">
+             <div class="card img-card img-animation">
+                <img src="app/public/skydash/images/mustafa.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                   <h5 class="card-title">Mustafa Peynirci</h5>
+                   <p>Front End Developer</p>
+                    <div class="social">
+                        <a class="norm" href="https://www.linkedin.com/in/mustafapeynirci/"><i class="mdi mdi-linkedin-box icon-md"></i></a>
+                        <a class="norm" href="https://github.com/MustafaPeynirci"><i class="mdi mdi-github-circle icon-md"></i></a>
+                        <a class="norm" href="mailto:mustafapeynirciii@gmail.com"><i class="mdi mdi-gmail icon-md"></i></a>
+                    </div>
+                </div>
+                <hr class="hr-cls">
+             </div>
+          </div>
+          <div class="col">
+             <div class="card img-card img-animation">
+                <img src="app/public/skydash/images/ahmet.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                   <h5 class="card-title">Ahmet Salih Karagöz</h5>
+                   <p>Front End Developer</p>
+                    <div class="social">
+                        <a class="norm" href="https://www.linkedin.com/in/ahmetsalihkaragoz/"><i class="mdi mdi-linkedin-box icon-md"></i></a>
+                        <a class="norm" href="https://github.com/krgzsalih"><i class="mdi mdi-github-circle icon-md"></i></a>
+                        <a class="norm" href="mailto:krgzahmetsalih@gmail.com"><i class="mdi mdi-gmail icon-md"></i></a>
+                    </div>
+                </div>
+                <hr class="hr-cls">
+             </div>
+          </div>
+          <div class="col">
+             <div class="card img-card img-animation">
+                <img src="app/public/skydash/images/gokalp.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                   <h5 class="card-title">Gökalp Çelik</h5>
+                   <p>Front End Developer</p>
+                    <div class="social">
+                        <a class="norm" href="https://www.linkedin.com/in/gokalpcelik/"><i class="mdi mdi-linkedin-box icon-md"></i></a>
+                        <a class="norm" href="https://github.com/gokalpclk"><i class="mdi mdi-github-circle icon-md"></i></a>
+                        <a class="norm" href="mailto:gokalp@gokalpcelik.com"><i class="mdi mdi-gmail icon-md"></i></a>
+                    </div>
+                </div>
+             </div>
+             <hr class="hr-cls">
+          </div>
+       </div>
+    </div>
+</div>
+
+ <div class="footer-basic">
+    <footer>
+       <div class="social"><a href="www.instagram.com"><i class="mdi mdi-instagram"></i></a><a href="www.twitter.com"><i
+                class="mdi mdi-twitter"></i> </a><a href="www.linkedin.com"><i class="mdi mdi-linkedin"></i></a></div>
+       <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item"><a routerLink="/index-about">About</a></li>
+          <li class="list-inline-item"><a routerLink="/register">Register</a></li>
+          <li class="list-inline-item"><a routerLink="/login">Login</a></li>
+       </ul>
+       <p class="copyright">The Pair 5 © 2022</p>
+    </footer>
+ </div>
