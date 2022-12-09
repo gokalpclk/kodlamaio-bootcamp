@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AuthGuard } from 'src/app/guards/auth.guard';
 import { IBootcampAllModel } from './../../models/bootcamp/request/BootcampAllModel';
 import { BootcampService } from './../../services/bootcamp/bootcamp.service';
@@ -13,7 +14,8 @@ export class IndexComponent implements OnInit {
   user = '';
   constructor(
     private bootcampService: BootcampService,
-    public authGuard: AuthGuard
+    public authGuard: AuthGuard,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -25,5 +27,19 @@ export class IndexComponent implements OnInit {
     this.bootcampService.getAllBootcamps().subscribe((data) => {
       this.allBootCampList = data;
     });
+  }
+
+  apply(bootcamp: any) {
+    if (localStorage.getItem('token')) {
+      if (localStorage.getItem('role') === 'ROLE_EMPLOYEE') {
+        this.router.navigate([
+          `admin-panel/bootcamp-list/bootcamp-update/${bootcamp.id}`,
+        ]);
+      } else if (localStorage.getItem('role') === 'ROLE_APPLICANT') {
+        this.router.navigate(['applicant-panel/bootcamp-list']);
+      }
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 }

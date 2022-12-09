@@ -111,6 +111,14 @@
       "applicantId": "4",
       "applicationState": "PENDING",
       "id": 14
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Programlamaya Giriş için Temel Kurs",
+      "applicantName": "Elif Sena Erdoğan",
+      "applicantId": "3",
+      "applicationState": "PENDING",
+      "id": 15
     }
   ],
   "blackList": [],
