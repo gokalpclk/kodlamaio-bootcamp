@@ -9,11 +9,9 @@
   "employees": [],
   "applications": [
     {
-      "bootcampId": 2,
-      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
       "applicantName": "Elif Sena Erdoğan",
-      "applicantId": "3",
-      "applicationState": "PENDING",
+      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
+      "applicationState": "DENIED",
       "id": 1
     },
     {
@@ -25,19 +23,15 @@
       "id": 2
     },
     {
-      "bootcampId": 6,
-      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
       "applicantName": "Habibe Çelikten",
-      "applicantId": "4",
-      "applicationState": "PENDING",
+      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
+      "applicationState": "SELECTED",
       "id": 3
     },
     {
-      "bootcampId": 2,
-      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
       "applicantName": "Habibe Çelikten",
-      "applicantId": "4",
-      "applicationState": "PENDING",
+      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
+      "applicationState": "SELECTED",
       "id": 5
     },
     {

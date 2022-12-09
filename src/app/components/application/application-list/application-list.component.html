@@ -17,8 +17,18 @@
             <tr *ngFor="let application of allApplicationList">
               <td>{{ application.applicantName}}</td>
               <td>{{ application.bootcampName}}</td>
-              <!-- class="*ngIf='application.applicationState==PENDING'" -->
-              <td>{{ application.applicationState }}</td>
+              <!-- <td class="font-weight-medium">
+                <span class="{{application.applicationState == 'PENDING' ? 'badge badge-success' : 'badge badge-danger'}}">
+                  {{ application.applicationState }}
+                </span>
+              </td> -->
+              <td>
+                <span [ngClass]="{'badge badge-pill badge-warning' : application.applicationState == 'PENDING',
+                'badge badge-pill badge-danger' : application.applicationState == 'DENIED',
+                'badge badge-success' : application.applicationState == 'SELECTED'}">
+                  {{ application.applicationState }}
+                </span>
+              </td>
               <td> <button type="button" class="btn btn-outline-info btn-sm" id="updateButton"
                 *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"
                  data-toggle="modal" data-target="#applicationModal" routerLink="application-update/{{application.id}}">Update</button></td>

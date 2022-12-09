@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { IApplicationAllModel } from './../../models/application/request/ApplicationAllModel';
 import { Injectable } from '@angular/core';
+import { IApplicationDeleteRequestModel } from 'src/app/models/application/request/ApplicationDeleteRequestModel';
 
 @Injectable({
   providedIn: 'root',
@@ -28,6 +29,11 @@ export class ApplicationService {
       this.apiUrl + '?applicantId=' + id
     );
   }
+
+  getApplicationById(id: number): Observable<IApplicationAllModel> {
+    return this.httpClient.get<IApplicationAllModel>(this.apiUrl + '/' + id);
+  }
+
   addApplication(data: IApplicationAddRequestModel) {
     return this.httpClient.post<IApplicationAddRequestModel[]>(
       this.apiUrl,
@@ -42,6 +48,12 @@ export class ApplicationService {
     return this.httpClient.put<IApplicationUpdateRequestModel>(
       this.apiUrl + '/' + id,
       data
+    );
+  }
+
+  deleteApplication(id: number): Observable<IApplicationDeleteRequestModel> {
+    return this.httpClient.delete<IApplicationDeleteRequestModel>(
+      this.apiUrl + '/' + id
     );
   }
 }
