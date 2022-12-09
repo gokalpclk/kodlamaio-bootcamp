@@ -1,3 +1,4 @@
+import { IndexAboutComponent } from './components/index-about/index-about.component';
 import { ApplicationUpdateComponent } from './components/application/application-update/application-update.component';
 import { ApplicationListComponent } from './components/application/application-list/application-list.component';
 import { ApplicationAddComponent } from './components/application/application-add/application-add.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: IndexComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'index-about', component: IndexAboutComponent },
 
   {
     path: 'admin-panel',
