@@ -65,7 +65,7 @@ import { userReducer } from './store/reducers/user-reducer';
     BootcampUpdateComponent,
     HomeComponent,
     BlackListAddComponent,
-    BlackListListComponent,
+    BlackListListComponent, 
     BlackListUpdateComponent,
     AdminAddComponent,
     AdminListComponent,

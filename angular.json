@@ -36,7 +36,9 @@
               "./src/app/public/skydash/vendors/select2/select2.min.css",
               "./src/app/public/skydash/vendors/select2-bootstrap-theme/select2-bootstrap.min.css",
               "./node_modules/animate.css/animate.css",
-              "./node_modules/ngx-toastr/toastr.css"
+              "./node_modules/ngx-toastr/toastr.css",
+              "node_modules/datatables.net-dt/css/jquery.dataTables.css",
+              "./node_modules/datatables.net-buttons-dt/css/buttons.dataTables.css"
             ],
             "scripts": [
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",
@@ -54,7 +56,15 @@
               "./src/app/public/skydash/js/dashboard.js",
               "./src/app/public/skydash/js/Chart.roundedBarCharts.js",
               "./src/app/public/skydash/vendors/select2/select2.min.js",
-              "./src/app/public/skydash/js/select2.js"
+              "./src/app/public/skydash/js/select2.js",
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/datatables.net/js/jquery.dataTables.js",
+              "node_modules/jszip/dist/jszip.js",
+              "node_modules/datatables.net-buttons/js/dataTables.buttons.js",
+              "node_modules/datatables.net-buttons/js/buttons.colVis.js",
+              "node_modules/datatables.net-buttons/js/buttons.flash.js",
+              "node_modules/datatables.net-buttons/js/buttons.html5.js",
+              "node_modules/datatables.net-buttons/js/buttons.print.js"
             ]
           },
           "configurations": {
@@ -115,8 +125,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
             "scripts": []
           }
         }
