@@ -110,18 +110,7 @@
         </ul>
       </div>
     </li>
-    <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
-      <a class="nav-link" data-toggle="collapse" href="#application" aria-expanded="false" aria-controls="application">
-        <i class="icon-layout menu-icon"></i>
-        <span class="menu-title">Application</span>
-        <i class="menu-arrow"></i>
-      </a>
-      <div class="collapse" id="application">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" routerLink="application-list">Application List</a></li>
-        </ul>
-      </div>
-    </li>
+
     <!-- ---------------- INSTRUCTOR COMPONENT'S ----------------- -->
     <li class="nav-item" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
       <a class="nav-link" data-toggle="collapse" href="#instructor" aria-expanded="false" aria-controls="instructor">

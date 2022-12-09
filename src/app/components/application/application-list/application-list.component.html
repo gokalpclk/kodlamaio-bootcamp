@@ -13,7 +13,7 @@
               <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
             <tr *ngFor="let application of allApplicationList">
               <td>{{ application.applicantName}}</td>
               <td>{{ application.bootcampName}}</td>
@@ -22,6 +22,15 @@
               <td> <button type="button" class="btn btn-outline-info btn-sm" id="updateButton"
                 *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"
                  data-toggle="modal" data-target="#applicationModal" routerLink="application-update/{{application.id}}">Update</button></td>
+            </tr>
+          </tbody>
+
+          <tbody *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
+            <tr *ngFor="let application of applicationByIdList">
+              <td>{{ application.applicantName}}</td>
+              <td>{{ application.bootcampName}}</td>
+              <!-- class="*ngIf='application.applicationState==PENDING'" -->
+              <td>{{ application.applicationState }}</td>
             </tr>
           </tbody>
         </table>

@@ -13,6 +13,7 @@ import { ApplicationStates } from './../../../enums/applicationState';
 })
 export class ApplicationListComponent implements OnInit {
   allApplicationList: IApplicationAllModel[] = [];
+  applicationByIdList: IApplicationAllModel[] = [];
   applicant: IApplicantAllModel;
   constructor(
     private applicationService: ApplicationService,
@@ -22,7 +23,7 @@ export class ApplicationListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllApplication();
-
+    this.getApplicationByApplicantId(localStorage.getItem('id'))
   }
 
   getAllApplication() {
@@ -36,4 +37,11 @@ export class ApplicationListComponent implements OnInit {
       this.applicant=data
     })
   }
+
+  getApplicationByApplicantId(id:any){
+    this.applicationService.getApplicationByApplicantId(id).subscribe(data=>{
+      this.applicationByIdList=data
+    })
+  }
+
 }

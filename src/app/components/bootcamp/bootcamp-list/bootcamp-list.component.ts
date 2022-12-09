@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BootcampListComponent implements OnInit {
   allBootcampsList: IBootcampAllModel[] = [];
-  bootcampModal: IBootcampAllModel;
+  bootcampModel: IBootcampAllModel;
 
   selectedBootcamp: IBootcampAllModel;
   constructor(
@@ -43,14 +43,14 @@ export class BootcampListComponent implements OnInit {
   }
 
   getBootcamp(data: any) {
-    this.bootcampModal = data;
+    this.bootcampModel = data;
     this.addApplicantion();
   }
 
   addApplicantion() {
     let applicationData = Object.assign({});
-    applicationData.bootcampId = this.bootcampModal.id;
-    applicationData.bootcampName = this.bootcampModal.name;
+    applicationData.bootcampId = this.bootcampModel.id;
+    applicationData.bootcampName = this.bootcampModel.name;
 
     this.applicantService
       .getApplicantById(parseInt(localStorage.getItem('id')))
@@ -69,14 +69,13 @@ export class BootcampListComponent implements OnInit {
             this.toastrService.success('Application');
           });
       });
-
-    // if (this.bootcampModal.state == 1) {
-    // } else {
-    //   this.toastrService.warning('Application is not active');
-    // }
   }
 
   changeSelected(model) {
-    this.selectedBootcamp = model;
+    if (this.bootcampModel.state == 1) {
+      this.selectedBootcamp = model;
+    } else {
+      this.toastrService.warning('Application is not active');
+    }
   }
 }
