@@ -1,49 +1,116 @@
 {
-  "applicants": [],
+  "applicants": [
+    {
+      "state": 0,
+      "id": 1
+    }
+  ],
   "instructors": [],
   "employees": [],
   "applications": [
     {
-      "applicantId": "3",
       "bootcampId": 2,
-      "state": "1",
+      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
+      "applicantName": "Elif Sena Erdoğan",
+      "applicantId": "3",
       "applicationState": "PENDING",
       "id": 1
     },
     {
-      "applicantId": "3",
       "bootcampId": 6,
-      "state": "1",
-      "applicationState": "SELECTED",
+      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
+      "applicantName": "Elif Sena Erdoğan",
+      "applicantId": "3",
+      "applicationState": "PENDING",
       "id": 2
     },
     {
-      "applicantId": "3",
-      "bootcampId": 3,
-      "state": "1",
-      "applicationState": "DENIED",
+      "bootcampId": 6,
+      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
+      "applicantName": "Habibe Çelikten",
+      "applicantId": "4",
+      "applicationState": "PENDING",
       "id": 3
     },
     {
       "bootcampId": 2,
+      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı(JAVA + REACT)",
+      "applicantName": "Habibe Çelikten",
       "applicantId": "4",
-      "state": "1",
-      "applicationState": "PENDING",
-      "id": 4
-    },
-    {
-      "bootcampId": 6,
-      "applicantId": "4",
-      "state": "1",
       "applicationState": "PENDING",
       "id": 5
     },
     {
-      "bootcampId": 2,
-      "applicantId": "4",
-      "state": "1",
+      "bootcampId": 1,
+      "bootcampName": "Programlamaya Giriş için Temel Kurs",
+      "applicantName": "Elif Sena Erdoğan",
+      "applicantId": "3",
       "applicationState": "PENDING",
       "id": 6
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Programlamaya Giriş için Temel Kurs",
+      "applicantName": "Elif Sena Erdoğan",
+      "applicantId": "3",
+      "applicationState": "PENDING",
+      "id": 7
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Programlamaya Giriş için Temel Kurs",
+      "applicantName": "Elif Sena Erdoğan",
+      "applicantId": "3",
+      "applicationState": "PENDING",
+      "id": 8
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Programlamaya Giriş için Temel Kurs",
+      "applicantName": "Elif Sena Erdoğan",
+      "applicantId": "3",
+      "applicationState": "PENDING",
+      "id": 9
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Programlamaya Giriş için Temel Kurs",
+      "applicantName": "Habibe Çelikten",
+      "applicantId": "4",
+      "applicationState": "PENDING",
+      "id": 10
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Programlamaya Giriş için Temel Kurs",
+      "applicantName": "Habibe Çelikten",
+      "applicantId": "4",
+      "applicationState": "PENDING",
+      "id": 11
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Programlamaya Giriş için Temel Kurs",
+      "applicantName": "Habibe Çelikten",
+      "applicantId": "4",
+      "applicationState": "PENDING",
+      "id": 12
+    },
+    {
+      "bootcampId": 1,
+      "bootcampName": "Programlamaya Giriş için Temel Kurs",
+      "applicantName": "Habibe Çelikten",
+      "applicantId": "4",
+      "applicationState": "PENDING",
+      "id": 13
+    },
+    {
+      "bootcampId": 6,
+      "bootcampName": "Yazılım Geliştirici Yetiştirme Kampı (JAVA)",
+      "applicantName": "Habibe Çelikten",
+      "applicantId": "4",
+      "applicationState": "PENDING",
+      "id": 14
     }
   ],
   "blackList": [],
@@ -148,7 +215,7 @@
     },
     {
       "firstName": "Elif Sena",
-      "lastName": "Çelikten",
+      "lastName": "Erdoğan",
       "email": "elifsena@gmail.com",
       "password": "1234",
       "nationalIdentity": 23456789012,
@@ -225,6 +292,10 @@
       "token": "MNBVCghgfdsDFGHJNMnbv",
       "role": "ROLE_EMPLOYEE",
       "expiration": "01/01/2023"
+    },
+    {
+      "state": 0,
+      "id": 10
     }
   ]
 }

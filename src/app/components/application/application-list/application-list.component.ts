@@ -1,3 +1,5 @@
+import { IApplicantAllModel } from './../../../models/applicant/request/ApplicantAllModel';
+import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { AuthGuard } from './../../../guards/auth.guard';
 import { IApplicationAllModel } from './../../../models/application/request/ApplicationAllModel';
 import { ApplicationService } from './../../../services/application/application.service';
@@ -11,18 +13,27 @@ import { ApplicationStates } from './../../../enums/applicationState';
 })
 export class ApplicationListComponent implements OnInit {
   allApplicationList: IApplicationAllModel[] = [];
+  applicant: IApplicantAllModel;
   constructor(
     private applicationService: ApplicationService,
-    public authGuard: AuthGuard
+    public authGuard: AuthGuard,
+    private applicantService:ApplicantService
   ) {}
 
   ngOnInit(): void {
     this.getAllApplication();
+
   }
 
   getAllApplication() {
     this.applicationService.getAllApplication().subscribe((data) => {
       this.allApplicationList = data;
     });
+  }
+
+  getApplicantById(id:number){
+    this.applicantService.getApplicantById(id).subscribe(data=>{
+      this.applicant=data
+    })
   }
 }

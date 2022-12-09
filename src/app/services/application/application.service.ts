@@ -17,8 +17,10 @@ export class ApplicationService {
     return this.httpClient.get<IApplicationAllModel[]>(this.apiUrl);
   }
 
-  getApplicantById(id: number): Observable<IApplicationAllModel> {
-    return this.httpClient.get<IApplicationAllModel>(this.apiUrl + '/' + id);
+  getApplicantById(id: any): Observable<IApplicationAllModel> {
+    return this.httpClient.get<IApplicationAllModel>(
+      this.apiUrl + '?applicantId=' + id
+    );
   }
 
   addApplication(data: IApplicationAddRequestModel) {

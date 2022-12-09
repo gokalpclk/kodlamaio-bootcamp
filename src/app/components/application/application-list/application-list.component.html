@@ -7,16 +7,16 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>Application Id</th>
-              <th>Bootcamp Id</th>
+              <th>Applicant Name</th>
+              <th>Bootcamp Name</th>
               <th>Application State</th>
               <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let application of allApplicationList">
-              <td>{{ application.applicantId }}</td>
-              <td>{{ application.bootcampId }}</td>
+              <td>{{ application.applicantName}}</td>
+              <td>{{ application.bootcampName}}</td>
               <!-- class="*ngIf='application.applicationState==PENDING'" -->
               <td>{{ application.applicationState }}</td>
               <td> <button type="button" class="btn btn-outline-info btn-sm" id="updateButton"

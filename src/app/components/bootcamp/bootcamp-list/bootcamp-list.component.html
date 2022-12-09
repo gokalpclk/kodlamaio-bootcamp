@@ -29,9 +29,8 @@
                 </span>
               </td>
               <td *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
-                <button type="button" class="btn btn-outline-info btn-sm" id="applyButton"
-                  
-                   data-toggle="modal" data-target="#applicationModal">Apply</button> 
+                <button type="button" class="btn btn-outline-info btn-sm"
+                   data-toggle="modal" (click)="changeSelected(bootcamp)" data-target="#applicationModal" >Apply</button> 
               </td>
               <td>
                 <button type="button" class="btn btn-outline-info btn-sm"
@@ -39,12 +38,12 @@
                   routerLink="bootcamp-update/{{bootcamp.id}}">Update</button>
               </td>
                       <!-- Modal -->
-              <div class="modal fade" id="applicationModal" tabindex="-1" role="dialog" aria-labelledby="applicationModalLabel" aria-hidden="false">
+              <div class="modal fade" id="applicationModal"  role="dialog" aria-labelledby="applicationModalLabel" aria-hidden="false">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="applicationModalLabel">Application</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -55,7 +54,7 @@
                             <button type="button" class="btn btn-secondary"
                                 data-dismiss="modal">Cancel</button>
                             <button type="button" class="btn btn-success" data-dismiss="modal"
-                            (click)="getBootcamp(bootcamp)">Apply</button>
+                            (click)="getBootcamp(selectedBootcamp)">Apply</button>
                         </div>
                     </div>
                 </div>
