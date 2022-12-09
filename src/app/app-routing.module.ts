@@ -33,7 +33,6 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: IndexComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '**', pathMatch: 'full', component: PagenotfoundComponent },
 
   {
     path: 'admin-panel',
@@ -135,6 +134,7 @@ const routes: Routes = [
       role: 'ROLE_APPLICANT',
     },
   },
+  { path: '**', pathMatch: 'full', component: PagenotfoundComponent },
 ];
 
 @NgModule({
