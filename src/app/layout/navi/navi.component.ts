@@ -1,3 +1,4 @@
+import { CurrentUserService } from './../../services/current-user/current-user.service';
 import { Logout } from './../../store/actions/user-actions';
 import { IUser } from './../../models/users/user';
 import { Router } from '@angular/router';
@@ -5,20 +6,23 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 // import { Logout } from 'src/app/store/actions/user-actions';
 
-
 @Component({
   selector: 'app-navi',
   templateUrl: './navi.component.html',
   styleUrls: ['./navi.component.css'],
 })
 export class NaviComponent implements OnInit {
-  constructor(private router: Router, 
-    private store: Store<any>
-    ) {}
+  constructor(
+    private router: Router,
+    private store: Store<any>,
+    private currentUserService: CurrentUserService
+  ) {}
 
-    user:IUser;
+  user: IUser;
+  currentUserId = 0;
+  userInfo: string;
   ngOnInit(): void {
-    this.getUser()
+    this.getUser();
   }
   logOut() {
     // this.store.dispatch(new Logout())
@@ -28,11 +32,18 @@ export class NaviComponent implements OnInit {
     this.router.navigate(['']);
     this.getUser();
   }
+  // getUser() {
+  //   this.store.select('userReducer').subscribe((state) => {
+  //     this.user = state;
+  //     console.log(this.user, ' user');
+  //   });
+  // }
   getUser() {
-    this.store.select('userReducer').subscribe((state) => {
-      this.user = state;
-      console.log(this.user);
-      
-    });
+    this.currentUserId = JSON.parse(localStorage.getItem('id'));
+    this.currentUserService
+      .getUserById(this.currentUserId)
+      .subscribe((data) => {
+        this.userInfo = `${data.firstName}`;
+      });
   }
 }
