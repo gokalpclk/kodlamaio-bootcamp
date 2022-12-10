@@ -1,5 +1,3 @@
-
-
 <div  class="col-lg-12 grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
@@ -26,7 +24,7 @@
               <td>{{applicant.nationalIdentity}}</td>
               <td>{{applicant.about}}</td>
               <td>{{applicant.dateOfBirth}}</td>
-              <td><button type="button" class="btn btn-outline-info btn-sm"
+              <td *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"><button type="button" class="btn btn-outline-info btn-sm"
                   *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"
                   routerLink="applicant-update/{{applicant.id}}">Update</button>
                 <button type="button" class="btn btn-outline-danger btn-sm ml-2"
