@@ -6,7 +6,7 @@
       "email": "ahmet@gmail.com",
       "password": "1234",
       "nationalIdentity": 12345678901,
-      "dateOfBirth": "12/23/1234",
+      "dateOfBirth": "12/08/1998",
       "position": "Specialist",
       "token": "asdfgasdfasdf",
       "role": "ROLE_EMPLOYEE",
@@ -16,27 +16,29 @@
     {
       "firstName": "Hediye",
       "lastName": "Yıldırım",
-      "email": "hediye@gmail.com",
+      "email": "hediyeyildirim@gmail.com",
       "password": "1234",
       "nationalIdentity": "12345678901",
       "dateOfBirth": "12/12/1245",
       "about": "Malatya Üniversitesi",
       "state": 1,
-      "role": "ROLE_APPLICANT",
       "token": "10.12.2022 16:08:01",
+      "role": "ROLE_APPLICANT",
+      "expiration": null,
       "id": 2
     },
     {
       "firstName": "Berkay",
       "lastName": "Anduv",
-      "email": "berkay@gmail.com",
+      "email": "berkayanduv@gmail.com",
       "password": "1234",
       "nationalIdentity": "54267128901",
       "dateOfBirth": "21/04/1999",
-      "about": "Wing Chun'cu",
-      "state": 1,
-      "role": "ROLE_APPLICANT",
+      "about": "Anadolu University Web Design and Coding",
+      "state": 0,
       "token": "10.12.2022 16:09:30",
+      "role": "ROLE_APPLICANT",
+      "expiration": null,
       "id": 3
     },
     {
@@ -66,29 +68,273 @@
     {
       "firstName": "Uğur",
       "lastName": "Meydanlı",
-      "email": "ugur@gmail.com",
+      "email": "ugurmeydanli@gmail.com",
       "password": "1234",
       "nationalIdentity": "34565678234",
       "dateOfBirth": "15/02/1995",
-      "about": "Artvinli",
+      "about": "Artvin Coruh University Computer Programing",
+      "state": 1,
+      "token": "10.12.2022 16:22:44",
+      "role": "ROLE_APPLICANT",
+      "expiration": null,
+      "id": 7
+    },
+    {
+      "firstName": "Kenan",
+      "lastName": "Yavuz",
+      "email": "kenanyavuz@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678911",
+      "dateOfBirth": "10/10/1985",
+      "position": "Deputy Chairman",
+      "role": "ROLE_EMPLOYEE",
+      "token": "10.12.2022 16:41:14",
+      "id": 8
+    },
+    {
+      "firstName": "Enes Bin Malik",
+      "lastName": "Köksal",
+      "email": "eneskoksal@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678901",
+      "dateOfBirth": "01/05/1989",
+      "position": "Assistant Specialist",
+      "role": "ROLE_EMPLOYEE",
+      "token": "10.12.2022 16:42:38",
+      "id": 9
+    },
+    {
+      "firstName": "İsmail",
+      "lastName": "Karakaya",
+      "email": "ismailkarakaya@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678998",
+      "dateOfBirth": "10/06/1989",
+      "position": "Assistant Specialist",
+      "role": "ROLE_EMPLOYEE",
+      "token": "10.12.2022 16:43:22",
+      "id": 10
+    },
+    {
+      "firstName": "Serhat",
+      "lastName": "Taşçı",
+      "email": "serhattasci@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "98765432101",
+      "dateOfBirth": "10/02/1989",
+      "position": "Assistant Specialist",
+      "role": "ROLE_EMPLOYEE",
+      "token": "10.12.2022 16:44:46",
+      "id": 11
+    },
+    {
+      "firstName": "Elif Sena",
+      "lastName": "Erdoğan",
+      "email": "elifsena@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "45612378913",
+      "dateOfBirth": "15/02/1998",
+      "about": "Necmettin Erbakan University Computer Engineering",
+      "state": 1,
+      "token": "10.12.2022 16:53:29",
+      "role": "ROLE_APPLICANT",
+      "expiration": null,
+      "id": 12
+    },
+    {
+      "firstName": "Mustafa",
+      "lastName": "Peynirci",
+      "email": "mustafa@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678900",
+      "dateOfBirth": "01/01/2002",
+      "about": "Anadolu University Management Information Systems",
       "state": 1,
       "role": "ROLE_APPLICANT",
-      "token": "10.12.2022 16:22:44",
-      "id": 7
+      "token": "10.12.2022 16:54:48",
+      "id": 13
+    },
+    {
+      "firstName": "Gökalp",
+      "lastName": "Çelik",
+      "email": "gokalpcelik@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678901",
+      "dateOfBirth": "10/02/1995",
+      "about": "Gazi University Computer Engineering",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 16:55:48",
+      "id": 14
+    },
+    {
+      "firstName": "Habibe",
+      "lastName": "Çelikten",
+      "email": "habibecelikten@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "65498732101",
+      "dateOfBirth": "20/01/1994",
+      "about": "Mugla Sitki Kocman University Information Systems Engineering",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 16:59:34",
+      "id": 15
+    },
+    {
+      "firstName": "Beyza",
+      "lastName": "Alıcı",
+      "email": "beyzaalici@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678912",
+      "dateOfBirth": "31/05/2000",
+      "about": "Erzurum Technical University Computer Engineering",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 17:07:46",
+      "id": 16
+    },
+    {
+      "firstName": "Mert",
+      "lastName": "Subaşı",
+      "email": "mert@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "78945612301",
+      "dateOfBirth": "10/12/1995",
+      "about": "Nisantasi University Business",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 17:10:16",
+      "id": 17
+    },
+    {
+      "firstName": "Enes",
+      "lastName": "Karaca",
+      "email": "eneskaraca@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "23456789120",
+      "dateOfBirth": "10/10/2001",
+      "about": "Corum Hitit University Computer Programming",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 17:11:50",
+      "id": 18
+    },
+    {
+      "firstName": "Burak",
+      "lastName": "Ergin",
+      "email": "burakergin@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678910",
+      "dateOfBirth": "12/01/2001",
+      "about": "Corum Hitit University Computer Programming",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 17:13:59",
+      "id": 19
+    },
+    {
+      "firstName": "İlknur",
+      "lastName": "Yıldırım",
+      "email": "ilknuryildirim@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "74185296301",
+      "dateOfBirth": "01/04/1995",
+      "about": "Selcuk University Computer Engineering",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 17:16:09",
+      "id": 20
     }
   ],
   "bootcamps": [
     {
       "instructorId": "5",
-      "name": "MİLTEK Front-end Geliştirici Bootcamp",
+      "name": "MILTEK Front-end Developer Bootcamp",
       "dateStart": "14/11/2022",
       "dateEnd": "12/12/2022",
       "state": "1",
-      "explanation": "Senede iki defa yapılan önemli eğitimlerden sonuncusudur.",
+      "explanation": "It is the last of the important trainings held twice a year.",
       "instructorName": "Engin Demiroğ",
+      "id": 1
+    },
+    {
+      "instructorId": "5",
+      "name": "Basic Course for Introduction to Programming",
+      "dateStart": "10/02/2022",
+      "dateEnd": "11/02/2022",
+      "state": "0",
+      "explanation": "First step to programming",
+      "instructorName": "Engin Demiroğ",
+      "id": 2
+    },
+    {
+      "instructorId": "6",
+      "name": "Software Developer Training Bootcamp (JAVA)",
+      "dateStart": "01/10/2022",
+      "dateEnd": "01/11/2022",
+      "state": "0",
+      "explanation": "Software Development with JAVA",
+      "instructorName": "Murat Yücedağ",
+      "id": 3
+    },
+    {
+      "instructorId": "6",
+      "name": "Software Developer Training Bootcamp (Javascript)",
+      "dateStart": "15/09/2022",
+      "dateEnd": "15/10/2022",
+      "state": "1",
+      "explanation": "Software Development with Javasicript",
+      "instructorName": "Murat Yücedağ",
+      "id": 4
+    },
+    {
+      "instructorId": "6",
+      "name": "iOS Developer Bootcamp with Swift",
+      "dateStart": "01/05/2022",
+      "dateEnd": "01/06/2022",
+      "state": "0",
+      "explanation": "iOS Development with Swift",
+      "instructorName": "Murat Yücedağ",
+      "id": 5
+    },
+    {
+      "instructorId": "5",
+      "name": "Tech Masters Bootcamp Program",
+      "dateStart": "18/07/2022",
+      "dateEnd": "18/08/2022",
+      "state": "0",
+      "explanation": "Tech Masters Bootcamp Program",
+      "instructorName": "Engin Demiroğ",
+      "id": 6
+    },
+    {
+      "instructorId": "6",
+      "name": "Yemeksepeti Go Bootcamp",
+      "dateStart": "19/02/2022",
+      "dateEnd": "19/03/2022",
+      "state": "0",
+      "explanation": "Code your own delicious story at Yemeksepeti",
+      "instructorName": "Murat Yücedağ",
+      "id": 7
+    }
+  ],
+  "applications": [
+    {
+      "bootcampId": 1,
+      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicantName": "Elif Sena Erdoğan",
+      "applicantId": "12",
+      "applicationState": "PENDING",
       "id": 1
     }
   ],
-  "applications": [],
-  "blacklist": []
+  "blacklist": [
+    {
+      "reason": "He registered but did not come",
+      "date": "10/11/2022",
+      "applicantId": "3",
+      "applicantName": "Berkay Anduv",
+      "id": 1
+    }
+  ]
 }

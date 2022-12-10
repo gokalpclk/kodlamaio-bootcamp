@@ -7,6 +7,7 @@ import { InstructorService } from 'src/app/services/instructor/instructor.servic
 import { AuthGuard } from 'src/app/guards/auth.guard';
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
 import { Component, OnInit } from '@angular/core';
+import { ConditionalExpr } from '@angular/compiler';
 
 @Component({
   selector: 'app-bootcamp-list',
@@ -79,8 +80,8 @@ export class BootcampListComponent implements OnInit {
       });
   }
 
-  changeSelected(model) {
-    if (this.bootcampModel.state == 1) {
+  changeSelected(model) {    
+    if (model.state == 1) {
       this.selectedBootcamp = model;
     } else {
       this.toastrService.warning('Application is not active');
