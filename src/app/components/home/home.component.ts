@@ -1,3 +1,4 @@
+import { IInstructorAllModel } from 'src/app/models/instructor/request/InstructorAllModel';
 import { ApplicationService } from './../../services/application/application.service';
 import { IApplicationAllModel } from './../../models/application/request/ApplicationAllModel';
 import { AuthGuard } from 'src/app/guards/auth.guard';
@@ -14,6 +15,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   allApplicationList: IApplicationAllModel[] = []
+  allInstructorList: IInstructorAllModel[] = []
+  applicationByIdList: IApplicationAllModel[] = [];
   totalApplicants = 0;
   totalEmployee = 0;
   totalInstructors = 0;
@@ -43,6 +46,7 @@ export class HomeComponent implements OnInit {
     this.getTotalBootcamps();
     this.getUser();
     this.getAllApplication();
+    this.getApplicationByApplicantId(localStorage.getItem('id'));
   }
   getAllApplicants() {
     this.dashboardService.getTotalApplicants().subscribe((data: any) => {
@@ -67,6 +71,11 @@ export class HomeComponent implements OnInit {
   getAllApplication(){
     this.applicationService.getAllApplication().subscribe(data=>{
       this.allApplicationList = data
+    })
+  }
+  getApplicationByApplicantId(id:any){
+    this.applicationService.getApplicationByApplicantId(id).subscribe(data=>{
+      this.applicationByIdList=data
     })
   }
   getUser() {
