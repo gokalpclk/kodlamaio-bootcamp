@@ -7,7 +7,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>Applicant Name</th>
+              <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Applicant Name</th>
               <th>Bootcamp Name</th>
               <th>Application State</th>
               <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th>
@@ -37,10 +37,15 @@
 
           <tbody *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
             <tr *ngFor="let application of applicationByIdList">
-              <td>{{ application.applicantName}}</td>
               <td>{{ application.bootcampName}}</td>
               <!-- class="*ngIf='application.applicationState==PENDING'" -->
-              <td>{{ application.applicationState }}</td>
+              <td>
+                <span [ngClass]="{'badge badge-pill badge-warning' : application.applicationState == 'PENDING',
+                'badge badge-pill badge-danger' : application.applicationState == 'DENIED',
+                'badge badge-success' : application.applicationState == 'SELECTED'}">
+                  {{ application.applicationState }}
+                </span>
+              </td>
             </tr>
           </tbody>
         </table>

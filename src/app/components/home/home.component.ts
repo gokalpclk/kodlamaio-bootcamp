@@ -1,3 +1,6 @@
+import { ApplicationService } from './../../services/application/application.service';
+import { IApplicationAllModel } from './../../models/application/request/ApplicationAllModel';
+import { AuthGuard } from 'src/app/guards/auth.guard';
 import { Store } from '@ngrx/store';
 import { CurrentUserService } from './../../services/current-user/current-user.service';
 import { DashboardService } from './../../services/dashboard/dashboard.service';
@@ -9,6 +12,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+
+  allApplicationList: IApplicationAllModel[] = []
   totalApplicants = 0;
   totalEmployee = 0;
   totalInstructors = 0;
@@ -26,7 +31,9 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private dashboardService: DashboardService,
-    private currentUserService: CurrentUserService
+    private currentUserService: CurrentUserService,
+    private applicationService: ApplicationService,
+    public authGuard: AuthGuard
   ) {}
 
   ngOnInit(): void {
@@ -35,6 +42,7 @@ export class HomeComponent implements OnInit {
     this.getTotalInstructors();
     this.getTotalBootcamps();
     this.getUser();
+    this.getAllApplication();
   }
   getAllApplicants() {
     this.dashboardService.getTotalApplicants().subscribe((data: any) => {
@@ -55,6 +63,11 @@ export class HomeComponent implements OnInit {
     this.dashboardService.getTotalBootcamps().subscribe((data: any) => {
       this.totalBootcamps = data.length;
     });
+  }
+  getAllApplication(){
+    this.applicationService.getAllApplication().subscribe(data=>{
+      this.allApplicationList = data
+    })
   }
   getUser() {
     this.currentUserId = JSON.parse(localStorage.getItem('id'));
