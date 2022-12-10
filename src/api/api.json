@@ -292,7 +292,7 @@
       "name": "iOS Developer Bootcamp with Swift",
       "dateStart": "01/05/2022",
       "dateEnd": "01/06/2022",
-      "state": "0",
+      "state": "1",
       "explanation": "iOS Development with Swift",
       "instructorName": "Murat Yücedağ",
       "id": 5
@@ -302,7 +302,7 @@
       "name": "Tech Masters Bootcamp Program",
       "dateStart": "18/07/2022",
       "dateEnd": "18/08/2022",
-      "state": "0",
+      "state": "1",
       "explanation": "Tech Masters Bootcamp Program",
       "instructorName": "Engin Demiroğ",
       "id": 6
@@ -320,12 +320,154 @@
   ],
   "applications": [
     {
+      "applicantName": "Elif Sena Erdoğan",
+      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicationState": "SELECTED",
+      "id": 1
+    },
+    {
+      "applicantName": "Elif Sena Erdoğan",
+      "bootcampName": "Software Developer Training Bootcamp (Javascript)",
+      "applicationState": "DENIED",
+      "id": 2
+    },
+    {
+      "applicantName": "Habibe Çelikten",
+      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicationState": "SELECTED",
+      "id": 4
+    },
+    {
+      "bootcampId": 4,
+      "bootcampName": "Software Developer Training Bootcamp (Javascript)",
+      "applicantName": "Habibe Çelikten",
+      "applicantId": "15",
+      "applicationState": "PENDING",
+      "id": 5
+    },
+    {
+      "applicantName": "Beyza Alıcı",
+      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicationState": "SELECTED",
+      "id": 6
+    },
+    {
+      "bootcampId": 6,
+      "bootcampName": "Tech Masters Bootcamp Program",
+      "applicantName": "Beyza Alıcı",
+      "applicantId": "16",
+      "applicationState": "PENDING",
+      "id": 7
+    },
+    {
+      "applicantName": "Mert Subaşı",
+      "bootcampName": "iOS Developer Bootcamp with Swift",
+      "applicationState": "DENIED",
+      "id": 8
+    },
+    {
+      "applicantName": "Mert Subaşı",
+      "bootcampName": "Software Developer Training Bootcamp (Javascript)",
+      "applicationState": "SELECTED",
+      "id": 9
+    },
+    {
       "bootcampId": 1,
       "bootcampName": "MILTEK Front-end Developer Bootcamp",
-      "applicantName": "Elif Sena Erdoğan",
-      "applicantId": "12",
+      "applicantName": "Enes Karaca",
+      "applicantId": "18",
       "applicationState": "PENDING",
-      "id": 1
+      "id": 10
+    },
+    {
+      "applicantName": "Enes Karaca",
+      "bootcampName": "Tech Masters Bootcamp Program",
+      "applicationState": "SELECTED",
+      "id": 11
+    },
+    {
+      "applicantName": "İlknur Yıldırım",
+      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicationState": "DENIED",
+      "id": 12
+    },
+    {
+      "bootcampId": 4,
+      "bootcampName": "Software Developer Training Bootcamp (Javascript)",
+      "applicantName": "İlknur Yıldırım",
+      "applicantId": "20",
+      "applicationState": "PENDING",
+      "id": 13
+    },
+    {
+      "bootcampId": 5,
+      "bootcampName": "iOS Developer Bootcamp with Swift",
+      "applicantName": "İlknur Yıldırım",
+      "applicantId": "20",
+      "applicationState": "PENDING",
+      "id": 14
+    },
+    {
+      "bootcampId": 4,
+      "bootcampName": "Software Developer Training Bootcamp (Javascript)",
+      "applicantName": "Uğur Meydanlı",
+      "applicantId": "7",
+      "applicationState": "PENDING",
+      "id": 15
+    },
+    {
+      "applicantName": "Uğur Meydanlı",
+      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicationState": "SELECTED",
+      "id": 16
+    },
+    {
+      "applicantName": "Uğur Meydanlı",
+      "bootcampName": "iOS Developer Bootcamp with Swift",
+      "applicationState": "DENIED",
+      "id": 17
+    },
+    {
+      "applicantName": "Mustafa Peynirci",
+      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicationState": "SELECTED",
+      "id": 18
+    },
+    {
+      "applicantName": "Mustafa Peynirci",
+      "bootcampName": "iOS Developer Bootcamp with Swift",
+      "applicationState": "SELECTED",
+      "id": 19
+    },
+    {
+      "bootcampId": 6,
+      "bootcampName": "Tech Masters Bootcamp Program",
+      "applicantName": "Mustafa Peynirci",
+      "applicantId": "13",
+      "applicationState": "PENDING",
+      "id": 20
+    },
+    {
+      "applicantName": "Gökalp Çelik",
+      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicationState": "SELECTED",
+      "id": 21
+    },
+    {
+      "bootcampId": 4,
+      "bootcampName": "Software Developer Training Bootcamp (Javascript)",
+      "applicantName": "Gökalp Çelik",
+      "applicantId": "14",
+      "applicationState": "PENDING",
+      "id": 22
+    },
+    {
+      "bootcampId": 6,
+      "bootcampName": "Tech Masters Bootcamp Program",
+      "applicantName": "Gökalp Çelik",
+      "applicantId": "14",
+      "applicationState": "PENDING",
+      "id": 23
     }
   ],
   "blacklist": [

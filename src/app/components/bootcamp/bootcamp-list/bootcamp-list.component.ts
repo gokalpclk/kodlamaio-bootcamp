@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { IBootcampAllModel } from 'src/app/models/bootcamp/request/BootcampAllModel';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { ApplicationStates } from 'src/app/enums/applicationState';
@@ -26,11 +27,13 @@ export class BootcampListComponent implements OnInit {
     private instructorService: InstructorService,
     private applicationService: ApplicationService,
     private toastrService: ToastrService,
-    private applicantService: ApplicantService
+    private applicantService: ApplicantService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.getAllBootcamps();
+    this.getBootcampsByInstructorId();
   }
 
   getAllBootcamps() {
@@ -80,7 +83,7 @@ export class BootcampListComponent implements OnInit {
       });
   }
 
-  changeSelected(model) {    
+  changeSelected(model) {
     if (model.state == 1) {
       this.selectedBootcamp = model;
     } else {
@@ -90,5 +93,6 @@ export class BootcampListComponent implements OnInit {
 
   detail(bootcamp: any) {
     console.log('bootcamp detay', bootcamp);
+    this.router.navigate(['instructor-panel/detail']);
   }
 }

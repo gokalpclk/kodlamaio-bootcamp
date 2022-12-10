@@ -67,7 +67,7 @@
         </table>
       </div>
       <div class="col-md-12 card-bg p-30" *ngIf="authGuard.userRoleIn == 'ROLE_INSTRUCTOR'">
-        <div class="card mb-3 img-animation" *ngFor="let bootcamp of allBootcampsList">
+        <div class="card mb-3 img-animation" *ngFor="let bootcamp of bootcampListByInstructorId">
           <div class="row g-0">
             <div class="col-md-4">
               <img src="app/public/skydash/images/s1.png" class="img-fluid rounded-start" alt="...">
@@ -83,7 +83,7 @@
                 <p>{{bootcamp.instructorName}}</p>
                 <p class="card-text">{{bootcamp.explanation}}</p>
                 <div class="state d-flex justify-content-start">
-                  <button class="btn btn-sm btn-outline-primary" (click)="detail(bootcamp)">Detail</button>
+                  <button class="btn btn-sm btn-outline-primary" routerLink="detail-bootcamp/{{bootcamp.id}}" >Detail</button>
                 </div>
               </div>
             </div>

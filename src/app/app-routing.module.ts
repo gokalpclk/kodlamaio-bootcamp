@@ -1,3 +1,4 @@
+import { ApplicantListOfBootcampComponent } from './components/bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp.component';
 import { IndexAboutComponent } from './components/index-about/index-about.component';
 import { ApplicationUpdateComponent } from './components/application/application-update/application-update.component';
 import { ApplicationListComponent } from './components/application/application-list/application-list.component';
@@ -109,6 +110,10 @@ const routes: Routes = [
         component: InstructorUpdateComponent,
       },
       { path: 'application-list', component: ApplicationListComponent },
+      {
+        path: 'bootcamp-list/detail-bootcamp/:id',
+        component: ApplicantListOfBootcampComponent,
+      },
     ],
     canActivate: [AuthGuard],
     data: {
