@@ -11,6 +11,15 @@
   border-radius: 20px;
 }
 
+.one-a{
+  max-width: 50%;
+  margin: auto;
+}
+
+.one-b{
+  max-width: 75%;
+  margin: auto;
+}
 
 .bg-purple {
   background-color: #4B49AC !important;
