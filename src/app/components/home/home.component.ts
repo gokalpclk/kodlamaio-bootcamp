@@ -3,8 +3,6 @@ import { IInstructorAllModel } from 'src/app/models/instructor/request/Instructo
 import { ApplicationService } from './../../services/application/application.service';
 import { IApplicationAllModel } from './../../models/application/request/ApplicationAllModel';
 import { AuthGuard } from 'src/app/guards/auth.guard';
-import { Store } from '@ngrx/store';
-import { CurrentUserService } from './../../services/current-user/current-user.service';
 import { DashboardService } from './../../services/dashboard/dashboard.service';
 import { Component, OnInit } from '@angular/core';
 

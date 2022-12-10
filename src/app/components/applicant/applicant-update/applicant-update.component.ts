@@ -1,4 +1,3 @@
-import { CurrentUserService } from './../../../services/current-user/current-user.service';
 import { ToastrService } from 'ngx-toastr';
 import { IApplicantUpdateRequestModel } from './../../../models/applicant/request/ApplicantUpdateRequestModel';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -18,7 +17,6 @@ export class ApplicantUpdateComponent implements OnInit {
   type: string = ApplicationStates.PENDING;
   constructor(
     private applicantService: ApplicantService,
-    private currentUserService: CurrentUserService,
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
     private toastrService: ToastrService,
