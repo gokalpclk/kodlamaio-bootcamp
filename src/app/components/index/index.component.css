@@ -213,3 +213,9 @@
   color: #aaa;
   margin-bottom: 0;
 }
+
+.p-backg{
+  background: rgb(0 0 0 / 30%);
+  border-radius: 10px;
+  padding: 5px;
+}
