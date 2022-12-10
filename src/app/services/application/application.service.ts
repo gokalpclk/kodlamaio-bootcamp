@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { IApplicationAllModel } from './../../models/application/request/ApplicationAllModel';
 import { Injectable } from '@angular/core';
 import { IApplicationDeleteRequestModel } from 'src/app/models/application/request/ApplicationDeleteRequestModel';
+import { IApplicantAllModel } from 'src/app/models/applicant/request/ApplicantAllModel';
 
 @Injectable({
   providedIn: 'root',
@@ -55,5 +56,9 @@ export class ApplicationService {
     return this.httpClient.delete<IApplicationDeleteRequestModel>(
       this.apiUrl + '/' + id
     );
+  }
+
+  getApplicationListByBootcampId(bootcampId):Observable<IApplicationAllModel[]>{
+    return this.httpClient.get<IApplicationAllModel[]>(this.apiUrl+"?bootcampId="+bootcampId);
   }
 }

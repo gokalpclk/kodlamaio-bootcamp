@@ -45,6 +45,7 @@ import { ApplicationUpdateComponent } from './components/application/application
 import { userReducer } from './store/reducers/user-reducer';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { IndexAboutComponent } from './components/index-about/index-about.component';
+import { ApplicantListOfBootcampComponent } from './components/bootcamp/applicant-list-of-bootcamp/applicant-list-of-bootcamp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,6 +84,7 @@ import { IndexAboutComponent } from './components/index-about/index-about.compon
     ApplicationUpdateComponent,
     PagenotfoundComponent,
     IndexAboutComponent,
+    ApplicantListOfBootcampComponent,
   ],
   imports: [
     BrowserModule,
