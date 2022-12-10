@@ -10,8 +10,8 @@ import { IApplicantDeleteRequestModel } from 'src/app/models/applicant/request/A
   providedIn: 'root',
 })
 export class ApplicantService {
-  apiUrl: string = 'http://localhost:3000/users';
-  allApplicants: IApplicantAllModel[] = [];
+  apiUrl = 'http://localhost:3000/users';
+  // allApplicants: IApplicantAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
 
   getAllApplicants(): Observable<IApplicantAllModel[]> {
@@ -22,8 +22,10 @@ export class ApplicantService {
   getApplicantById(id: number): Observable<IApplicantAllModel> {
     return this.httpClient.get<IApplicantAllModel>(this.apiUrl + '/' + id);
   }
-  addApplicant(id: any): Observable<IApplicantAddRequestModel> {
-    return this.httpClient.post<IApplicantAddRequestModel>(this.apiUrl, id);
+  addApplicant(
+    data: IApplicantAddRequestModel
+  ): Observable<IApplicantAddRequestModel> {
+    return this.httpClient.post<IApplicantAddRequestModel>(this.apiUrl, data);
   }
   updateApplicant(
     id: number,

@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { IBootcampAllModel } from '../../models/bootcamp/request/BootcampAllModel';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IInstructorAllModel } from 'src/app/models/instructor/request/InstructorAllModel';
 import { IBootcampDeleteRequestModel } from 'src/app/models/bootcamp/request/BootcampDeleteRequestModel';
 import { IBootcampUpdateRequestModel } from 'src/app/models/bootcamp/request/BootcampUpdateRequestModel';
 
@@ -13,7 +12,6 @@ import { IBootcampUpdateRequestModel } from 'src/app/models/bootcamp/request/Boo
 })
 export class BootcampService {
   apiUrl = 'http://localhost:3000/bootcamps';
-  allBootcamps: IBootcampAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
 
   getAllBootcamps(): Observable<IBootcampAllModel[]> {
@@ -22,6 +20,11 @@ export class BootcampService {
 
   getBootcampById(id: number): Observable<IBootcampAllModel> {
     return this.httpClient.get<IBootcampAllModel>(this.apiUrl + '/' + id);
+  }
+  getBootcampsByInstructorId(id: number): Observable<IBootcampAllModel[]> {
+    return this.httpClient.get<IBootcampAllModel[]>(
+      this.apiUrl + '?instructor=' + id
+    );
   }
   addBootcamp(
     data: IBootcampAddRequestModel

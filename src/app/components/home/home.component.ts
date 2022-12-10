@@ -14,9 +14,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
-  allApplicationList: IApplicationAllModel[] = []
-  allInstructorList: IInstructorAllModel[] = []
+  allApplicationList: IApplicationAllModel[] = [];
+  allInstructorList: IInstructorAllModel[] = [];
   applicationByIdList: IApplicationAllModel[] = [];
   totalApplicants = 0;
   totalEmployee = 0;
@@ -35,7 +34,6 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private dashboardService: DashboardService,
-    private currentUserService: CurrentUserService,
     private applicationService: ApplicationService,
     private applicantService: ApplicantService,
     public authGuard: AuthGuard
@@ -70,15 +68,17 @@ export class HomeComponent implements OnInit {
       this.totalBootcamps = data.length;
     });
   }
-  getAllApplication(){
-    this.applicationService.getAllApplication().subscribe(data=>{
-      this.allApplicationList = data
-    })
+  getAllApplication() {
+    this.applicationService.getAllApplication().subscribe((data) => {
+      this.allApplicationList = data;
+    });
   }
-  getApplicationByApplicantId(id:any){
-    this.applicationService.getApplicationByApplicantId(id).subscribe(data=>{
-      this.applicationByIdList=data
-    })
+  getApplicationByApplicantId(id: any) {
+    this.applicationService
+      .getApplicationByApplicantId(id)
+      .subscribe((data) => {
+        this.applicationByIdList = data;
+      });
   }
   getUser() {
     this.currentUserId = JSON.parse(localStorage.getItem('id'));

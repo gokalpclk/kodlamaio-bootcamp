@@ -10,8 +10,7 @@ import { IBlackListAllModel } from 'src/app/models/blackList/request/BlackListAl
   providedIn: 'root',
 })
 export class BlackListService {
-  apiUrl = ' http://localhost:3000/blackList';
-  allBlackLists: IBlackListAllModel[] = [];
+  apiUrl = 'http://localhost:3000/blacklist';
   constructor(private httpClient: HttpClient) {}
 
   getAllBlackLists(): Observable<IBlackListAllModel[]> {
@@ -21,8 +20,13 @@ export class BlackListService {
     return this.httpClient.get<IBlackListAllModel>(this.apiUrl + '/' + id);
   }
 
-  addBlackList(blacklistAddRequestModel: IBlackListAddRequestModel): Observable<IBlackListAllModel> {
-    return this.httpClient.post<IBlackListAllModel>(this.apiUrl, blacklistAddRequestModel);
+  addBlackList(
+    blacklistAddRequestModel: IBlackListAddRequestModel
+  ): Observable<IBlackListAllModel> {
+    return this.httpClient.post<IBlackListAllModel>(
+      this.apiUrl,
+      blacklistAddRequestModel
+    );
   }
   updateBlackList(
     id: number,

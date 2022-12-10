@@ -1,10 +1,10 @@
+import { IBootcampAllModel } from 'src/app/models/bootcamp/request/BootcampAllModel';
 import { ApplicantService } from './../../../services/applicant/applicant.service';
 import { ApplicationStates } from 'src/app/enums/applicationState';
 import { ToastrService } from 'ngx-toastr';
 import { ApplicationService } from './../../../services/application/application.service';
 import { InstructorService } from 'src/app/services/instructor/instructor.service';
 import { AuthGuard } from 'src/app/guards/auth.guard';
-import { IBootcampAllModel } from './../../../models/bootcamp/request/BootcampAllModel';
 import { BootcampService } from './../../../services/bootcamp/bootcamp.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -15,9 +15,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BootcampListComponent implements OnInit {
   allBootcampsList: IBootcampAllModel[] = [];
+  bootcampListByInstructorId: IBootcampAllModel[] = [];
   bootcampModel: IBootcampAllModel;
-
   selectedBootcamp: IBootcampAllModel;
+
   constructor(
     private bootcampService: BootcampService,
     public authGuard: AuthGuard,
@@ -45,6 +46,13 @@ export class BootcampListComponent implements OnInit {
   getBootcamp(data: any) {
     this.bootcampModel = data;
     this.addApplicantion();
+  }
+  getBootcampsByInstructorId() {
+    this.bootcampService
+      .getBootcampsByInstructorId(parseInt(localStorage.getItem('id')))
+      .subscribe((data) => {
+        this.bootcampListByInstructorId = data;
+      });
   }
 
   addApplicantion() {
@@ -77,5 +85,9 @@ export class BootcampListComponent implements OnInit {
     } else {
       this.toastrService.warning('Application is not active');
     }
+  }
+
+  detail(bootcamp: any) {
+    console.log('bootcamp detay', bootcamp);
   }
 }

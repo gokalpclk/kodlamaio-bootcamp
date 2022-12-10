@@ -1,4 +1,4 @@
-import { CurrentUserService } from './../../services/current-user/current-user.service';
+import { ApplicantService } from './../../services/applicant/applicant.service';
 import { Logout } from './../../store/actions/user-actions';
 import { IUser } from './../../models/users/user';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class NaviComponent implements OnInit {
   constructor(
     private router: Router,
     private store: Store<any>,
-    private currentUserService: CurrentUserService
+    private applicantService: ApplicantService
   ) {}
 
   user: IUser;
@@ -40,8 +40,8 @@ export class NaviComponent implements OnInit {
   // }
   getUser() {
     this.currentUserId = JSON.parse(localStorage.getItem('id'));
-    this.currentUserService
-      .getUserById(this.currentUserId)
+    this.applicantService
+      .getApplicantById(this.currentUserId)
       .subscribe((data) => {
         this.userInfo = `${data.firstName}`;
       });

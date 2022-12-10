@@ -5,14 +5,12 @@ import { HttpClient } from '@angular/common/http';
 import { IApplicationAllModel } from './../../models/application/request/ApplicationAllModel';
 import { Injectable } from '@angular/core';
 import { IApplicationDeleteRequestModel } from 'src/app/models/application/request/ApplicationDeleteRequestModel';
-import { IApplicantAllModel } from 'src/app/models/applicant/request/ApplicantAllModel';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApplicationService {
   apiUrl = 'http://localhost:3000/applications';
-  allApplications: IApplicationAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
 
   getAllApplication(): Observable<IApplicationAllModel[]> {
@@ -58,7 +56,11 @@ export class ApplicationService {
     );
   }
 
-  getApplicationListByBootcampId(bootcampId):Observable<IApplicationAllModel[]>{
-    return this.httpClient.get<IApplicationAllModel[]>(this.apiUrl+"?bootcampId="+bootcampId);
+  getApplicationListByBootcampId(
+    bootcampId
+  ): Observable<IApplicationAllModel[]> {
+    return this.httpClient.get<IApplicationAllModel[]>(
+      this.apiUrl + '?bootcampId=' + bootcampId
+    );
   }
 }

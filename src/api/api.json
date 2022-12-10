@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "firstName": "Ahmet",
+      "lastName": "KARAGÖZ",
+      "email": "ahmet@gmail.com",
+      "password": "1234",
+      "nationalIdentity": 12345678901,
+      "dateOfBirth": "12/23/1234",
+      "position": "Specialist",
+      "token": "asdfgasdfasdf",
+      "role": "ROLE_EMPLOYEE",
+      "expiration": "12/12/1212",
+      "id": 1
+    },
+    {
+      "firstName": "Hediye",
+      "lastName": "Yıldırım",
+      "email": "hediye@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678901",
+      "dateOfBirth": "12/12/1245",
+      "about": "Malatya Üniversitesi",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 16:08:01",
+      "id": 2
+    },
+    {
+      "firstName": "Berkay",
+      "lastName": "Anduv",
+      "email": "berkay@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "54267128901",
+      "dateOfBirth": "21/04/1999",
+      "about": "Wing Chun'cu",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 16:09:30",
+      "id": 3
+    },
+    {
+      "firstName": "Engin",
+      "lastName": "Demiroğ",
+      "email": "engin@gmail.com",
+      "password": "1661",
+      "nationalIdentity": "87654321765",
+      "dateOfBirth": "12/05/1985",
+      "companyName": "Kodlama.io",
+      "role": "ROLE_INSTRUCTOR",
+      "token": "10.12.2022 16:12:05",
+      "id": 5
+    },
+    {
+      "firstName": "Murat",
+      "lastName": "Yücedağ",
+      "email": "murat@gmail.com",
+      "password": "1212",
+      "nationalIdentity": "45672345678",
+      "dateOfBirth": "02/05/1986",
+      "companyName": "Murat Inc.",
+      "role": "ROLE_INSTRUCTOR",
+      "token": "10.12.2022 16:14:39",
+      "id": 6
+    },
+    {
+      "firstName": "Uğur",
+      "lastName": "Meydanlı",
+      "email": "ugur@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "34565678234",
+      "dateOfBirth": "15/02/1995",
+      "about": "Artvinli",
+      "state": 1,
+      "role": "ROLE_APPLICANT",
+      "token": "10.12.2022 16:22:44",
+      "id": 7
+    }
+  ],
+  "bootcamps": [
+    {
+      "instructorId": "5",
+      "name": "MİLTEK Front-end Geliştirici Bootcamp",
+      "dateStart": "14/11/2022",
+      "dateEnd": "12/12/2022",
+      "state": "1",
+      "explanation": "Senede iki defa yapılan önemli eğitimlerden sonuncusudur.",
+      "instructorName": "Engin Demiroğ",
+      "id": 1
+    }
+  ],
+  "applications": [],
+  "blacklist": []
+}

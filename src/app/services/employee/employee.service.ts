@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
   apiUrl = 'http://localhost:3000/users';
-  allEmployee: IEmployeeAllModel[] = [];
   constructor(private httpClient: HttpClient) {}
   getAllEmployees(): Observable<IEmployeeAllModel[]> {
     return this.httpClient.get<IEmployeeAllModel[]>(

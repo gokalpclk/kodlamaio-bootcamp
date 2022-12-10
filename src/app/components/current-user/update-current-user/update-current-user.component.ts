@@ -1,5 +1,4 @@
 import { ApplicantService } from './../../../services/applicant/applicant.service';
-import { CurrentUserService } from './../../../services/current-user/current-user.service';
 import { IApplicantAllModel } from 'src/app/models/applicant/request/ApplicantAllModel';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -17,7 +16,6 @@ export class UpdateCurrentUserComponent implements OnInit {
   userUpdateForm: FormGroup;
   getUser: IApplicantAllModel;
   constructor(
-    private currentUserService: CurrentUserService,
     private applicantService: ApplicantService,
     private formBuilder: FormBuilder,
     private activatedRoute: ActivatedRoute,
@@ -31,8 +29,8 @@ export class UpdateCurrentUserComponent implements OnInit {
   }
 
   getUserById() {
-    this.currentUserService
-      .getUserById(this.activatedRoute.snapshot.params['id'])
+    this.applicantService
+      .getApplicantById(this.activatedRoute.snapshot.params['id'])
       .subscribe((data) => {
         this.getUser = data;
         this.createUpdateUserForm();
@@ -57,8 +55,8 @@ export class UpdateCurrentUserComponent implements OnInit {
   updateUser() {
     if (this.userUpdateForm.valid) {
       let getUserInfos = Object.assign({}, this.userUpdateForm.value);
-      this.currentUserService
-        .updateUser(this.getUser.id, getUserInfos)
+      this.applicantService
+        .updateApplicant(this.getUser.id, getUserInfos)
         .subscribe((data) => {
           // this.router.navigate(['admin-panel/applicant-list']);
           this.toastrService.success('Update succesfull');
@@ -69,9 +67,9 @@ export class UpdateCurrentUserComponent implements OnInit {
   }
 
   deleteUser() {
-    this.currentUserService.deleteUser(this.getUser.id).subscribe((data) => {
+    this.applicantService.deleteApplicant(this.getUser.id).subscribe((data) => {
       this.toastrService.error('Your Account Deleted!');
-      this.store.dispatch(new Logout())
+      this.store.dispatch(new Logout());
       localStorage.clear();
       this.router.navigate(['']);
     });
