@@ -1,3 +1,4 @@
+import { ApplicantService } from './../../services/applicant/applicant.service';
 import { IInstructorAllModel } from 'src/app/models/instructor/request/InstructorAllModel';
 import { ApplicationService } from './../../services/application/application.service';
 import { IApplicationAllModel } from './../../models/application/request/ApplicationAllModel';
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit {
     private dashboardService: DashboardService,
     private currentUserService: CurrentUserService,
     private applicationService: ApplicationService,
+    private applicantService: ApplicantService,
     public authGuard: AuthGuard
   ) {}
 
@@ -80,8 +82,8 @@ export class HomeComponent implements OnInit {
   }
   getUser() {
     this.currentUserId = JSON.parse(localStorage.getItem('id'));
-    this.currentUserService
-      .getUserById(this.currentUserId)
+    this.applicantService
+      .getApplicantById(this.currentUserId)
       .subscribe((data) => {
         console.log(data, ' Bu data');
         this.userInfo = `${data.firstName} ${data.lastName}`;
