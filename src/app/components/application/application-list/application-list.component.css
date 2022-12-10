@@ -1,0 +1,10 @@
+.badge-warning{
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    color: white;
+}
+.badge-danger{
+    padding: 3px 16px;
+    font-size: 12px;
+}
