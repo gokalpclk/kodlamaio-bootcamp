@@ -298,6 +298,42 @@
     {
       "state": 0,
       "id": 10
+    },
+    {
+      "firstName": "Mustafa",
+      "lastName": "Peynirci",
+      "email": "mustafa@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678909",
+      "dateOfBirth": "11/03/1997",
+      "position": "Uzman",
+      "role": "ROLE_EMPLOYEE",
+      "token": "10.12.2022 10:16:55",
+      "id": 11
+    },
+    {
+      "firstName": "Habibe",
+      "lastName": "Çelikten",
+      "email": "habibe@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678905",
+      "dateOfBirth": "22/12/1994",
+      "position": "Uzman",
+      "role": "ROLE_EMPLOYEE",
+      "token": "10.12.2022 10:17:37",
+      "id": 12
+    },
+    {
+      "firstName": "Gökalp",
+      "lastName": "Çelik",
+      "email": "gokalp@gmail.com",
+      "password": "1234",
+      "nationalIdentity": "12345678903",
+      "dateOfBirth": "23/06/1998",
+      "position": "Uzman",
+      "role": "ROLE_EMPLOYEE",
+      "token": "10.12.2022 10:18:10",
+      "id": 13
     }
   ]
 }
