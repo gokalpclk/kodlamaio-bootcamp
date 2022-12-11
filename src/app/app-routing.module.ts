@@ -80,10 +80,18 @@ const routes: Routes = [
         path: 'bootcamp-list/bootcamp-update/:id',
         component: BootcampUpdateComponent,
       },
+      {
+        path: 'bootcamp-list/bootcamp-update/:id/applicant-update/:id',
+        component: ApplicantUpdateComponent,
+      },
 
       { path: 'blacklist', component: BlackListListComponent },
       {
         path: 'applicant-list/blacklist-add/:id',
+        component: BlackListAddComponent,
+      },
+      {
+        path: 'bootcamp-list/bootcamp-update/:id/blacklist-add/:id',
         component: BlackListAddComponent,
       },
       { path: 'application-list', component: ApplicationListComponent },
