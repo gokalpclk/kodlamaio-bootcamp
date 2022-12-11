@@ -84,7 +84,7 @@
                     <th>Applicant Name</th>
                     <th>Bootcamp Name</th>
                     <th>Application State</th>
-                    <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th>
+                    <!-- <th *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">Manage</th> -->
                   </tr>
                 </thead>
                 <tbody *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'">
@@ -98,9 +98,9 @@
                         {{ application.applicationState }}
                       </span>
                     </td>
-                    <td> <button type="button" class="btn btn-outline-info btn-sm" id="updateButton"
+                    <!-- <td> <button type="button" class="btn btn-outline-info btn-sm" id="updateButton"
                       *ngIf="authGuard.userRoleIn == 'ROLE_EMPLOYEE'"
-                       data-toggle="modal" data-target="#applicationModal" routerLink="application-update/{{application.id}}">Update</button></td>
+                       data-toggle="modal" data-target="#applicationModal" routerLink="application-update/{{application.id}}">Update</button></td> -->
                   </tr>
                 </tbody>
                 <tbody *ngIf="authGuard.userRoleIn == 'ROLE_APPLICANT'">
@@ -113,7 +113,7 @@
                       'badge badge-pill badge-danger' : application.applicationState == 'DENIED',
                       'badge badge-success' : application.applicationState == 'SELECTED'}">
                         {{ application.applicationState }}
-                        </span>
+                      </span>
                     </td>
                   </tr>
                 </tbody>
@@ -127,7 +127,7 @@
                       'badge badge-pill badge-danger' : application.applicationState == 'DENIED',
                       'badge badge-success' : application.applicationState == 'SELECTED'}">
                         {{ application.applicationState }}
-                        </span>
+                      </span>
                     </td>
                   </tr>
                 </tbody>
