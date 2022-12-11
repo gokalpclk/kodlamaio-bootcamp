@@ -320,22 +320,12 @@
   ],
   "applications": [
     {
+      "bootcampId": 1,
       "applicantName": "Elif Sena Erdoğan",
       "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicantId": "12",
       "applicationState": "SELECTED",
       "id": 1
-    },
-    {
-      "applicantName": "Elif Sena Erdoğan",
-      "bootcampName": "Software Developer Training Bootcamp (Javascript)",
-      "applicationState": "DENIED",
-      "id": 2
-    },
-    {
-      "applicantName": "Habibe Çelikten",
-      "bootcampName": "MILTEK Front-end Developer Bootcamp",
-      "applicationState": "SELECTED",
-      "id": 4
     },
     {
       "bootcampId": 4,
@@ -346,50 +336,20 @@
       "id": 5
     },
     {
-      "applicantName": "Beyza Alıcı",
-      "bootcampName": "MILTEK Front-end Developer Bootcamp",
-      "applicationState": "SELECTED",
-      "id": 6
-    },
-    {
       "bootcampId": 6,
       "bootcampName": "Tech Masters Bootcamp Program",
       "applicantName": "Beyza Alıcı",
       "applicantId": "16",
-      "applicationState": "PENDING",
-      "id": 7
-    },
-    {
-      "applicantName": "Mert Subaşı",
-      "bootcampName": "iOS Developer Bootcamp with Swift",
-      "applicationState": "DENIED",
-      "id": 8
-    },
-    {
-      "applicantName": "Mert Subaşı",
-      "bootcampName": "Software Developer Training Bootcamp (Javascript)",
       "applicationState": "SELECTED",
-      "id": 9
+      "id": 7
     },
     {
       "bootcampId": 1,
       "bootcampName": "MILTEK Front-end Developer Bootcamp",
       "applicantName": "Enes Karaca",
       "applicantId": "18",
-      "applicationState": "PENDING",
-      "id": 10
-    },
-    {
-      "applicantName": "Enes Karaca",
-      "bootcampName": "Tech Masters Bootcamp Program",
       "applicationState": "SELECTED",
-      "id": 11
-    },
-    {
-      "applicantName": "İlknur Yıldırım",
-      "bootcampName": "MILTEK Front-end Developer Bootcamp",
-      "applicationState": "DENIED",
-      "id": 12
+      "id": 10
     },
     {
       "bootcampId": 4,
@@ -416,28 +376,12 @@
       "id": 15
     },
     {
-      "applicantName": "Uğur Meydanlı",
+      "bootcampId": 1,
       "bootcampName": "MILTEK Front-end Developer Bootcamp",
-      "applicationState": "SELECTED",
-      "id": 16
-    },
-    {
-      "applicantName": "Uğur Meydanlı",
-      "bootcampName": "iOS Developer Bootcamp with Swift",
-      "applicationState": "DENIED",
-      "id": 17
-    },
-    {
       "applicantName": "Mustafa Peynirci",
-      "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicantId": "13",
       "applicationState": "SELECTED",
       "id": 18
-    },
-    {
-      "applicantName": "Mustafa Peynirci",
-      "bootcampName": "iOS Developer Bootcamp with Swift",
-      "applicationState": "SELECTED",
-      "id": 19
     },
     {
       "bootcampId": 6,
@@ -448,8 +392,10 @@
       "id": 20
     },
     {
-      "applicantName": "Gökalp Çelik",
+      "bootcampId": 1,
       "bootcampName": "MILTEK Front-end Developer Bootcamp",
+      "applicantName": "Gökalp Çelik",
+      "applicantId": "14",
       "applicationState": "SELECTED",
       "id": 21
     },

@@ -44,7 +44,7 @@ export class ApplicationService {
     id: number,
     data: IApplicationUpdateRequestModel
   ): Observable<IApplicationUpdateRequestModel> {
-    return this.httpClient.put<IApplicationUpdateRequestModel>(
+    return this.httpClient.patch<IApplicationUpdateRequestModel>(
       this.apiUrl + '/' + id,
       data
     );
@@ -60,7 +60,7 @@ export class ApplicationService {
     bootcampId
   ): Observable<IApplicationAllModel[]> {
     return this.httpClient.get<IApplicationAllModel[]>(
-      this.apiUrl + '?bootcampId=' + bootcampId
+      this.apiUrl + '?bootcampId=' + bootcampId + '&applicationState=SELECTED'
     );
   }
 }
